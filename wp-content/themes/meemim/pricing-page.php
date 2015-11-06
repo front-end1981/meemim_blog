@@ -78,11 +78,44 @@
         </form>
 
 
-<!--        <div class="table-responsive">-->
-<!--            <table class="table">-->
-<!---->
-<!--            </table>-->
-<!--        </div>-->
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>FREE</th>
+                    <th>PRO</th>
+                    <th>ENTERPRISE</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Meeting participants</td>
+                </tr>
+                <tr>
+                    <td>Mobile apps</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <td>Video conferencing</td>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <td>Meeting participants</td>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <td>Mobile apps</td>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
 
 
     </section>

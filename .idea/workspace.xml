@@ -55,8 +55,8 @@
       <file leaf-file-name="pricing-page.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/meemim/pricing-page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.90088105">
-              <caret line="84" column="18" selection-start-line="80" selection-start-column="9" selection-end-line="84" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.44493392">
+              <caret line="92" column="49" selection-start-line="92" selection-start-column="49" selection-end-line="92" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -88,7 +88,7 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="14" column="68" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="68" />
               <folding>
-                <marker date="1446712074588" expanded="true" signature="833:861" placeholder="..." />
+                <marker date="1446712074000" expanded="true" signature="833:861" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -548,7 +548,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="68" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="68" />
           <folding>
-            <marker date="1446712074588" expanded="true" signature="833:861" placeholder="..." />
+            <marker date="1446712074000" expanded="true" signature="833:861" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -612,7 +612,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="65" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="65" />
           <folding>
-            <marker date="1446712074588" expanded="true" signature="833:861" placeholder="..." />
+            <marker date="1446712074000" expanded="true" signature="833:861" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -645,7 +645,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="57" />
           <folding>
-            <marker date="1446712074588" expanded="true" signature="833:861" placeholder="..." />
+            <marker date="1446712074000" expanded="true" signature="833:861" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -831,7 +831,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="68" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="68" />
           <folding>
-            <marker date="1446712074588" expanded="true" signature="833:861" placeholder="..." />
+            <marker date="1446712074000" expanded="true" signature="833:861" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -854,8 +854,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/meemim/pricing-page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.90088105">
-          <caret line="84" column="18" selection-start-line="80" selection-start-column="9" selection-end-line="84" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.44493392">
+          <caret line="92" column="49" selection-start-line="92" selection-start-column="49" selection-end-line="92" selection-end-column="49" />
           <folding />
         </state>
       </provider>
