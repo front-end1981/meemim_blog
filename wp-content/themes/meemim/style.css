@@ -1,0 +1,462 @@
+@font-face {
+  font-family: Calibri;
+  src: url(../meemim/font/Calibri.ttf); }
+@font-face {
+  font-family: Capsuula;
+  src: url(../meemim/font/Capsuula.ttf); }
+* {
+  -webkit-box-sizing: inherit !important;
+  -moz-box-sizing: inherit !important;
+  box-sizing: inherit !important; }
+
+body {
+  margin: 0;
+  font-family: Calibri !important;
+  line-height: normal; }
+
+body {
+  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-size: 14px; */
+  /* line-height: 1.42857143; */
+  /* color: #333333; */
+  /* background-color: #ffffff; */ }
+
+.front-page {
+  min-height: 100%;
+  width: 100%;
+  background: url("../meemim/images/homepage_main_bg.jpg") no-repeat;
+  background-size: cover; }
+
+header {
+  max-width: 1366px;
+  height: 112px;
+  margin: auto; }
+  header.home-page .logo {
+    background: url("../meemim/images/bg_logo.png") no-repeat; }
+  header.home-page .main-navigation {
+    background: url("../meemim/images/bg_menu.png") no-repeat; }
+  header .logo,
+  header .main-navigation {
+    float: left;
+    width: 468px;
+    height: 112px;
+    background-size: cover; }
+  header .logo a {
+    margin: 40px 0 0 57px;
+    display: inline-block; }
+  header .main-navigation {
+    width: 444px;
+    float: right; }
+  header #menu-top-menu {
+    margin: 42px 0 0 67px;
+    padding: 0;
+    display: inline-flex; }
+  header #menu-top-menu li {
+    margin-right: 5px;
+    list-style: none; }
+  header.home-page li a {
+    color: #fff; }
+  header li a {
+    width: 80px;
+    padding: 5px 0;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: #5d052a;
+    font-family: Calibri;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 3px; }
+  header #menu-top-menu li:last-child a {
+    background-color: #94ad3c;
+    color: #fff; }
+  header #menu-top-menu li:last-child a:hover {
+    background-color: #94ad3c;
+    text-decoration: none; }
+  header.home-page #menu-top-menu li a:hover {
+    background-color: #5d052a;
+    text-decoration: none; }
+
+.wrapper {
+  margin: auto;
+  max-width: 1366px; }
+
+.wrapper.home-page {
+  min-height: calc(100vh - 261px);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+footer {
+  max-width: 1366px;
+  height: 128px;
+  margin: auto;
+  padding-bottom: 21px;
+  position: relative; }
+  footer .bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 2; }
+  footer .left-side {
+    position: relative;
+    z-index: 2; }
+  footer.home-page .first-row {
+    border-bottom: 1px solid #212121; }
+  footer .first-row {
+    padding-left: 57px;
+    border-bottom: 1px solid #727272; }
+  footer .first-row ul {
+    margin: 19px 0 9px 0;
+    display: inline-flex; }
+  footer .left-side ul > li {
+    list-style: none; }
+  footer .left-side ul {
+    padding: 0; }
+  footer .left-side ul li > a,
+  footer .left-side ul > li {
+    font-size: 17px;
+    font-family: Calibri;
+    text-decoration: none; }
+  footer .left-side ul li > a,
+  footer .left-side ul > li {
+    color: #2d2d2d; }
+  footer.home-page .left-side ul li > a,
+  footer.home-page .left-side ul > li {
+    color: #8f8f8f; }
+  footer .footer-menu-right-first-row li {
+    margin-right: 33px !important; }
+  footer .first-row .social {
+    float: right; }
+    footer .first-row .social li {
+      margin-right: 25px; }
+      footer .first-row .social li:nth-child(2) {
+        margin-right: 53px; }
+  footer .first-row ul {
+    padding: 0; }
+  footer .first-row ul li {
+    padding: 0;
+    margin-right: 72px; }
+  footer .first-row ul li:nth-child(2) {
+    margin-right: 105px; }
+  footer .first-column {
+    padding-left: 57px; }
+  footer .first-column,
+  footer .second-column,
+  footer .third-column {
+    margin-top: 5px;
+    margin-right: 72px;
+    float: left; }
+  footer .fourth-column {
+    float: right;
+    margin-top: 5px;
+    margin-right: 148px; }
+  footer .menu-footer-menu-right-first-row-container {
+    float: right; }
+
+.front-page-footer {
+  background-color: #000;
+  opacity: 0.3; }
+
+.main-page {
+  max-width: 1366px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .main-page .center-block {
+    width: 100%;
+    height: 218px;
+    max-width: 1366px;
+    margin: auto;
+    background: url("../meemim/images/bg_main_block.png") no-repeat center;
+    background-size: cover;
+    text-align: center; }
+    .main-page .center-block .title-block {
+      width: 100%;
+      padding: 20px 0px;
+      display: inline-block;
+      font-size: 40px;
+      font-family: Capsuula;
+      color: #fff; }
+    .main-page .center-block .content-block {
+      max-width: 360px;
+      padding: 28px 0px;
+      display: inline-block;
+      font-size: 20px;
+      color: #fff; }
+  .main-page .form-sing-up {
+    width: 100%;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.7); }
+    .main-page .form-sing-up .sing-up-message {
+      width: 465px;
+      height: 46px;
+      margin: auto;
+      background: url("../meemim/images/sing_up_for_free.png") no-repeat 3px;
+      text-align: center; }
+      .main-page .form-sing-up .sing-up-message span {
+        color: #b5b5b5;
+        font-size: 20px;
+        line-height: 35px; }
+    .main-page .form-sing-up form {
+      margin: 3px auto;
+      width: 368px; }
+      .main-page .form-sing-up form input {
+        height: 35px;
+        min-width: 285px;
+        float: left;
+        border-radius: 10px 0 0 10px;
+        border: none; }
+      .main-page .form-sing-up form .button-form {
+        height: 38px;
+        width: 83px;
+        float: left;
+        background-color: #5d052a;
+        border-radius: 0px 10px 10px 0px;
+        cursor: pointer; }
+        .main-page .form-sing-up form .button-form span {
+          color: #f0efef;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 39px;
+          padding: 0 18px; }
+
+.main-heading-title {
+  max-width: 1366px;
+  margin: 60px auto 0;
+  text-align: center; }
+  .main-heading-title h1 {
+    font-family: Capsuula;
+    font-size: 40px;
+    font-weight: normal;
+    color: #6d6d6d;
+    text-transform: uppercase; }
+
+.static-page {
+  max-width: 933px;
+  margin: 75px auto 150px;
+  color: #515151; }
+  .static-page h3 {
+    margin-bottom: 27px;
+    font-size: 30px;
+    font-weight: normal; }
+  .static-page p {
+    font-size: 23px; }
+
+.about-us-page {
+  max-width: 1366px;
+  margin: 65px auto 150px;
+  color: #484848; }
+  .about-us-page p {
+    font-size: 23px;
+    padding: 0px 130px;
+    text-align: center; }
+  .about-us-page .about-us-block,
+  .about-us-page .about-us-block2 {
+    margin: 108px 0 0 0;
+    max-width: 1366px;
+    height: 376px;
+    background: url("../meemim/images/about-us-img1.png") no-repeat;
+    background-size: cover; }
+    .about-us-page .about-us-block .rectangle,
+    .about-us-page .about-us-block2 .rectangle {
+      margin: 0 auto 146px;
+      max-width: 737px;
+      height: 230px;
+      background: url("../meemim/images/rectangele.png") no-repeat;
+      text-align: center; }
+      .about-us-page .about-us-block .rectangle span,
+      .about-us-page .about-us-block2 .rectangle span {
+        margin: 18% 0;
+        font-family: Capsuula;
+        font-size: 40px;
+        text-transform: uppercase;
+        display: inline-block;
+        color: #fff; }
+  .about-us-page .about-us-block2 {
+    height: 453px;
+    background: url("../meemim/images/about-us-img2.jpg") no-repeat; }
+    .about-us-page .about-us-block2 .rectangle {
+      margin: auto; }
+    .about-us-page .about-us-block2 .content-block {
+      font-size: 20px;
+      color: #cacaca;
+      margin: 56px auto 0;
+      width: 393px;
+      text-align: center; }
+
+.contact-us-page {
+  max-width: 1366px;
+  margin: 65px auto 150px;
+  color: #484848; }
+  .contact-us-page p {
+    font-size: 23px;
+    padding: 0px 130px;
+    text-align: center; }
+  .contact-us-page .contact-us-block {
+    max-width: 1366px;
+    height: 278px;
+    margin: 90px 0 0 0; }
+    .contact-us-page .contact-us-block img {
+      width: 100%;
+      height: auto; }
+  .contact-us-page .contact-us-message {
+    width: 465px;
+    height: 46px;
+    margin: 0  auto 40px; }
+    .contact-us-page .contact-us-message img {
+      width: 100%;
+      height: auto; }
+  .contact-us-page form {
+    width: 50%;
+    margin: auto;
+    box-sizing: border-box !important; }
+    .contact-us-page form label {
+      margin-bottom: 0;
+      color: #6e6e6e;
+      font-size: 22px;
+      font-weight: normal; }
+    .contact-us-page form textarea.form-control {
+      height: auto; }
+    .contact-us-page form .form-control {
+      height: 42px;
+      border: 1px solid #6e6e6e;
+      border-radius: 9px; }
+    .contact-us-page form .form-control:focus {
+      border-color: #6e6e6e;
+      box-shadow: none; }
+    .contact-us-page form button {
+      margin: 10px 0 0 10px;
+      padding: 3px 23px;
+      border: none;
+      border-radius: 9px;
+      background-color: #5d052a;
+      color: #dacfd3;
+      font-size: 20px; }
+      .contact-us-page form button.btn-default:hover {
+        color: #dacfd3;
+        background-color: #5d052a;
+        border: none; }
+      .contact-us-page form button.btn:hover, .contact-us-page form button .btn:focus, .contact-us-page form button .btn.focus {
+        text-decoration: none; }
+
+.pricing-page p {
+  font-size: 23px;
+  padding: 0px 130px 90px;
+  text-align: center; }
+.pricing-page h1 {
+  margin: 56px 0 65px 0;
+  font-family: Capsuula;
+  font-size: 40px;
+  font-weight: normal;
+  color: #6d6d6d;
+  text-transform: uppercase; }
+.pricing-page .casuta {
+  width: 100%;
+  height: 195px;
+  margin: 23px 0;
+  border: 1px solid #a1a1a1;
+  border-radius: 8px;
+  position: relative;
+  text-align: center; }
+  .pricing-page .casuta .title-casuta {
+    top: -37px;
+    left: 14%;
+    width: 270px;
+    height: 36px;
+    background: url("../meemim/images/title_casuta_bg.png") no-repeat;
+    position: absolute; }
+    .pricing-page .casuta .title-casuta span {
+      margin: 6px 0;
+      font-size: 23px;
+      color: #fff; }
+  .pricing-page .casuta span {
+    display: inline-block; }
+  .pricing-page .casuta .text1 {
+    padding: 16px 30px 0 30px;
+    font-size: 18px;
+    color: #484848; }
+  .pricing-page .casuta .text2 {
+    padding: 8px 30px 0 30px;
+    line-height: 43px;
+    font-size: 47px;
+    text-transform: uppercase;
+    color: #5d052a; }
+  .pricing-page .casuta .text3 {
+    padding: 11px 60px;
+    font-size: 13px;
+    color: #484848; }
+.pricing-page .col-xs-6 {
+  margin: 0 23px;
+  min-width: 375px; }
+.pricing-page .massage-sign-up {
+  height: 44px;
+  width: 100%;
+  background-color: #5d052a;
+  position: relative;
+  text-align: center; }
+  .pricing-page .massage-sign-up span {
+    color: #fff;
+    font-size: 17px;
+    margin: 10px 0px;
+    display: inline-block; }
+  .pricing-page .massage-sign-up .arrow-bottom {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #5d052a transparent transparent transparent; }
+  .pricing-page .massage-sign-up:before {
+    top: 0;
+    left: 0;
+    height: 44px;
+    width: 35px;
+    position: absolute;
+    content: "";
+    background: url("../meemim/images/left-corner-btn.png") no-repeat;
+    display: block; }
+  .pricing-page .massage-sign-up:after {
+    right: 0;
+    top: 0;
+    height: inherit;
+    width: 35px;
+    position: absolute;
+    content: "";
+    background: url("../meemim/images/right-corner-btn.png") no-repeat;
+    display: block; }
+.pricing-page form {
+  width: 413px;
+  margin: 30px auto 0; }
+  .pricing-page form .form-control:focus {
+    border-color: #5d052a;
+    box-shadow: none; }
+  .pricing-page form input {
+    width: 278px !important;
+    height: 43px;
+    border-radius: 13px 0 0 13px;
+    border-color: #5d052a;
+    font-size: 17px;
+    color: #7f7f7f; }
+  .pricing-page form button {
+    height: 45px;
+    width: 83px;
+    margin-left: -3px;
+    border: none;
+    background-color: #5d052a;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+    font-size: 17px;
+    color: #fff; }
+    .pricing-page form button.btn-default:hover {
+      color: #fff;
+      background-color: #5d052a;
+      border: none; }
+    .pricing-page form button.btn:hover, .pricing-page form button .btn:focus, .pricing-page form button .btn.focus {
+      text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */
