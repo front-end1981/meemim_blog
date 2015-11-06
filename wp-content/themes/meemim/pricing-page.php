@@ -83,9 +83,15 @@
                 <thead>
                 <tr>
                     <th>&nbsp;</th>
-                    <th>FREE</th>
-                    <th>PRO</th>
-                    <th>ENTERPRISE</th>
+                    <th class="bg-table">
+                        <div class="corner-lf"></div>
+                        FREE
+                    </th>
+                    <th class="bg-table">PRO</th>
+                    <th class="bg-table rt">
+                        <div class="corner-rt"></div>
+                        ENTERPRISE
+                    </th>
                 </tr>
                 </thead>
                 <tbody>

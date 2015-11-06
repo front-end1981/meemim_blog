@@ -458,5 +458,19 @@ footer {
       border: none; }
     .pricing-page form button.btn:hover, .pricing-page form button .btn:focus, .pricing-page form button .btn.focus {
       text-decoration: none; }
+.pricing-page table .corner {
+  background: url("../meemim/images/corner_left_casuta.png") no-repeat; }
+.pricing-page table .bg-table {
+  position: relative;
+  text-align: center;
+  background-color: #94ad3c;
+  color: #fff; }
+  .pricing-page table .bg-table .corner-lf {
+    width: 38px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: url("../meemim/images/corner_left_casuta.png") no-repeat; }
 
 /*# sourceMappingURL=style.css.map */
