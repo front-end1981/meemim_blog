@@ -20,6 +20,7 @@ $footer-page-color: #2d2d2d;
 
 body {
     margin: 0;
+    font-size: 14px;
     font-family: Calibri!important;
     line-height: normal;
 
@@ -45,16 +46,6 @@ header {
     height: 112px;
     margin: auto;
 
-    &.home-page {
-        .logo {
-            background: url("../meemim/images/bg_logo.png") no-repeat;
-        }
-    }
-    &.home-page .main-navigation
-    {
-        background: url("../meemim/images/bg_menu.png") no-repeat;
-    }
-
     .logo,
     .main-navigation
     {
@@ -72,18 +63,28 @@ header {
         width: 444px;
         float: right;
     }
-    #menu-top-menu {
-        margin: 42px 0 0 67px;
-        padding: 0;
-        display: inline-flex;
-    }
-    #menu-top-menu li {
-        margin-right: 5px;
-        list-style: none;
-    }
-    &.home-page li {
-        a {
-            color: #fff;
+
+
+    &.home-page {
+
+        #menu-top-menu li {
+            a:hover {
+                background-color: #F2B229;
+                text-decoration: none;
+            }
+        }
+
+        .logo {
+            background: url("../meemim/images/bg_logo.png") no-repeat;
+        }
+        .main-navigation {
+            background: url("../meemim/images/bg_menu.png") no-repeat;
+        }
+
+        li {
+            a {
+                color: #fff;
+            }
         }
     }
 
@@ -101,31 +102,37 @@ header {
     }
 
     #menu-top-menu {
-      li:last-child {
-        a{
-          background-color: #94ad3c;
-          color: #fff;
-        }
-      }
-    }
-    #menu-top-menu {
-      li:last-child {
-        a:hover{
-            background-color: #94ad3c;
-            text-decoration: none;
-        }
-      }
-    }
+        margin: 42px 0 0 67px;
+        padding: 0;
+        display: inline-flex;
 
-    &.home-page {
-        #menu-top-menu li {
+        .current-menu-item {
+            a {
+                background-color: #F2B229;
+            }
+        }
+
+
+        li {
             a:hover {
-                background-color: #5d052a;
+                color: inherit;
+                text-decoration: none;
+            }
+            margin-right: 5px;
+            list-style: none;
+        }
+
+        li:last-child {
+            a{
+                background-color: #94ad3c;
+                color: #fff;
+            }
+            a:hover{
+                background-color: #94ad3c;
                 text-decoration: none;
             }
         }
     }
-
 }
 
 .wrapper{
@@ -381,6 +388,38 @@ footer{
         text-align: center;
     }
 
+
+    .leadership-user {
+
+        width: 626px;
+        margin: 150px auto 0;
+
+        &:after {
+            content: ' ';
+            clear: both;
+            display: block;
+        }
+        .users {
+            max-width: 258px;
+            margin-right: 55px;
+            float: left;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .users-name{
+            font-size: 26px;
+            text-align: center;
+        }
+        .users-data{
+            font-size: 13px;
+            text-align: center;
+        }
+    }
+
     .about-us-block,
     .about-us-block2{
         margin: 108px 0 0 0;
@@ -397,9 +436,9 @@ footer{
             text-align: center;
 
             span {
-                margin: 18% 0;
+                margin: 17% 0 0% 0;
                 font-family: Capsuula;
-                font-size: 40px;
+                font-size: 3vw;
                 text-transform: uppercase;
                 display: inline-block;
                 color: #fff;
@@ -409,9 +448,13 @@ footer{
     .about-us-block2 {
         height: 453px;
         background: url("../meemim/images/about-us-img2.jpg") no-repeat;
+        background-size: contain;
 
         .rectangle {
-            margin:auto;
+            width: 70%;
+            margin: auto;
+            background-size: contain;
+            font-size: 100%;
         }
 
         .content-block {
@@ -665,6 +708,31 @@ footer{
         }
     }
     table {
+        width: 95%;
+        margin: 115px 2%;
+        .pro-cell {
+            font-size: 32px!important;
+            color: #5d052a;
+        }
+        .first-cell {
+            padding: 20px 0 0 0;
+            font-size: 23px;
+            border-top: none!important;
+            border-bottom: 1px dashed #a5a5a5;
+        }
+
+        tr > th {
+            padding: 5px 0 0 0!important;
+            font-size: 23px;
+            font-weight: normal;
+            border-bottom: none!important;
+        }
+        tr > td:not(.first-cell) {
+            text-align: center;
+            font-size: 18px;
+            border-top: none;
+            border-bottom: 1px dashed #a5a5a5;
+        }
         .corner {
             background: url("../meemim/images/corner_left_casuta.png") no-repeat;
         }
@@ -675,20 +743,74 @@ footer{
             background-color: #94ad3c;
             color: #fff;
 
-            .corner-lf {
+            &:last-child span {
+                margin-right: 20px;
+                display: inline-block;
+            }
+
+            .corner-lf,
+            .corner-rt {
                 width: 38px;
                 height: 100%;
                 top: 0;
-                left: 0;
                 position: absolute;
+            }
+
+            .corner-lf {
+                left: 0;
                 background: url("../meemim/images/corner_left_casuta.png") no-repeat;
+            }
+            .corner-rt {
+                right: 0px;
+                background: url("../meemim/images/corner_right_casuta.png") no-repeat -4px 0;
             }
         }
     }
+}
 
+.product-page {
 
+    p {
+        font-size: 23px;
+        padding: 0px 130px 90px;
+        text-align: center;
+    }
 
+    h1 {
+        margin: 56px 0 65px 0;
+        font-family: Capsuula;
+        font-size: 40px;
+        font-weight: normal;
+        color: #6d6d6d;
+        text-transform: uppercase;
+    }
+    .main-img {
+        margin: 108px 0 0 0;
+        max-width: 1366px;
+        height: 453px;
+        background: url("../meemim/images/about-us-img2.jpg") no-repeat;
+        background-size: contain;
 
+        .rectangle {
+            max-width: 737px;
+            height: 230px;
+            width: 70%;
+            margin: auto;
+            background: url("../meemim/images/rectangele.png") no-repeat;
+            background-size: contain;
+            font-size: 100%;
+            text-align: center;
+
+            span {
+                margin: 17% 0 0% 0;
+                font-family: Capsuula;
+                font-size: 3vw;
+                text-transform: uppercase;
+                display: inline-block;
+                color: #fff;
+            }
+        }
+    }
 }
 
 

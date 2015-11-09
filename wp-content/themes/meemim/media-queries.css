@@ -1,0 +1,22 @@
+@media screen and (max-width: 957px) {
+  .collapse-menu {
+    display: none; } }
+@media screen and (max-width: 650px) {
+  .about-us-page .leadership-user {
+    width: 259px; }
+    .about-us-page .leadership-user .users {
+      margin-right: 0; } }
+@media screen and (max-width: 767px) {
+  .pricing-page .form-inline input {
+    width: 100% !important;
+    border-radius: 10px; }
+  .pricing-page .form-inline button {
+    width: 100%;
+    border-radius: 10px; }
+  .pricing-page .table-responsive {
+    margin-bottom: 100px;
+    border: none; }
+    .pricing-page .table-responsive tr > th {
+      font-size: 23px; } }
+
+/*# sourceMappingURL=media-queries.css.map */

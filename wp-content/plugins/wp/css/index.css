@@ -1,0 +1,18 @@
+#team_metabox .team_metabox_body .photo {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    position: relative;
+}
+
+#team_metabox .team_metabox_body .photo .remove-photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+#team_metabox .team_metabox_footer {
+    display: block;
+}

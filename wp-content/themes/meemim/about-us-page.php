@@ -23,7 +23,20 @@
             <span>Meet the leadership</span>
         </div>
     </div>
-    <img src="<?php echo get_template_directory_uri(); ?> 'images/about-us-img1.jpg" alt="">
+
+    <div class="leadership-user">
+        <?php foreach(AboutPageHelper::getAllImages(13, 'meemim') as $image): ?>
+            <div class="users">
+                <img src="<?php echo $image[0]; ?>" alt="">
+                <div class="users-name">ALEXANDRE PESTOV</div>
+                <div class="users-data">
+                    Online meetings with unlimited
+                    audio conferencing
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
     <div class="about-us-block2">
         <div class="rectangle">
             <span>Meet the team</span>

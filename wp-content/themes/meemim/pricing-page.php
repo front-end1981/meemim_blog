@@ -88,35 +88,44 @@
                         FREE
                     </th>
                     <th class="bg-table">PRO</th>
-                    <th class="bg-table rt">
+                    <th class="bg-table">
                         <div class="corner-rt"></div>
-                        ENTERPRISE
+                        <span>ENTERPRISE</span>
                     </th>
                 </tr>
                 </thead>
                 <tbody>
+
                 <tr>
-                    <td>Meeting participants</td>
+                    <td class="first-cell">Meeting participants</td>
+                    <td></td>
+                    <td class="pro-cell">8$</td>
+                    <td></td>
                 </tr>
+
+
                 <tr>
-                    <td>Mobile apps</td>
+                    <td class="first-cell">Mobile apps</td>
                     <td>Jacob</td>
                     <td>Thornton</td>
                     <td>@fat</td>
                 </tr>
                 <tr>
-                    <td>Video conferencing</td>
-                    <td colspan="2">Larry the Bird</td>
+                    <td class="first-cell">Video conferencing</td>
+                    <td>Larry the Bird</td>
+                    <td>@twitter</td>
                     <td>@twitter</td>
                 </tr>
                 <tr>
-                    <td>Meeting participants</td>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
+                    <td class="first-cell">Meeting participants</td>
+                    <td><img src="<?php bloginfo('template_url'); ?>/images/square_ok_07.png"></td>
+                    <td><img src="<?php bloginfo('template_url'); ?>/images/square_ok_07.png"></td>
+                    <td><img src="<?php bloginfo('template_url'); ?>/images/square_ok_07.png"></td>
                 </tr>
                 <tr>
-                    <td>Mobile apps</td>
-                    <td colspan="2">Larry the Bird</td>
+                    <td class="first-cell">Mobile apps</td>
+                    <td>Larry the Bird</td>
+                    <td>@twitter</td>
                     <td>@twitter</td>
                 </tr>
                 </tbody>

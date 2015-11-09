@@ -17,8 +17,10 @@
 				<a href="/"><img src="<?php bloginfo('template_url'); ?>/images/logo_page.png" alt="Meemim logo"></a>
 			<?php endif;?>
 		</div>
-		<nav class="main-navigation">
+		<nav class="main-navigation collapse-menu">
 			<?php wp_nav_menu(array('menu' => 'top-menu', 'menu_class' => 'top-menu')); ?>
 		</nav>
 	</header>
 	<div class="wrapper <?php echo is_page('Home')? 'home-page' : ''?>">
+
+		
