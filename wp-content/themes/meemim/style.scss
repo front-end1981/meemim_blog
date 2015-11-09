@@ -151,11 +151,22 @@ header {
 
 footer{
     max-width: 1366px;
-    height: 128px;
     margin: auto;
     padding-bottom: 21px;
     position: relative;
 
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    hr {
+        top: 12px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+    }
 
     .bg {
         height: 100%;
@@ -214,23 +225,6 @@ footer{
     }
 
 
-    .footer-menu-right-first-row {
-        li {
-            margin-right: 33px!important;
-        }
-    }
-
-    .first-row {
-        .social {
-            float: right;
-            li{
-                margin-right: 25px;
-                &:nth-child(2){
-                    margin-right: 53px;
-                }
-            }
-        }
-    }
     .first-row ul {padding: 0}
     .first-row ul li {
         padding: 0;
@@ -255,9 +249,37 @@ footer{
         margin-top: 5px;
         margin-right: 148px;
     }
-    .menu-footer-menu-right-first-row-container {
-        float: right;
+    .menu-item-has-children {
+      &>a {
+          display: inline-block;
+          border-bottom: 7px solid transparent;
+      }
     }
+    .sub-menu{
+        margin-top: 10px;
+    }
+    .sub-menu {
+        .current-menu-item {
+            & > a {
+                border-bottom: 2px solid #390042;
+            }
+        }
+    }
+    .current-menu-item {
+        & > a {
+            border-bottom: 7px solid #390042;
+        }
+    }
+    .social {
+        top:5px;
+        right: 20px;
+        position: absolute;
+        li {
+            margin-right: 25px;
+            float: left;
+        }
+    }
+
 }
 .front-page-footer {
     background-color: #000;
