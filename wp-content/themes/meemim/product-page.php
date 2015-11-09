@@ -11,7 +11,9 @@
 
         <div class="main-img">
             <div class="rectangle">
-                <span>Meet the team</span>
+                <span>COMPANIES around the world use Meemim
+            to make sure EMPLOYEES can find the information
+            they need to do their job.</span>
             </div>
         </div>
 

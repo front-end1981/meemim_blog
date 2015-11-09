@@ -537,14 +537,13 @@ footer {
   padding: 0px 130px 90px;
   text-align: center; }
 .product-page h1 {
-  margin: 56px 0 65px 0;
+  margin: 56px 0 45px 0;
   font-family: Capsuula;
   font-size: 40px;
   font-weight: normal;
   color: #6d6d6d;
   text-transform: uppercase; }
 .product-page .main-img {
-  margin: 108px 0 0 0;
   max-width: 1366px;
   height: 453px;
   background: url("../meemim/images/about-us-img2.jpg") no-repeat;
@@ -559,10 +558,8 @@ footer {
     font-size: 100%;
     text-align: center; }
     .product-page .main-img .rectangle span {
-      margin: 17% 0 0% 0;
-      font-family: Capsuula;
-      font-size: 3vw;
-      text-transform: uppercase;
+      margin: 16% 20%;
+      font-size: 21px;
       display: inline-block;
       color: #fff; }
 

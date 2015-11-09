@@ -18,5 +18,11 @@
     border: none; }
     .pricing-page .table-responsive tr > th {
       font-size: 23px; } }
+@media screen and (max-width: 1000px) {
+  .product-page .main-img .rectangle span {
+    margin: 16% 20%;
+    font-size: 1.9vw;
+    display: inline-block;
+    color: #fff; } }
 
 /*# sourceMappingURL=media-queries.css.map */
