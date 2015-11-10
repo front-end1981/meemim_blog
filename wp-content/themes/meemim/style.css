@@ -95,10 +95,18 @@ header {
 
 footer {
   max-width: 1366px;
-  height: 128px;
   margin: auto;
   padding-bottom: 21px;
   position: relative; }
+  footer:after {
+    content: '';
+    display: block;
+    clear: both; }
+  footer hr {
+    top: 12px;
+    left: 0;
+    width: 100%;
+    position: absolute; }
   footer .bg {
     height: 100%;
     width: 100%;
@@ -132,14 +140,6 @@ footer {
   footer.home-page .left-side ul li > a,
   footer.home-page .left-side ul > li {
     color: #8f8f8f; }
-  footer .footer-menu-right-first-row li {
-    margin-right: 33px !important; }
-  footer .first-row .social {
-    float: right; }
-    footer .first-row .social li {
-      margin-right: 25px; }
-      footer .first-row .social li:nth-child(2) {
-        margin-right: 53px; }
   footer .first-row ul {
     padding: 0; }
   footer .first-row ul li {
@@ -159,8 +159,22 @@ footer {
     float: right;
     margin-top: 5px;
     margin-right: 148px; }
-  footer .menu-footer-menu-right-first-row-container {
-    float: right; }
+  footer .menu-item-has-children > a {
+    display: inline-block;
+    border-bottom: 7px solid transparent; }
+  footer .sub-menu {
+    margin-top: 10px; }
+  footer .sub-menu .current-menu-item > a {
+    border-bottom: 2px solid #390042; }
+  footer .current-menu-item > a {
+    border-bottom: 7px solid #390042; }
+  footer .social {
+    top: 5px;
+    right: 20px;
+    position: absolute; }
+    footer .social li {
+      margin-right: 25px;
+      float: left; }
 
 .front-page-footer {
   background-color: #000;

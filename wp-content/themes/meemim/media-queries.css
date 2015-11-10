@@ -1,3 +1,25 @@
+@media screen and (max-width: 820px) {
+  footer hr {
+    display: none; }
+  footer .menu-item-has-children > a {
+    border-bottom: none; }
+  footer .sub-menu {
+    margin-top: 0; }
+    footer .sub-menu li {
+      margin: 10px 0; }
+  footer .col {
+    width: 50%;
+    margin: 0;
+    float: left; }
+    footer .col div > ul {
+      margin-bottom: 0;
+      margin-left: 10px; }
+  footer .first-column {
+    padding-left: 10px; }
+  footer .social {
+    top: 0px;
+    left: 170px;
+    position: absolute; } }
 @media screen and (max-width: 957px) {
   .collapse-menu {
     display: none; } }
