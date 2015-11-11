@@ -28,10 +28,118 @@ body {
   background: url("../meemim/images/homepage_main_bg.jpg") no-repeat;
   background-size: cover; }
 
+.navbar {
+  min-height: 0 !important;
+  display: none;
+  font-size: 17px; }
+  .navbar.navbar-default {
+    border: none; }
+
+.home .navbar-default {
+  background-color: inherit; }
+.home .collapsing {
+  background: rgba(0, 0, 0, 0.5) !important; }
+  .home .collapsing ul {
+    margin: 10px 0;
+    list-style: none; }
+  .home .collapsing li a {
+    color: #fff; }
+
+.massage-sign-up {
+  height: 44px;
+  width: 100%;
+  background-color: #5d052a;
+  position: relative;
+  text-align: center; }
+  .massage-sign-up span {
+    color: #fff;
+    font-size: 17px;
+    margin: 10px 0px;
+    display: inline-block; }
+  .massage-sign-up .arrow-bottom {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #5d052a transparent transparent transparent; }
+  .massage-sign-up:before {
+    top: 0;
+    left: 0;
+    height: 44px;
+    width: 35px;
+    position: absolute;
+    content: "";
+    background: url("../meemim/images/left-corner-btn.png") no-repeat;
+    display: block; }
+  .massage-sign-up:after {
+    right: 0;
+    top: 0;
+    height: inherit;
+    width: 35px;
+    position: absolute;
+    content: "";
+    background: url("../meemim/images/right-corner-btn.png") no-repeat;
+    display: block; }
+
+.collapsing ul {
+  margin: 10px 0 !important;
+  list-style: none; }
+.collapsing li a {
+  color: #fff; }
+
+.collapse {
+  background: none !important;
+  text-decoration: none; }
+  .collapse.home-page {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5) !important; }
+    .collapse.home-page #menu-top-menu li a:hover {
+      background-color: #F2B229;
+      text-decoration: none; }
+    .collapse.home-page ul {
+      margin: 10px 0; }
+    .collapse.home-page li a {
+      color: #fff; }
+  .collapse ul {
+    margin: 10px 0; }
+  .collapse li {
+    margin-right: 5px;
+    list-style: none; }
+    .collapse li a {
+      width: 80px;
+      padding: 5px 0;
+      text-align: center;
+      text-decoration: none;
+      color: #5d052a;
+      font-family: Calibri;
+      font-size: 17px;
+      font-weight: 500;
+      border-radius: 3px; }
+    .collapse li a:hover {
+      color: inherit;
+      text-decoration: none; }
+
 header {
   max-width: 1366px;
   height: 112px;
   margin: auto; }
+  header .navbar-toggle {
+    top: 42px;
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: #93AC3C;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px; }
+  header .navbar-toggle .icon-bar {
+    background-color: #6f6f6f; }
+  header .navbar-collapse {
+    display: none; }
   header .logo,
   header .main-navigation {
     float: left;
@@ -88,7 +196,7 @@ header {
   max-width: 1366px; }
 
 .wrapper.home-page {
-  min-height: calc(100vh - 261px);
+  min-height: calc(100vh - 262px);
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -96,17 +204,20 @@ header {
 footer {
   max-width: 1366px;
   margin: auto;
-  padding-bottom: 21px;
+  padding-bottom: 19px;
+  top: 118px;
   position: relative; }
   footer:after {
     content: '';
     display: block;
     clear: both; }
   footer hr {
-    top: 12px;
+    top: 13px;
     left: 0;
     width: 100%;
-    position: absolute; }
+    position: absolute;
+    border-top: 1px solid;
+    color: #727272; }
   footer .bg {
     height: 100%;
     width: 100%;
@@ -134,6 +245,8 @@ footer {
     font-size: 17px;
     font-family: Calibri;
     text-decoration: none; }
+  footer .left-side ul li > ul > li > a {
+    color: #4e4e4e; }
   footer .left-side ul li > a,
   footer .left-side ul > li {
     color: #2d2d2d; }
@@ -152,7 +265,7 @@ footer {
   footer .first-column,
   footer .second-column,
   footer .third-column {
-    margin-top: 5px;
+    margin-top: 7px;
     margin-right: 72px;
     float: left; }
   footer .fourth-column {
@@ -168,13 +281,17 @@ footer {
     border-bottom: 2px solid #390042; }
   footer .current-menu-item > a {
     border-bottom: 7px solid #390042; }
+  footer.home-page .social a {
+    color: #8f8f8f; }
   footer .social {
     top: 5px;
-    right: 20px;
+    right: 35px;
     position: absolute; }
     footer .social li {
       margin-right: 25px;
       float: left; }
+      footer .social li a {
+        color: #2d2f2e; }
 
 .front-page-footer {
   background-color: #000;
@@ -204,46 +321,65 @@ footer {
       color: #fff; }
     .main-page .center-block .content-block {
       max-width: 360px;
-      padding: 28px 0px;
+      padding: 21px 0;
       display: inline-block;
       font-size: 20px;
-      color: #fff; }
+      color: #cacaca;
+      line-height: normal; }
   .main-page .form-sing-up {
     width: 100%;
     height: 200px;
     background: rgba(0, 0, 0, 0.7); }
-    .main-page .form-sing-up .sing-up-message {
-      width: 465px;
-      height: 46px;
-      margin: auto;
-      background: url("../meemim/images/sing_up_for_free.png") no-repeat 3px;
-      text-align: center; }
-      .main-page .form-sing-up .sing-up-message span {
-        color: #b5b5b5;
-        font-size: 20px;
-        line-height: 35px; }
+    .main-page .form-sing-up .wrapper-block {
+      padding: 0 36px; }
+      .main-page .form-sing-up .wrapper-block .massage-sign-up {
+        max-width: 393px;
+        height: 36px;
+        margin: auto;
+        position: relative; }
+        .main-page .form-sing-up .wrapper-block .massage-sign-up:before {
+          left: -35px;
+          background: url("../meemim/images/corner_left_color.png") no-repeat; }
+        .main-page .form-sing-up .wrapper-block .massage-sign-up:after {
+          right: -36px;
+          width: 40px;
+          background: url("../meemim/images/corner_right_color.png") no-repeat; }
+        .main-page .form-sing-up .wrapper-block .massage-sign-up span {
+          color: #b5b5b5;
+          font-size: 20px;
+          line-height: 15px; }
     .main-page .form-sing-up form {
-      margin: 3px auto;
-      width: 368px; }
+      max-width: 372px;
+      margin: 13px auto 0; }
+      .main-page .form-sing-up form .form-control:focus {
+        border-color: #d8d8d8;
+        box-shadow: none; }
       .main-page .form-sing-up form input {
+        width: 258px;
+        height: 33px;
+        padding: 0 12px;
+        border-radius: 8px 0 0 8px;
+        border-color: #d8d8d8;
+        background-color: #d8d8d8;
+        font-size: 17px;
+        color: #000; }
+      .main-page .form-sing-up form button {
         height: 35px;
-        min-width: 285px;
-        float: left;
-        border-radius: 10px 0 0 10px;
-        border: none; }
-      .main-page .form-sing-up form .button-form {
-        height: 38px;
-        width: 83px;
-        float: left;
+        width: 63px;
+        margin-left: -3px;
+        padding: 0 12px;
+        border: none;
         background-color: #5d052a;
-        border-radius: 0px 10px 10px 0px;
-        cursor: pointer; }
-        .main-page .form-sing-up form .button-form span {
-          color: #f0efef;
-          font-size: 16px;
-          font-weight: 600;
-          line-height: 39px;
-          padding: 0 18px; }
+        border-radius: 0 8px 8px 0;
+        cursor: pointer;
+        font-size: 17px;
+        color: #fff; }
+        .main-page .form-sing-up form button.btn-default:hover {
+          color: #fff;
+          background-color: #5d052a;
+          border: none; }
+        .main-page .form-sing-up form button.btn:hover, .main-page .form-sing-up form button .btn:focus, .main-page .form-sing-up form button .btn.focus {
+          text-decoration: none; }
 
 .main-heading-title {
   max-width: 1366px;
@@ -313,14 +449,13 @@ footer {
       .about-us-page .about-us-block2 .rectangle span {
         margin: 17% 0 0% 0;
         font-family: Capsuula;
-        font-size: 3vw;
+        font-size: 40px;
         text-transform: uppercase;
         display: inline-block;
         color: #fff; }
   .about-us-page .about-us-block2 {
     height: 453px;
-    background: url("../meemim/images/about-us-img2.jpg") no-repeat;
-    background-size: contain; }
+    background: url("../meemim/images/about-us-img2.jpg") no-repeat; }
     .about-us-page .about-us-block2 .rectangle {
       width: 70%;
       margin: auto;
@@ -344,17 +479,57 @@ footer {
   .contact-us-page .contact-us-block {
     max-width: 1366px;
     height: 278px;
-    margin: 90px 0 0 0; }
-    .contact-us-page .contact-us-block img {
-      width: 100%;
-      height: auto; }
-  .contact-us-page .contact-us-message {
-    width: 465px;
-    height: 46px;
+    margin: 90px 0 0 0;
+    position: relative;
+    background: url("../meemim/images/about-us-img2.jpg") no-repeat;
+    overflow: hidden; }
+    .contact-us-page .contact-us-block .rectangle {
+      left: 321px;
+      top: 147px;
+      width: 750px;
+      height: 300px;
+      position: absolute;
+      background: url("../meemim/images/rectangele.png") no-repeat 0 -90px;
+      background-size: contain; }
+      .contact-us-page .contact-us-block .rectangle p {
+        padding: 35px 170px;
+        color: #fff;
+        font-size: 23px; }
+    .contact-us-page .contact-us-block .contact-data {
+      padding-top: 60px; }
+      .contact-us-page .contact-us-block .contact-data:after {
+        content: '';
+        display: block;
+        clear: both; }
+      .contact-us-page .contact-us-block .contact-data .contact-email {
+        width: 387px;
+        height: 87px;
+        float: left;
+        background: url("../meemim/images/rectangele2.png") no-repeat;
+        color: #fff; }
+        .contact-us-page .contact-us-block .contact-data .contact-email .email {
+          padding: 0 40px;
+          font-size: 22px; }
+        .contact-us-page .contact-us-block .contact-data .contact-email .phone {
+          padding: 0 40px;
+          display: inherit;
+          font-family: Capsuula;
+          font-size: 40px; }
+      .contact-us-page .contact-us-block .contact-data .contact-address {
+        width: 354px;
+        height: 87px;
+        float: right;
+        background: url("../meemim/images/rectangele3.png") no-repeat; }
+        .contact-us-page .contact-us-block .contact-data .contact-address p {
+          padding: 3px 60px 0 140px;
+          color: #fff;
+          font-size: 20px;
+          text-align: left; }
+  .contact-us-page .massage-sign-up {
+    max-width: 474px;
     margin: 0  auto 40px; }
-    .contact-us-page .contact-us-message img {
-      width: 100%;
-      height: auto; }
+    .contact-us-page .massage-sign-up span {
+      display: none; }
   .contact-us-page form {
     width: 50%;
     margin: auto;
@@ -437,44 +612,8 @@ footer {
 .pricing-page .col-xs-6 {
   margin: 0 23px;
   min-width: 375px; }
-.pricing-page .massage-sign-up {
-  height: 44px;
-  width: 100%;
-  background-color: #5d052a;
-  position: relative;
-  text-align: center; }
-  .pricing-page .massage-sign-up span {
-    color: #fff;
-    font-size: 17px;
-    margin: 10px 0px;
-    display: inline-block; }
-  .pricing-page .massage-sign-up .arrow-bottom {
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    border-width: 10px 10px 0 10px;
-    border-style: solid;
-    border-color: #5d052a transparent transparent transparent; }
-  .pricing-page .massage-sign-up:before {
-    top: 0;
-    left: 0;
-    height: 44px;
-    width: 35px;
-    position: absolute;
-    content: "";
-    background: url("../meemim/images/left-corner-btn.png") no-repeat;
-    display: block; }
-  .pricing-page .massage-sign-up:after {
-    right: 0;
-    top: 0;
-    height: inherit;
-    width: 35px;
-    position: absolute;
-    content: "";
-    background: url("../meemim/images/right-corner-btn.png") no-repeat;
-    display: block; }
 .pricing-page form {
-  width: 413px;
+  max-width: 413px;
   margin: 30px auto 0; }
   .pricing-page form .form-control:focus {
     border-color: #5d052a;
@@ -576,5 +715,22 @@ footer {
       font-size: 21px;
       display: inline-block;
       color: #fff; }
+.product-page .row {
+  padding: 165px 0 140px;
+  border-bottom: 1px solid #a8a8a8; }
+  .product-page .row.even h1 {
+    text-align: right; }
+  .product-page .row h1 {
+    color: #6d6d6d;
+    font-family: Calibri;
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: none; }
+  .product-page .row img {
+    width: 100%; }
+  .product-page .row p {
+    color: #4a4a4a;
+    padding: 0;
+    text-align: justify; }
 
 /*# sourceMappingURL=style.css.map */

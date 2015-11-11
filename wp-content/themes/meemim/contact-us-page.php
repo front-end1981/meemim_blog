@@ -10,11 +10,31 @@
         <?php endwhile; endif; ?>
 
         <div class="contact-us-block">
-            <img src="<?php bloginfo('template_url')?>/images/CONTACT-US_img1.jpg">
+
+            <div class="rectangle">
+                <p>
+                     Please fill out the form below, and we will
+                be in touch shortly.
+                </p>
+            </div>
+
+            <div class="contact-data">
+                <div class="contact-email">
+                    <span class="phone">1-800-503-3027</span>
+                    <span class="email">Email: info@meemim.com</span>
+                </div>
+                <div class="contact-address">
+                    <p>
+                        238 Dunforest Ave.
+                        Toronto, ON
+                        M2N 4J9
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <div class="contact-us-message">
-            <img src="<?php bloginfo('template_url')?>/images/sing_up_for_free.png">
+        <div class="massage-sign-up">
+            <div class="arrow-bottom"></div>
         </div>
 
 

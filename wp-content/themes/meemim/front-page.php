@@ -15,15 +15,29 @@
         </div>
     </div>
     <div class="form-sing-up">
-        <div class="sing-up-message">
-            <span>Sing up for free</span>
-        </div>
-        <form>
-            <input type="text" >
-            <div class="button-form">
-                <span>sing up</span>
+        <div class="wrapper-block">
+            <div class="massage-sign-up">
+                <div class="corner-left"></div>
+                <div class="corner-right"></div>
+                <span>Sing up for free</span>
+                <div class="arrow-bottom"></div>
             </div>
+        </div>
+
+
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+            </div>
+            <button type="submit" class="btn btn-default">sing up</button>
         </form>
+<!--        -->
+<!--        <form>-->
+<!--            <input type="text" >-->
+<!--            <div class="button-form">-->
+<!--                <span>sing up</span>-->
+<!--            </div>-->
+<!--        </form>-->
     </div>
 </section>
 

@@ -1,10 +1,130 @@
+@media screen and (max-width: 320px) {
+  .product-page .main-img {
+    height: 120px !important; }
+    .product-page .main-img .rectangle {
+      width: 90%;
+      background: none; }
+      .product-page .main-img .rectangle span {
+        font-size: 15px !important;
+        margin: 5% 0 !important; }
+
+  footer .social li {
+    margin-right: 20px; } }
+@media screen and (max-width: 480px) {
+  .product-page .main-img {
+    height: 155px; }
+    .product-page .main-img .rectangle {
+      width: 85%;
+      background: none; }
+      .product-page .main-img .rectangle span {
+        font-size: 18px;
+        margin: 12% 0; }
+
+  .pricing-page .col-xs-6 {
+    min-width: 315px; }
+    .pricing-page .col-xs-6 .title-casuta {
+      left: 7%; } }
+@media screen and (max-width: 600px) {
+  .main-page .form-inline,
+  .pricing-page .form-inline {
+    padding: 0 0 0 5px; }
+    .main-page .form-inline .form-group,
+    .pricing-page .form-inline .form-group {
+      margin: 0;
+      padding: 0;
+      float: none !important; }
+      .main-page .form-inline .form-group input,
+      .pricing-page .form-inline .form-group input {
+        height: 35px;
+        width: 98%;
+        border-radius: 10px;
+        box-sizing: border-box !important; }
+    .main-page .form-inline button,
+    .pricing-page .form-inline button {
+      height: 35px !important;
+      width: 98% !important;
+      margin: 10px 0 0 0 !important;
+      border-radius: 10px !important;
+      box-sizing: border-box !important; }
+
+  .product-page .main-img {
+    height: 195px; }
+    .product-page .main-img .rectangle {
+      width: 85%;
+      background: none; }
+      .product-page .main-img .rectangle span {
+        font-size: 21px;
+        margin: 12% 0; }
+
+  .pricing-page .massage-sign-up span {
+    font-size: 14px; }
+  .pricing-page .form-inline button {
+    width: 100% !important; }
+  .pricing-page .table th {
+    font-size: 16px; }
+  .pricing-page .table td {
+    font-size: 16px; }
+  .pricing-page .table .pro-cell {
+    font-size: 20px !important; } }
+@media screen and (max-width: 800px) {
+  .pricing-page p,
+  .about-us-page p,
+  .contact-us-page p {
+    padding: 0 30px 90px;
+    text-align: justify; }
+
+  .main-page .center-block {
+    height: auto;
+    background: none; }
+  .main-page .form-inline .form-group {
+    display: block;
+    float: left; }
+
+  .about-us-page .about-us-block2 .content-block {
+    width: 100%; }
+
+  .contact-us-page .massage-sign-up {
+    max-width: 95% !important; }
+  .contact-us-page .contact-us-block .contact-data .contact-email {
+    margin: auto;
+    float: none;
+    background: none;
+    text-align: center; }
+  .contact-us-page .contact-us-block .contact-data .contact-address {
+    margin: auto;
+    float: none;
+    background: none; }
+    .contact-us-page .contact-us-block .contact-data .contact-address p {
+      padding: 3px 60px 0 70px; }
+  .contact-us-page form {
+    width: 95%; } }
+@media screen and (max-width: 1380px) {
+  .contact-us-page .massage-sign-up {
+    max-width: 55%; }
+    .contact-us-page .massage-sign-up span {
+      display: inline-block; }
+  .contact-us-page .contact-us-block .rectangle {
+    display: none; } }
+@media screen and (max-width: 540px) {
+  header .logo {
+    width: 235px; } }
 @media screen and (max-width: 820px) {
+  .product-page .main-img .rectangle {
+    background: none; }
+    .product-page .main-img .rectangle span {
+      display: inline-block;
+      color: #fff; }
+
   footer hr {
-    display: none; }
+    top: 7px; }
   footer .menu-item-has-children > a {
-    border-bottom: none; }
+    border-bottom: 2px solid transparent; }
+  footer .menu-item-has-children.current-menu-item > a {
+    border-bottom: 2px solid #390042; }
   footer .sub-menu {
     margin-top: 0; }
+    footer .sub-menu > a {
+      border-bottom: 2px solid #390042; }
     footer .sub-menu li {
       margin: 10px 0; }
   footer .col {
@@ -21,7 +141,17 @@
     left: 170px;
     position: absolute; } }
 @media screen and (max-width: 957px) {
+  .navbar-toggle {
+    display: block; }
+
   .collapse-menu {
+    display: none; }
+
+  .navbar {
+    min-height: 0 !important;
+    display: block !important; }
+
+  .collapse {
     display: none; } }
 @media screen and (max-width: 650px) {
   .about-us-page .leadership-user {
@@ -37,14 +167,20 @@
     border-radius: 10px; }
   .pricing-page .table-responsive {
     margin-bottom: 100px;
-    border: none; }
-    .pricing-page .table-responsive tr > th {
-      font-size: 23px; } }
+    border: none; } }
+@media screen and (max-width: 1024px) {
+  .about-us-page .about-us-block2 .rectangle,
+  .about-us-page .about-us-block .rectangle {
+    width: 100%;
+    background: none; }
+  .about-us-page .about-us-block2 .content-block,
+  .about-us-page .about-us-block .content-block {
+    margin: 0 auto 0; } }
 @media screen and (max-width: 1000px) {
-  .product-page .main-img .rectangle span {
-    margin: 16% 20%;
-    font-size: 1.9vw;
-    display: inline-block;
-    color: #fff; } }
+  .product-page .main-img .rectangle {
+    background: none; }
+    .product-page .main-img .rectangle span {
+      display: inline-block;
+      color: #fff; } }
 
 /*# sourceMappingURL=media-queries.css.map */
