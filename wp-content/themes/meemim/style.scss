@@ -23,8 +23,8 @@ body {
     font-size: 14px;
     font-family: Calibri!important;
     line-height: normal;
-
 }
+
 
 body {
     /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -41,10 +41,173 @@ body {
     background-size: cover;
 }
 
+.navbar {
+    min-height: 0!important;
+    display: none;
+    font-size: 17px;
+
+    &.navbar-default {
+        border: none;
+    }
+}
+
+.home {
+    .navbar-default {
+        background-color: inherit;
+    }
+    .collapsing {
+        background: rgba(0, 0, 0, 0.5)!important;
+        ul {
+            margin: 10px 0;
+            list-style: none;
+        }
+        li {
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.massage-sign-up {
+    height: 44px;
+    width: 100%;
+    background-color: #5d052a;
+    position: relative;
+    text-align: center;
+
+    span {
+        color: #fff;
+        font-size: 17px;
+        margin: 10px 0px;
+        display: inline-block
+    }
+
+
+    .arrow-bottom {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        border-width: 10px 10px 0 10px;
+        border-style: solid;
+        border-color: #5d052a transparent transparent transparent;
+    }
+
+    &:before {
+        top: 0;
+        left: 0;
+        height: 44px;
+        width: 35px;
+        position: absolute;
+        content: "";
+        background: url("../meemim/images/left-corner-btn.png") no-repeat;
+        display: block;
+    }
+    &:after {
+        right: 0;
+        top: 0;
+        height: inherit;
+        width: 35px;
+        position: absolute;
+        content: "";
+        background: url("../meemim/images/right-corner-btn.png") no-repeat;
+        display: block;
+    }
+}
+
+
+.collapsing {
+    ul {
+        margin: 10px 0!important;
+        list-style: none;
+    }
+    li {
+        a {
+            color: #fff;
+        }
+    }
+}
+
+
+
+.collapse {
+    background: none!important;
+    text-decoration: none;
+
+    &.home-page {
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5)!important;
+
+        #menu-top-menu li {
+            a:hover {
+                background-color: #F2B229;
+                text-decoration: none;
+            }
+        }
+        ul {
+            margin: 10px 0;
+        }
+
+        li {
+            a {
+                color: #fff;
+            }
+        }
+    }
+
+
+    ul {
+        margin: 10px 0;
+    }
+    li {
+
+        a {
+            width: 80px;
+            padding: 5px 0;
+            text-align: center;
+            text-decoration: none;
+            color: #5d052a;
+            font-family: Calibri;
+            font-size: 17px;
+            font-weight: 500;
+            border-radius: 3px;
+        }
+
+        a:hover {
+            color: inherit;
+            text-decoration: none;
+        }
+        margin-right: 5px;
+        list-style: none;
+    }
+}
+
 header {
     max-width: 1366px;
     height: 112px;
     margin: auto;
+
+
+    .navbar-toggle {
+        top:42px;
+        position: relative;
+        float: right;
+        margin-right: 15px;
+        padding: 9px 10px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        background-color: #93AC3C;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+    .navbar-toggle .icon-bar {
+        background-color: #6f6f6f;
+    }
+
+    .navbar-collapse {
+        display: none;
+    }
 
     .logo,
     .main-navigation
@@ -142,7 +305,7 @@ header {
 
 .wrapper {
     &.home-page {
-        min-height: calc(100vh - 261px);
+        min-height: calc(100vh - 262px);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -152,8 +315,10 @@ header {
 footer{
     max-width: 1366px;
     margin: auto;
-    padding-bottom: 21px;
+    padding-bottom: 19px;
+    top:118px;
     position: relative;
+
 
     &:after {
         content: '';
@@ -162,10 +327,12 @@ footer{
     }
 
     hr {
-        top: 12px;
+        top: 13px;
         left: 0;
         width: 100%;
         position: absolute;
+        border-top: 1px solid;
+        color: #727272;
     }
 
     .bg {
@@ -210,11 +377,16 @@ footer{
     }
 
 
+    .left-side ul li > ul > li > a
+    {
+        color: #4e4e4e
+    }
     .left-side ul li > a,
     .left-side ul > li
     {
         color:$footer-page-color
     }
+
 
     &.home-page {
         .left-side ul li > a,
@@ -239,7 +411,7 @@ footer{
     .second-column,
     .third-column
     {
-        margin-top: 5px;
+        margin-top: 7px;
         margin-right: 72px;
         float: left;
     }
@@ -270,13 +442,24 @@ footer{
             border-bottom: 7px solid #390042;
         }
     }
+
+    &.home-page {
+        .social {
+            a {
+                color: #8f8f8f;
+            }
+        }
+    }
     .social {
         top:5px;
-        right: 20px;
+        right: 35px;
         position: absolute;
         li {
             margin-right: 25px;
             float: left;
+            a {
+                color: #2d2f2e;
+            }
         }
     }
 
@@ -313,10 +496,11 @@ footer{
 
         .content-block {
             max-width: 360px;
-            padding: 28px 0px;
+            padding: 21px 0;
             display: inline-block;
             font-size: 20px;
-            color: #fff;
+            color: #cacaca;
+            line-height: normal;
         }
     }
     .form-sing-up {
@@ -324,43 +508,74 @@ footer{
         height: 200px;
         background: rgba(0, 0, 0, 0.7);
 
-        .sing-up-message {
-            width: 465px;
-            height: 46px;
-            margin: auto;
-            background: url("../meemim/images/sing_up_for_free.png") no-repeat 3px;
-            text-align: center;
+        .wrapper-block {
+            padding: 0 36px;
+            .massage-sign-up {
+                max-width: 393px;
+                height: 36px;
+                margin: auto;
+                position: relative;
 
-            span {
-                color: #b5b5b5;
-                font-size: 20px;
-                line-height: 35px;
+                &:before {
+                    left: -35px;
+                    background: url("../meemim/images/corner_left_color.png") no-repeat;
+                }
+                &:after {
+                    right: -36px;
+                    width: 40px;
+                    background: url("../meemim/images/corner_right_color.png") no-repeat;
+                }
+
+                span {
+                    color: #b5b5b5;
+                    font-size: 20px;
+                    line-height: 15px;
+                }
+
             }
         }
+
+
         form {
-            margin: 3px auto;
-            width: 368px;
+            max-width: 372px;
+            margin: 13px auto 0;
+
+            .form-control:focus {
+                border-color: #d8d8d8;
+                box-shadow: none;
+            }
 
             input {
-                height: 35px;
-                min-width: 285px;
-                float: left;
-                border-radius: 10px 0 0 10px;
-                border: none;
+                width: 258px;
+                height: 33px;
+                padding: 0 12px;
+                border-radius: 8px 0 0 8px;
+                border-color: #d8d8d8;
+                background-color: #d8d8d8;
+                font-size: 17px;
+                color: #000;
             }
-            .button-form {
-                height: 38px;
-                width: 83px;
-                float: left;
+
+            button {
+                height: 35px;
+                width: 63px;
+                margin-left: -3px;
+                padding: 0 12px;
+                border: none;
                 background-color: #5d052a;
-                border-radius: 0px 10px 10px 0px;
+                border-radius: 0 8px 8px 0;
                 cursor: pointer;
-                span {
-                    color: #f0efef;
-                    font-size: 16px;
-                    font-weight: 600;
-                    line-height: 39px;
-                    padding: 0 18px;
+                font-size: 17px;
+                color: #fff;
+
+                &.btn-default:hover {
+                    color: #fff;
+                    background-color: #5d052a;
+                    border: none;
+                }
+
+                &.btn:hover, .btn:focus, .btn.focus {
+                    text-decoration: none;
                 }
             }
         }
@@ -460,7 +675,7 @@ footer{
             span {
                 margin: 17% 0 0% 0;
                 font-family: Capsuula;
-                font-size: 3vw;
+                font-size: 40px;
                 text-transform: uppercase;
                 display: inline-block;
                 color: #fff;
@@ -470,7 +685,7 @@ footer{
     .about-us-block2 {
         height: 453px;
         background: url("../meemim/images/about-us-img2.jpg") no-repeat;
-        background-size: contain;
+        //background-size: contain;
 
         .rectangle {
             width: 70%;
@@ -504,19 +719,72 @@ footer{
         max-width: 1366px;
         height:278px;
         margin: 90px 0 0 0;
-        img {
-            width: 100%;
-            height: auto;
+        position: relative;
+        background: url("../meemim/images/about-us-img2.jpg") no-repeat;
+        overflow: hidden;
+
+
+        .rectangle {
+            left: 321px;
+            top: 147px;
+            width: 750px;
+            height: 300px;
+            position: absolute;
+            background: url("../meemim/images/rectangele.png") no-repeat 0 -90px;
+            background-size: contain;
+            p {
+                padding: 35px 170px;
+                color: #fff;
+                font-size: 23px;
+            }
         }
+
+        .contact-data {
+            padding-top: 60px;
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .contact-email {
+                width: 387px;
+                height: 87px;
+                float: left;
+                background: url("../meemim/images/rectangele2.png") no-repeat;
+                color: #fff;
+
+                .email {
+                    padding: 0 40px;
+                    font-size: 22px;
+                }
+                .phone {
+                    padding: 0 40px;
+                    display: inherit;
+                    font-family: Capsuula;
+                    font-size: 40px;
+                }
+            }
+            .contact-address {
+                width: 354px;
+                height: 87px;
+                float: right;
+                background: url("../meemim/images/rectangele3.png") no-repeat;
+                p {
+                    padding: 3px 60px 0 140px;
+                    color: #fff;
+                    font-size: 20px;
+                    text-align: left;
+                }
+            }
+        }
+
     }
-    .contact-us-message{
-        width: 465px;
-        height: 46px;
+
+    .massage-sign-up {
+        max-width: 474px;
         margin: 0  auto 40px;
-        //background: url("../meemim/images/sing_up_for_free.png") no-repeat 3px;
-        img {
-            width: 100%;
-            height: auto;
+        span {
+            display: none;
         }
     }
 
@@ -642,55 +910,8 @@ footer{
         min-width: 375px;
     }
 
-
-    .massage-sign-up {
-        height: 44px;
-        width: 100%;
-        background-color: #5d052a;
-        position: relative;
-        text-align: center;
-
-        span {
-            color: #fff;
-            font-size: 17px;
-            margin: 10px 0px;
-            display: inline-block
-        }
-
-
-        .arrow-bottom {
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            border-width: 10px 10px 0 10px;
-            border-style: solid;
-            border-color: #5d052a transparent transparent transparent;
-        }
-
-        &:before {
-            top: 0;
-            left: 0;
-            height: 44px;
-            width: 35px;
-            position: absolute;
-            content: "";
-            background: url("../meemim/images/left-corner-btn.png") no-repeat;
-            display: block;
-        }
-        &:after {
-            right: 0;
-            top: 0;
-            height: inherit;
-            width: 35px;
-            position: absolute;
-            content: "";
-            background: url("../meemim/images/right-corner-btn.png") no-repeat;
-            display: block;
-        }
-    }
-
     form {
-        width: 413px;
+        max-width: 413px;
         margin: 30px auto 0;
 
         .form-control:focus {
@@ -828,6 +1049,33 @@ footer{
                 display: inline-block;
                 color: #fff;
             }
+        }
+    }
+
+    .row {
+        padding: 165px 0 140px;
+        border-bottom: 1px solid #a8a8a8;
+
+        &.even {
+            h1 {
+                text-align: right;
+            }
+        }
+
+        h1 {
+            color: #6d6d6d;
+            font-family: Calibri;
+            font-size: 40px;
+            font-weight: 500;
+            text-transform: none;
+        }
+        img {
+            width: 100%;
+        }
+        p {
+            color: #4a4a4a;
+            padding: 0;
+            text-align: justify;
         }
     }
 }

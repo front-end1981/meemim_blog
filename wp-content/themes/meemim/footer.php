@@ -1,19 +1,12 @@
 
+
+
 </div>
-	<footer class="<?php echo is_page('Home')? 'home-page' : ''?>">
+<div style="overflow: hidden">
+    <footer class="<?php echo is_page('Home')? 'home-page' : ''?>">
         <hr>
         <?php echo is_page('Home')? '<div class="bg"></div>' : ''?>
         <div class="left-side">
-<!--            <div class="first-row">-->
-<!--                <ul>-->
-<!--                    <li>Made by Meemim</li>-->
-<!--                </ul>-->
-<!--                <ul class="social">-->
-<!--                    <li><a href="#" class="icon-linkedin"></a></li>-->
-<!--                    <li><a href="#" class="icon-twitter"></a></li>-->
-<!--                </ul>-->
-<!--            </div>-->
-
             <div class="col first-column">
                 <ul>
                     <li>Made by Meemim</li>
@@ -39,6 +32,8 @@
             <div class="right-side"></div>
         </div>
     </footer>
+</div>
+
 	<?php wp_footer(); ?>
 </body>
 </html>

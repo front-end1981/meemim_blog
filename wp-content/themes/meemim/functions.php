@@ -30,6 +30,9 @@ add_action('wp_enqueue_scripts', function () {
 function enqueue_scripts () {
     wp_register_script('html5-shim', 'http://html5shim.googlecode.com/svn/trunk/html5.js');
     wp_enqueue_script('html5-shim');
-    wp_enqueue_style('meemim-bootstrap', dirname(get_stylesheet_uri()).'/css/bootstrap/js/bootstrap.min.js');
-}
+    wp_enqueue_script('jquery-js', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
+    wp_enqueue_script('bootstrap-js', dirname(get_stylesheet_uri()).'/css/bootstrap/js/bootstrap.min.js');
+    wp_enqueue_script('function-js', dirname(get_stylesheet_uri()).'/js/functions.js');
 
+}
+add_action('wp_enqueue_scripts', 'enqueue_scripts');
