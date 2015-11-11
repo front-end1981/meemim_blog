@@ -391,6 +391,11 @@ footer {
     font-weight: normal;
     color: #6d6d6d;
     text-transform: uppercase; }
+  .main-heading-title p {
+    max-width: 369px;
+    margin: 22px auto 0;
+    color: #707070;
+    font-size: 23px; }
 
 .static-page {
   max-width: 933px;
@@ -732,5 +737,115 @@ footer {
     color: #4a4a4a;
     padding: 0;
     text-align: justify; }
+
+.blog-index {
+  margin-top: 80px; }
+  .blog-index .content {
+    max-width: 970px; }
+    .blog-index .content form {
+      max-width: 413px;
+      margin: 30px auto 0; }
+      .blog-index .content form .form-control:focus {
+        border-color: #5d052a;
+        box-shadow: none; }
+      .blog-index .content form input {
+        width: 278px !important;
+        height: 43px;
+        border-radius: 13px 0 0 13px;
+        border-color: #5d052a;
+        font-size: 17px;
+        color: #7f7f7f; }
+      .blog-index .content form button {
+        height: 45px;
+        width: 83px;
+        margin-left: -3px;
+        border: none;
+        background-color: #5d052a;
+        border-radius: 0px 10px 10px 0px;
+        cursor: pointer;
+        font-size: 17px;
+        color: #fff; }
+        .blog-index .content form button.btn-default:hover {
+          color: #fff;
+          background-color: #5d052a;
+          border: none; }
+        .blog-index .content form button.btn:hover, .blog-index .content form button .btn:focus, .blog-index .content form button .btn.focus {
+          text-decoration: none; }
+    .blog-index .content .block {
+      margin-left: 92px;
+      margin-bottom: 77px; }
+      .blog-index .content .block:after {
+        content: '';
+        display: block;
+        clear: both; }
+      .blog-index .content .block.first .group:first-child {
+        max-width: 567px;
+        margin-right: 47px; }
+      .blog-index .content .block.first .group {
+        max-width: 264px; }
+        .blog-index .content .block.first .group img {
+          height: 282px; }
+      .blog-index .content .block.second .group:last-child {
+        margin-right: 0; }
+      .blog-index .content .block.second .group {
+        max-width: 258px;
+        margin-right: 52px; }
+        .blog-index .content .block.second .group img {
+          height: 282px; }
+      .blog-index .content .block.third .group:first-child {
+        max-width: 264px;
+        margin-right: 47px; }
+      .blog-index .content .block.third .group {
+        max-width: 567px; }
+        .blog-index .content .block.third .group img {
+          height: 282px; }
+      .blog-index .content .block.block-title .suggested-readings {
+        max-width: 248px;
+        margin-right: 60px;
+        float: left; }
+        .blog-index .content .block.block-title .suggested-readings h3 {
+          margin-top: 0;
+          font-size: 40px;
+          color: #6d6d6d; }
+        .blog-index .content .block.block-title .suggested-readings p {
+          font-size: 20px;
+          color: #707070; }
+      .blog-index .content .block.block-title .group {
+        max-width: 568px; }
+        .blog-index .content .block.block-title .group img {
+          height: 286px; }
+      .blog-index .content .block .group {
+        float: left; }
+        .blog-index .content .block .group img {
+          width: 100%;
+          border-radius: 8px; }
+        .blog-index .content .block .group .title {
+          margin-top: 20px;
+          font-size: 26px;
+          font-weight: bold; }
+        .blog-index .content .block .group .date {
+          font-size: 26px; }
+        .blog-index .content .block .group .share {
+          margin: 8px 0 0 0;
+          font-size: 13px;
+          border-top: 1px solid #000;
+          color: #484848; }
+          .blog-index .content .block .group .share:after {
+            content: '';
+            display: block;
+            clear: both; }
+          .blog-index .content .block .group .share .days-ago {
+            margin: 24px 0 0 0;
+            text-transform: uppercase;
+            float: left; }
+          .blog-index .content .block .group .share button {
+            margin: 10px 0px 0px 10px;
+            padding: 2px 19px;
+            border: medium none;
+            border-radius: 5px;
+            background-color: #5D052A;
+            color: #fff;
+            font-size: 18px;
+            float: right; }
 
 /*# sourceMappingURL=style.css.map */
