@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'meemim';
-  src: url('../font/meemim.eot?41228550');
-  src: url('../font/meemim.eot?41228550#iefix') format('embedded-opentype'),
-       url('../font/meemim.woff?41228550') format('woff'),
-       url('../font/meemim.ttf?41228550') format('truetype'),
-       url('../font/meemim.svg?41228550#meemim') format('svg');
+  src: url('../font/meemim.eot?10637592');
+  src: url('../font/meemim.eot?10637592#iefix') format('embedded-opentype'),
+       url('../font/meemim.woff?10637592') format('woff'),
+       url('../font/meemim.ttf?10637592') format('truetype'),
+       url('../font/meemim.svg?10637592#meemim') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'meemim';
-    src: url('../font/meemim.svg?41228550#meemim') format('svg');
+    src: url('../font/meemim.svg?10637592#meemim') format('svg');
   }
 }
 */
@@ -56,3 +56,5 @@
  
 .icon-linkedin:before { content: '\e800'; } /* '' */
 .icon-twitter:before { content: '\e801'; } /* '' */
+.icon-gplus:before { content: '\e802'; } /* '' */
+.icon-facebook:before { content: '\e803'; } /* '' */

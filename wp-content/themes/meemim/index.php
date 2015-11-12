@@ -25,6 +25,53 @@ get_header(); ?>
     </div>
 
     <section class="blog-index">
+        <div class="sidebar top">
+            <div class="suggested-readings">
+                <h3>Suggested readings</h3>
+                <div class="block-sidebar">
+                    <div class="title">
+                        Social Media News You
+                        Need to Know:
+                    </div>
+                    <div class="date">
+                        October 2015 Roundup
+                    </div>
+                    <p>
+                        Hatching the ideas and techno
+                        Shape the future of the social
+                    </p>
+                </div>
+
+                <div class="block-sidebar">
+                    <div class="title">
+                        Social Media News You
+                        Need to Know:
+                    </div>
+                    <div class="date">
+                        October 2015 Roundup
+                    </div>
+                    <p>
+                        Hatching the ideas and techno
+                        Shape the future of the social
+                    </p>
+                </div>
+
+                <div class="block-sidebar">
+                    <div class="title">
+                        Social Media News You
+                        Need to Know:
+                    </div>
+                    <div class="date">
+                        October 2015 Roundup
+                    </div>
+                    <p>
+                        Hatching the ideas and techno
+                        Shape the future of the social
+                    </p>
+                </div>
+
+            </div>
+        </div>
         <div class="content">
             <div class="block block-title">
                 <div class="suggested-readings">
@@ -37,6 +84,9 @@ get_header(); ?>
                     </p>
                 </div>
                 <div class="group">
+                    <div class="featured">
+                        <span>Featured</span>
+                    </div>
                     <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
                     <div class="title">
                         Our New Plan to Educate 1 Million Social Media
@@ -48,6 +98,14 @@ get_header(); ?>
                     <div class="share">
                         <div class="days-ago">2 days ago</div>
                         <button  class="btn btn-default">Share</button>
+                        <div class="social" style="display: none">
+                            <ul>
+                                <li><a href="#" class="icon-linkedin"></a></li>
+                                <li><a href="#" class="icon-twitter"></a></li>
+                                <li><a href="#" class="icon-facebook"></a></li>
+                                <li><a href="#" class="icon-gplus"></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -65,6 +123,14 @@ get_header(); ?>
                     <div class="share">
                         <div class="days-ago">2 days ago</div>
                         <button  class="btn btn-default">Share</button>
+                        <div class="social" style="display: none">
+                            <ul>
+                                <li><a href="#" class="icon-linkedin"></a></li>
+                                <li><a href="#" class="icon-twitter"></a></li>
+                                <li><a href="#" class="icon-facebook"></a></li>
+                                <li><a href="#" class="icon-gplus"></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -78,7 +144,27 @@ get_header(); ?>
                     </div>
                     <div class="share">
                         <div class="days-ago">2 days ago</div>
-                        <button  class="btn btn-default">Share</button>
+                        <button  class="btn btn-default" style="display: none">Share</button>
+                        <div class="social">
+                            <ul>
+                                <li>
+                                    <div class="posted">3</div>
+                                    <a href="#" class="icon-linkedin"></a>
+                                </li>
+                                <li>
+                                    <div class="posted">3</div>
+                                    <a href="#" class="icon-twitter"></a>
+                                </li>
+                                <li>
+                                    <div class="posted">3</div>
+                                    <a href="#" class="icon-facebook"></a>
+                                </li>
+                                <li>
+                                    <div class="posted">3</div>
+                                    <a href="#" class="icon-gplus"></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -158,19 +244,77 @@ get_header(); ?>
             </div>
             <div class="massage-sign-up">
                 <span>
-                    Choose your plan and enter your email to get started
+                 Sign up to our blog updates
                 </span>
                 <div class="arrow-bottom"></div>
             </div>
             <form class="form-inline" role="form">
-                <div class="form-group">
+                <div class="form-group" id="blog-index">
                     <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
                 </div>
                 <button type="submit" class="btn btn-default">sing up</button>
             </form>
         </div>
-        <div class="sidebar"></div>
+        <div class="sidebar">
+            <div class="suggested-readings">
+                <h3>Suggested readings</h3>
+                <div class="block-sidebar">
+                    <div class="title">
+                        Social Media News You
+                        Need to Know:
+                    </div>
+                    <div class="date">
+                        October 2015 Roundup
+                    </div>
+                    <p>
+                        Hatching the ideas and techno
+                        Shape the future of the social
+                    </p>
+                </div>
+
+                <div class="block-sidebar">
+                    <div class="title">
+                        Social Media News You
+                        Need to Know:
+                    </div>
+                    <div class="date">
+                        October 2015 Roundup
+                    </div>
+                    <p>
+                        Hatching the ideas and techno
+                        Shape the future of the social
+                    </p>
+                </div>
+
+                <div class="block-sidebar">
+                    <div class="title">
+                        Social Media News You
+                        Need to Know:
+                    </div>
+                    <div class="date">
+                        October 2015 Roundup
+                    </div>
+                    <p>
+                        Hatching the ideas and techno
+                        Shape the future of the social
+                    </p>
+                </div>
+
+            </div>
+        </div>
     </section>
+
+    <div class="pagination-blog">
+        <ul>
+            <li><a href="#" class="active">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#" class="more">...</a></li>
+        </ul>
+    </div>
 
 
 <?php

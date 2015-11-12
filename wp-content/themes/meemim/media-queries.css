@@ -47,6 +47,25 @@
       border-radius: 10px !important;
       box-sizing: border-box !important; }
 
+  .blog-index .form-inline {
+    padding: 0 0 0 5px; }
+    .blog-index .form-inline #blog-index.form-group {
+      margin: 0;
+      padding: 0;
+      float: none;
+      display: block; }
+      .blog-index .form-inline #blog-index.form-group input#exampleInputEmail2 {
+        height: 45px;
+        width: 98%;
+        border-radius: 10px;
+        box-sizing: border-box !important; }
+    .blog-index .form-inline button.btn {
+      height: 45px;
+      width: 98%;
+      margin: 10px 0 0 0;
+      border-radius: 10px;
+      box-sizing: border-box !important; }
+
   .product-page .main-img {
     height: 195px; }
     .product-page .main-img .rectangle {
@@ -98,6 +117,65 @@
       padding: 3px 60px 0 70px; }
   .contact-us-page form {
     width: 95%; } }
+@media screen and (max-width: 1350px) {
+  .blog-index .content {
+    max-width: 100%;
+    margin-left: 30px; }
+    .blog-index .content .block.block-title .group {
+      max-width: 67%; }
+    .blog-index .content .block.first .group:first-child {
+      max-width: 67%; }
+    .blog-index .content .block.first .group {
+      max-width: 26%; }
+    .blog-index .content .block.second .group {
+      max-width: 30%;
+      margin-right: 42px; }
+    .blog-index .content .block.third .group:first-child {
+      max-width: 26%; }
+    .blog-index .content .block.third .group {
+      max-width: 67%; }
+  .blog-index .suggested-readings {
+    max-width: 24%; }
+  .blog-index .sidebar {
+    display: none; }
+    .blog-index .sidebar.top {
+      margin-bottom: 30px;
+      margin-left: 30px;
+      display: block;
+      overflow: hidden; }
+      .blog-index .sidebar.top .suggested-readings {
+        max-width: 100%; } }
+@media screen and (max-width: 1041px) {
+  .blog-index .content {
+    max-width: 100%;
+    margin-left: 30px;
+    margin-right: 30px; }
+    .blog-index .content .block {
+      margin-bottom: 0; }
+      .blog-index .content .block .group {
+        margin-bottom: 77px; }
+      .blog-index .content .block.block-title .group {
+        max-width: 100%; }
+      .blog-index .content .block.first .group:first-child {
+        max-width: 100%;
+        margin-right: 0px; }
+      .blog-index .content .block.first .group {
+        max-width: 100%; }
+      .blog-index .content .block.second .group {
+        max-width: 100%;
+        margin-right: 0; }
+      .blog-index .content .block.third .group:first-child {
+        max-width: 100%;
+        margin-right: 0; }
+      .blog-index .content .block.third .group {
+        max-width: 100%; }
+  .blog-index .suggested-readings {
+    max-width: 100%;
+    margin-right: 0; }
+  .blog-index form.form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle; } }
 @media screen and (max-width: 1380px) {
   .contact-us-page .massage-sign-up {
     max-width: 55%; }
