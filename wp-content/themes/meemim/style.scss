@@ -1370,4 +1370,34 @@ footer{
     }
 }
 
+.blog-single {
+    .main-img {
+        height: 279px;
+        margin-top: 70px;
+        position: relative;
+        background: url("../meemim/images/BLOG-INNER-PAGE.jpg") no-repeat;
+        .rectangle {
+            left: 16%;
+            height: 100%;
+            width: 913px;
+            background: url("../meemim/images/rectangele4.png") no-repeat;
+            position: absolute;
+            .main-img-title {
+                max-width: 760px;
+                margin: 7% auto;
+                color: #fff;
+                text-align: center;
+                span {
+                    &:first-child {
+                        font-weight: bold;
+                    }
+                    display: inline-block;
+                    font-size: 34px;
+                }
+            }
+        }
+
+    }
+}
+
 

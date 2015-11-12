@@ -930,4 +930,26 @@ footer {
         .pagination-blog ul li a.active {
           border-bottom: 3px solid #5d052a; }
 
+.blog-single .main-img {
+  height: 279px;
+  margin-top: 70px;
+  position: relative;
+  background: url("../meemim/images/BLOG-INNER-PAGE.jpg") no-repeat; }
+  .blog-single .main-img .rectangle {
+    left: 16%;
+    height: 100%;
+    width: 913px;
+    background: url("../meemim/images/rectangele4.png") no-repeat;
+    position: absolute; }
+    .blog-single .main-img .rectangle .main-img-title {
+      max-width: 760px;
+      margin: 7% auto;
+      color: #fff;
+      text-align: center; }
+      .blog-single .main-img .rectangle .main-img-title span {
+        display: inline-block;
+        font-size: 34px; }
+        .blog-single .main-img .rectangle .main-img-title span:first-child {
+          font-weight: bold; }
+
 /*# sourceMappingURL=style.css.map */
