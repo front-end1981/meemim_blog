@@ -1,5 +1,5 @@
-(function ( $ ) {
-    $('footer').on('click', function ( ) {
-        console.log("OK");
-    });
-})(jQuery);
+//(function ( $ ) {
+//    $('footer').on('click', function ( ) {
+//        console.log("OK");
+//    });
+//})(jQuery);

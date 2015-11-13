@@ -205,7 +205,14 @@ footer {
   max-width: 1366px;
   margin: auto;
   padding-bottom: 19px;
+  top: 115px;
   position: relative; }
+  footer.animation-top {
+    top: 0;
+    transition: top 500ms ease-out 0s; }
+  footer.animation-bottom {
+    top: 115px;
+    transition: top 500ms ease-out 0s; }
   footer:after {
     content: '';
     display: block;
@@ -578,44 +585,48 @@ footer {
   font-weight: normal;
   color: #6d6d6d;
   text-transform: uppercase; }
-.pricing-page .casuta {
-  width: 100%;
-  height: 195px;
-  margin: 23px 0;
-  border: 1px solid #a1a1a1;
-  border-radius: 8px;
-  position: relative;
-  text-align: center; }
-  .pricing-page .casuta .title-casuta {
-    top: -37px;
-    left: 14%;
+.pricing-page .column {
+  width: 29%;
+  margin: 0 23px;
+  float: left;
+  position: relative; }
+  .pricing-page .column .title-casuta {
+    top: 23px;
+    margin: auto;
     width: 270px;
     height: 36px;
     background: url("../meemim/images/title_casuta_bg.png") no-repeat;
-    position: absolute; }
-    .pricing-page .casuta .title-casuta span {
+    text-align: center;
+    position: relative; }
+    .pricing-page .column .title-casuta span {
       margin: 6px 0;
       font-size: 23px;
+      line-height: 42px;
       color: #fff; }
-  .pricing-page .casuta span {
-    display: inline-block; }
-  .pricing-page .casuta .text1 {
-    padding: 16px 30px 0 30px;
-    font-size: 18px;
-    color: #484848; }
-  .pricing-page .casuta .text2 {
-    padding: 8px 30px 0 30px;
-    line-height: 43px;
-    font-size: 47px;
-    text-transform: uppercase;
-    color: #5d052a; }
-  .pricing-page .casuta .text3 {
-    padding: 11px 60px;
-    font-size: 13px;
-    color: #484848; }
-.pricing-page .col-xs-6 {
-  margin: 0 23px;
-  min-width: 375px; }
+  .pricing-page .column .casuta {
+    width: 100%;
+    height: 195px;
+    margin: 23px 0;
+    border: 1px solid #a1a1a1;
+    border-radius: 8px;
+    position: relative;
+    text-align: center; }
+    .pricing-page .column .casuta span {
+      display: inline-block; }
+    .pricing-page .column .casuta .text1 {
+      padding: 16px 30px 0 30px;
+      font-size: 18px;
+      color: #484848; }
+    .pricing-page .column .casuta .text2 {
+      padding: 8px 30px 0 30px;
+      line-height: 43px;
+      font-size: 47px;
+      text-transform: uppercase;
+      color: #5d052a; }
+    .pricing-page .column .casuta .text3 {
+      padding: 11px 60px;
+      font-size: 13px;
+      color: #484848; }
 .pricing-page form {
   max-width: 413px;
   margin: 30px auto 0; }
@@ -665,7 +676,8 @@ footer {
     text-align: center;
     font-size: 18px;
     border-top: none;
-    border-bottom: 1px dashed #a5a5a5; }
+    border-bottom: 1px dashed #a5a5a5;
+    vertical-align: inherit; }
   .pricing-page table .corner {
     background: url("../meemim/images/corner_left_casuta.png") no-repeat; }
   .pricing-page table .bg-table {
@@ -770,35 +782,6 @@ footer {
     max-width: 970px;
     margin-left: 92px;
     float: left; }
-    .blog-index .content form {
-      max-width: 413px;
-      margin: 30px auto 0; }
-      .blog-index .content form .form-control:focus {
-        border-color: #5d052a;
-        box-shadow: none; }
-      .blog-index .content form input#exampleInputEmail2 {
-        width: 278px;
-        height: 33px;
-        border-radius: 13px 0 0 13px;
-        border-color: #5d052a;
-        font-size: 17px;
-        color: #7f7f7f; }
-      .blog-index .content form button {
-        height: 35px;
-        width: 83px;
-        margin-left: -3px;
-        border: none;
-        background-color: #5d052a;
-        border-radius: 0px 10px 10px 0px;
-        cursor: pointer;
-        font-size: 17px;
-        color: #fff; }
-        .blog-index .content form button.btn-default:hover {
-          color: #fff;
-          background-color: #5d052a;
-          border: none; }
-        .blog-index .content form button.btn:hover, .blog-index .content form button .btn:focus, .blog-index .content form button .btn.focus {
-          text-decoration: none; }
     .blog-index .content .block {
       margin-bottom: 77px; }
       .blog-index .content .block:after {
@@ -913,6 +896,44 @@ footer {
             font-size: 18px;
             float: right; }
 
+.blog-index form,
+.blog-single form {
+  max-width: 413px;
+  margin: 30px auto 0; }
+  .blog-index form .form-control:focus,
+  .blog-single form .form-control:focus {
+    border-color: #5d052a;
+    box-shadow: none; }
+  .blog-index form input#exampleInputEmail2,
+  .blog-single form input#exampleInputEmail2 {
+    width: 278px;
+    height: 33px;
+    border-radius: 13px 0 0 13px;
+    border-color: #5d052a;
+    font-size: 17px;
+    color: #7f7f7f; }
+  .blog-index form button,
+  .blog-single form button {
+    height: 35px;
+    width: 83px;
+    margin-left: -3px;
+    border: none;
+    background-color: #5d052a;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+    font-size: 17px;
+    color: #fff; }
+    .blog-index form button.btn-default:hover,
+    .blog-single form button.btn-default:hover {
+      color: #fff;
+      background-color: #5d052a;
+      border: none; }
+    .blog-index form button.btn:hover, .blog-index form button .btn:focus, .blog-index form button .btn.focus,
+    .blog-single form button.btn:hover,
+    .blog-single form button .btn:focus,
+    .blog-single form button .btn.focus {
+      text-decoration: none; }
+
 .pagination-blog {
   margin: 20px 0 57px 0;
   display: block !important;
@@ -930,26 +951,149 @@ footer {
         .pagination-blog ul li a.active {
           border-bottom: 3px solid #5d052a; }
 
-.blog-single .main-img {
-  height: 279px;
-  margin-top: 70px;
-  position: relative;
-  background: url("../meemim/images/BLOG-INNER-PAGE.jpg") no-repeat; }
-  .blog-single .main-img .rectangle {
-    left: 16%;
-    height: 100%;
-    width: 913px;
-    background: url("../meemim/images/rectangele4.png") no-repeat;
-    position: absolute; }
-    .blog-single .main-img .rectangle .main-img-title {
-      max-width: 760px;
-      margin: 7% auto;
-      color: #fff;
+.blog-single {
+  position: relative; }
+  .blog-single .content {
+    max-width: 916px;
+    margin: auto; }
+    .blog-single .content .user {
+      margin: 108px auto 90px;
       text-align: center; }
-      .blog-single .main-img .rectangle .main-img-title span {
-        display: inline-block;
-        font-size: 34px; }
-        .blog-single .main-img .rectangle .main-img-title span:first-child {
-          font-weight: bold; }
+      .blog-single .content .user.written-by {
+        margin: 88px auto 53px; }
+        .blog-single .content .user.written-by span {
+          margin-right: 12px;
+          font-size: 23px; }
+      .blog-single .content .user img {
+        margin-right: 24px;
+        border-radius: 4px; }
+      .blog-single .content .user .block-user {
+        vertical-align: middle;
+        display: inline-block; }
+        .blog-single .content .user .block-user:after {
+          content: '';
+          clear: both;
+          display: block; }
+        .blog-single .content .user .block-user .user-name,
+        .blog-single .content .user .block-user .user-data {
+          text-align: left;
+          color: #414141; }
+        .blog-single .content .user .block-user .user-name {
+          font-size: 23px; }
+        .blog-single .content .user .block-user .user-data {
+          font-size: 18px; }
+    .blog-single .content h1, .blog-single .content h2, .blog-single .content h3 {
+      font-size: 47px;
+      font-weight: bold;
+      color: #3c3c3c; }
+    .blog-single .content h2, .blog-single .content h3 {
+      font-size: 37px; }
+    .blog-single .content p {
+      font-size: 23px;
+      color: #4a4a4a; }
+    .blog-single .content .massage-sign-up {
+      margin-top: 104px; }
+  .blog-single .main-img {
+    height: 279px;
+    margin-top: 70px;
+    position: relative;
+    background: url("../meemim/images/BLOG-INNER-PAGE.jpg") no-repeat; }
+    .blog-single .main-img .rectangle {
+      left: 16%;
+      height: 100%;
+      width: 913px;
+      background: url("../meemim/images/rectangele4.png") no-repeat;
+      position: absolute; }
+      .blog-single .main-img .rectangle .main-img-title {
+        max-width: 760px;
+        margin: 7% auto;
+        color: #fff;
+        text-align: center; }
+        .blog-single .main-img .rectangle .main-img-title span {
+          display: inline-block;
+          font-size: 34px; }
+          .blog-single .main-img .rectangle .main-img-title span:first-child {
+            font-weight: bold; }
+  .blog-single form.set-comments {
+    max-width: 100%;
+    margin-top: 100px;
+    box-sizing: border-box !important; }
+    .blog-single form.set-comments .form-group {
+      margin-bottom: 3px;
+      text-align: center; }
+    .blog-single form.set-comments label {
+      font-size: 21px;
+      font-weight: normal;
+      color: #414141; }
+    .blog-single form.set-comments textarea {
+      border-radius: 8px;
+      border-color: #828282; }
+    .blog-single form.set-comments ul {
+      margin-left: 5px;
+      margin-bottom: 0;
+      padding-left: 0;
+      list-style: none; }
+      .blog-single form.set-comments ul li {
+        display: inline-block; }
+        .blog-single form.set-comments ul li:last-of-type a {
+          border-right: 0; }
+        .blog-single form.set-comments ul li a {
+          padding: 0 5px;
+          border-right: 1px solid;
+          font-size: 17px;
+          color: #414141; }
+  .blog-single .comments .user {
+    margin: 40px 0 130px 0;
+    text-align: left; }
+    .blog-single .comments .user img {
+      width: 57px;
+      height: 63px;
+      margin-right: 18px;
+      border-radius: 5px;
+      float: left; }
+    .blog-single .comments .user .block-user .user-name {
+      font-size: 23px; }
+    .blog-single .comments .user .block-user .user-data {
+      max-width: 830px;
+      font-size: 16px; }
+  .blog-single .comments:after {
+    content: '';
+    display: block;
+    clear: both; }
+  .blog-single .comments .user-avatar {
+    float: left; }
+  .blog-single .comments .block-user {
+    color: #414141; }
+    .blog-single .comments .block-user .user-nick {
+      font-size: 23px; }
+    .blog-single .comments .block-user .user-comment {
+      font-size: 16px; }
+  .blog-single .social {
+    top: 410px;
+    position: absolute; }
+    .blog-single .social ul:first-child {
+      border-bottom: 1px solid; }
+      .blog-single .social ul:first-child li {
+        margin-bottom: 15px; }
+    .blog-single .social ul:last-child li:first-child {
+      margin-top: 15px; }
+    .blog-single .social ul {
+      margin-bottom: 0;
+      list-style: none; }
+      .blog-single .social ul li {
+        margin-bottom: 30px;
+        margin-right: 14px;
+        position: relative; }
+        .blog-single .social ul li .posted {
+          top: -5px;
+          left: 20px;
+          position: absolute;
+          font-size: 14px; }
+        .blog-single .social ul li a {
+          font-size: 16px;
+          color: #000; }
+          .blog-single .social ul li a:hover {
+            color: #5d052a;
+            text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */

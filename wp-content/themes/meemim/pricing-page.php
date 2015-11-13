@@ -10,10 +10,11 @@
         <?php endwhile; endif; ?>
 
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-6 col-sm-3">
+<!--            <div class="row">-->
+                <div class="column">
+                    <div class="title-casuta"><span>FREE</span></div>
                     <div class="casuta">
-                        <div class="title-casuta"><span>FREE</span></div>
+
                         <span class="text1">
                             Premium meetings with advanced
                             management capabilities
@@ -27,9 +28,9 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-xs-6 col-sm-3">
+                <div class="column">
+                    <div class="title-casuta"><span>PRO</span></div>
                     <div class="casuta">
-                        <div class="title-casuta"><span>PRO</span></div>
                         <span class="text1">
                            Online meetings with unlimited
                             audio conferencing
@@ -44,9 +45,9 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-xs-6 col-sm-3">
+                <div class="column">
+                    <div class="title-casuta"><span>ENTERPRISE</span></div>
                     <div class="casuta">
-                        <div class="title-casuta"><span>ENTERPRISE</span></div>
                         <span class="text1">
                             Premium meetings with advanced
                             management capabilities
@@ -60,7 +61,7 @@
                         </span>
                     </div>
                 </div>
-            </div>
+<!--            </div>-->
         </div>
 
         <div class="massage-sign-up">

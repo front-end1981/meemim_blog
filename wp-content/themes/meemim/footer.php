@@ -35,5 +35,21 @@
 </div>
 
 	<?php wp_footer(); ?>
+
+<script>
+    (function ( $ ) {
+        $('footer').hover(
+            function ( ) {
+                $(this).removeClass('animation-bottom');
+                $(this).addClass('animation-top');
+            },
+            function ( ) {
+                $(this).removeClass('animation-top');
+                $(this).addClass('animation-bottom');
+            }
+
+        );
+    })(jQuery);
+</script>
 </body>
 </html>

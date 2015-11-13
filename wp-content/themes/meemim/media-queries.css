@@ -1,9 +1,21 @@
 @media screen and (max-width: 1280px) {
   .blog-single .main-img .rectangle {
     left: 14%; } }
+@media screen and (max-width: 1160px) {
+  .blog-single .content .user {
+    margin: 108px 0 90px 100px; }
+  .blog-single .content .comments .user {
+    margin: 108px auto 100px; }
+  .blog-single .social {
+    top: 320px; } }
 @media screen and (max-width: 1024px) {
   .blog-single .main-img .rectangle {
     left: 5%; } }
+@media screen and (max-width: 1107px) {
+  .pricing-page .column {
+    width: 340px;
+    margin: auto;
+    float: none; } }
 @media screen and (max-width: 980px) {
   .blog-single .main-img .rectangle {
     left: 4%; } }
@@ -12,6 +24,9 @@
     left: 0;
     width: 100%;
     background: none; } }
+@media screen and (max-width: 380px) {
+  .pricing-page .column {
+    width: 320px; } }
 @media screen and (max-width: 360px) {
   .blog-single .main-img .rectangle {
     background: none; } }
@@ -48,6 +63,29 @@
     min-width: 315px; }
     .pricing-page .col-xs-6 .title-casuta {
       left: 7%; } }
+@media screen and (max-width: 768px) {
+  .blog-index .form-inline,
+  .blog-single .form-inline {
+    padding: 0 0 0 5px; }
+    .blog-index .form-inline #blog-index.form-group,
+    .blog-single .form-inline #blog-index.form-group {
+      margin: 0;
+      padding: 0;
+      float: none;
+      display: block; }
+      .blog-index .form-inline #blog-index.form-group input#exampleInputEmail2,
+      .blog-single .form-inline #blog-index.form-group input#exampleInputEmail2 {
+        height: 45px;
+        width: 98%;
+        border-radius: 10px;
+        box-sizing: border-box !important; }
+    .blog-index .form-inline button.btn,
+    .blog-single .form-inline button.btn {
+      height: 45px;
+      width: 98%;
+      margin: 10px 0 0 0;
+      border-radius: 10px;
+      box-sizing: border-box !important; } }
 @media screen and (max-width: 600px) {
   .main-page .form-inline,
   .pricing-page .form-inline {
@@ -71,19 +109,23 @@
       border-radius: 10px !important;
       box-sizing: border-box !important; }
 
-  .blog-index .form-inline {
+  .blog-index .form-inline,
+  .blog-single .form-inline {
     padding: 0 0 0 5px; }
-    .blog-index .form-inline #blog-index.form-group {
+    .blog-index .form-inline #blog-index.form-group,
+    .blog-single .form-inline #blog-index.form-group {
       margin: 0;
       padding: 0;
       float: none;
       display: block; }
-      .blog-index .form-inline #blog-index.form-group input#exampleInputEmail2 {
+      .blog-index .form-inline #blog-index.form-group input#exampleInputEmail2,
+      .blog-single .form-inline #blog-index.form-group input#exampleInputEmail2 {
         height: 45px;
         width: 98%;
         border-radius: 10px;
         box-sizing: border-box !important; }
-    .blog-index .form-inline button.btn {
+    .blog-index .form-inline button.btn,
+    .blog-single .form-inline button.btn {
       height: 45px;
       width: 98%;
       margin: 10px 0 0 0;
