@@ -37,18 +37,37 @@
 	<?php wp_footer(); ?>
 
 <script>
+
+
     (function ( $ ) {
-        $('footer').hover(
-            function ( ) {
-                $(this).removeClass('animation-bottom');
-                $(this).addClass('animation-top');
-            },
-            function ( ) {
-                $(this).removeClass('animation-top');
-                $(this).addClass('animation-bottom');
+
+        $(window).mousemove(function( event ) {
+            var targetTop = $('.form-inline').offset().top,
+                footer = $('footer');
+
+            if ( $('body').hasClass('home') ) {
+                if ( event.pageY > targetTop ) {
+                    footer.removeClass('animation-bottom');
+                    footer.addClass('animation-top');
+                } else {
+                    footer.removeClass('animation-top');
+                    footer.addClass('animation-bottom');
+                }
             }
 
+        });
+
+        $('.casuta').hover(
+            function () {
+                $(this).removeClass('animation-none');
+                $(this).addClass('animation');
+            },
+            function () {
+                $(this).removeClass('animation');
+                $(this).addClass('animation-none');
+            }
         );
+
     })(jQuery);
 </script>
 </body>
