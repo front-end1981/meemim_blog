@@ -422,7 +422,7 @@ footer {
     font-size: 23px; }
 
 .about-us-page {
-  max-width: 100%;
+  max-width: 1366px;
   margin: 65px auto 150px;
   color: #484848; }
   .about-us-page p {
@@ -487,7 +487,7 @@ footer {
       text-align: center; }
 
 .contact-us-page {
-  max-width: 100%;
+  max-width: 1366px;
   margin: 65px auto 150px;
   color: #484848; }
   .contact-us-page p {
@@ -505,7 +505,7 @@ footer {
     .contact-us-page .contact-us-block .rectangle {
       left: 4px;
       top: -4px;
-      max-width: 1014px;
+      max-width: 35%;
       height: 131px;
       margin: auto;
       position: relative;
@@ -531,7 +531,7 @@ footer {
         background-size: contain;
         position: absolute; }
       .contact-us-page .contact-us-block .rectangle p {
-        padding: 35px 170px;
+        padding: 35px 80px;
         color: #fff;
         font-size: 23px; }
     .contact-us-page .contact-us-block .contact-data {
@@ -607,156 +607,130 @@ footer {
       .contact-us-page form button.btn:hover, .contact-us-page form button .btn:focus, .contact-us-page form button .btn.focus {
         text-decoration: none; }
 
-.pricing-page p {
-  font-size: 23px;
-  padding: 0px 130px 90px;
-  text-align: center; }
-.pricing-page h1 {
-  margin: 56px 0 65px 0;
-  font-family: Capsuula;
-  font-size: 40px;
-  font-weight: normal;
-  color: #6d6d6d;
-  text-transform: uppercase; }
-.pricing-page .column {
-  width: 29%;
-  margin: 0 23px;
-  float: left;
-  position: relative; }
-  .pricing-page .column .title-casuta {
-    top: 23px;
-    margin: auto;
-    width: 270px;
-    height: 36px;
-    background: url("../meemim/images/title_casuta_bg.png") no-repeat;
-    text-align: center;
-    position: relative; }
-    .pricing-page .column .title-casuta span {
-      margin: 6px 0;
-      font-size: 23px;
-      line-height: 42px;
-      color: #fff; }
-  .pricing-page .column .casuta {
-    width: 100%;
-    height: 195px;
-    margin: 23px 0;
-    border: 1px solid #a1a1a1;
-    border-radius: 8px;
-    position: relative;
+.pricing-page {
+  max-width: 1366px;
+  margin: auto; }
+  .pricing-page p {
+    font-size: 23px;
+    padding: 0px 130px 90px;
     text-align: center; }
-    .pricing-page .column .casuta.animation {
-      height: 250px;
-      transition: height 500ms ease-out 0s; }
-      .pricing-page .column .casuta.animation .text1 {
-        padding: 10% 30px 0 30px;
-        transition: padding 500ms ease-out 0s; }
-      .pricing-page .column .casuta.animation .text2 {
-        padding: 4% 30px 0 30px;
-        transition: padding 500ms ease-out 0s; }
-      .pricing-page .column .casuta.animation .text3 {
-        padding: 7% 60px;
-        transition: padding 500ms ease-out 0s; }
-    .pricing-page .column .casuta.animation-none {
-      height: 195px;
-      transition: height 500ms ease-out 0s; }
-      .pricing-page .column .casuta.animation-none .text1 {
-        transition: padding 500ms ease-out 0s;
-        padding: 16px 30px 0 30px; }
-      .pricing-page .column .casuta.animation-none .text2 {
-        transition: padding 500ms ease-out 0s;
-        padding: 8px 30px 0 30px; }
-      .pricing-page .column .casuta.animation-none .text3 {
-        transition: padding 500ms ease-out 0s;
-        padding: 11px 60px; }
-    .pricing-page .column .casuta span {
-      display: inline-block; }
-    .pricing-page .column .casuta .text1 {
-      padding: 16px 30px 0 30px;
-      font-size: 18px;
-      color: #484848; }
-    .pricing-page .column .casuta .text2 {
-      padding: 8px 30px 0 30px;
-      line-height: 43px;
-      font-size: 47px;
-      text-transform: uppercase;
-      color: #5d052a; }
-    .pricing-page .column .casuta .text3 {
-      padding: 11px 60px;
-      font-size: 13px;
-      color: #484848; }
-.pricing-page form {
-  max-width: 413px;
-  margin: 30px auto 0; }
-  .pricing-page form .form-control:focus {
-    border-color: #5d052a;
-    box-shadow: none; }
-  .pricing-page form input {
-    width: 278px !important;
-    height: 43px;
-    border-radius: 13px 0 0 13px;
-    border-color: #5d052a;
-    font-size: 17px;
-    color: #7f7f7f; }
-  .pricing-page form button {
-    height: 45px;
-    width: 83px;
-    margin-left: -3px;
-    border: none;
-    background-color: #5d052a;
-    border-radius: 0px 10px 10px 0px;
-    cursor: pointer;
-    font-size: 17px;
-    color: #fff; }
-    .pricing-page form button.btn-default:hover {
-      color: #fff;
-      background-color: #5d052a;
-      border: none; }
-    .pricing-page form button.btn:hover, .pricing-page form button .btn:focus, .pricing-page form button .btn.focus {
-      text-decoration: none; }
-.pricing-page table {
-  width: 95%;
-  margin: 115px 2%; }
-  .pricing-page table .pro-cell {
-    font-size: 32px !important;
-    color: #5d052a; }
-  .pricing-page table .first-cell {
-    padding: 20px 0 0 0;
-    font-size: 23px;
-    border-top: none !important;
-    border-bottom: 1px dashed #a5a5a5; }
-  .pricing-page table tr > th {
-    padding: 5px 0 0 0 !important;
-    font-size: 23px;
+  .pricing-page h1 {
+    margin: 56px 0 65px 0;
+    font-family: Capsuula;
+    font-size: 40px;
     font-weight: normal;
-    border-bottom: none !important; }
-  .pricing-page table tr > td:not(.first-cell) {
-    text-align: center;
-    font-size: 18px;
-    border-top: none;
-    border-bottom: 1px dashed #a5a5a5;
-    vertical-align: inherit; }
-  .pricing-page table .corner {
-    background: url("../meemim/images/corner_left_casuta.png") no-repeat; }
-  .pricing-page table .bg-table {
-    position: relative;
-    text-align: center;
-    background-color: #94ad3c;
-    color: #fff; }
-    .pricing-page table .bg-table:last-child span {
-      margin-right: 20px;
-      display: inline-block; }
-    .pricing-page table .bg-table .corner-lf,
-    .pricing-page table .bg-table .corner-rt {
-      width: 38px;
-      height: 100%;
-      top: 0;
-      position: absolute; }
-    .pricing-page table .bg-table .corner-lf {
-      left: 0;
+    color: #6d6d6d;
+    text-transform: uppercase; }
+  .pricing-page .column {
+    width: 29%;
+    margin: 0 23px;
+    float: left;
+    position: relative; }
+    .pricing-page .column .title-casuta {
+      top: 23px;
+      margin: auto;
+      width: 270px;
+      height: 36px;
+      background: url("../meemim/images/title_casuta_bg.png") no-repeat;
+      text-align: center;
+      position: relative; }
+      .pricing-page .column .title-casuta span {
+        margin: 6px 0;
+        font-size: 23px;
+        line-height: 42px;
+        color: #fff; }
+    .pricing-page .column .casuta {
+      width: 100%;
+      height: 195px;
+      margin: 23px 0;
+      border: 1px solid #a1a1a1;
+      border-radius: 8px;
+      position: relative;
+      text-align: center; }
+      .pricing-page .column .casuta.hover, .pricing-page .column .casuta.selected {
+        height: 250px;
+        transition: height 500ms ease-out 0s; }
+        .pricing-page .column .casuta.hover .text1, .pricing-page .column .casuta.selected .text1 {
+          padding: 10% 30px 0 30px;
+          transition: padding 500ms ease-out 0s; }
+        .pricing-page .column .casuta.hover .text2, .pricing-page .column .casuta.selected .text2 {
+          padding: 4% 30px 0 30px;
+          transition: padding 500ms ease-out 0s; }
+        .pricing-page .column .casuta.hover .text3, .pricing-page .column .casuta.selected .text3 {
+          padding: 7% 60px;
+          transition: padding 500ms ease-out 0s; }
+      .pricing-page .column .casuta.over, .pricing-page .column .casuta.selected-none {
+        height: 195px;
+        transition: height 500ms ease-out 0s; }
+        .pricing-page .column .casuta.over .text1, .pricing-page .column .casuta.selected-none .text1 {
+          transition: padding 500ms ease-out 0s;
+          padding: 16px 30px 0 30px; }
+        .pricing-page .column .casuta.over .text2, .pricing-page .column .casuta.selected-none .text2 {
+          transition: padding 500ms ease-out 0s;
+          padding: 8px 30px 0 30px; }
+        .pricing-page .column .casuta.over .text3, .pricing-page .column .casuta.selected-none .text3 {
+          transition: padding 500ms ease-out 0s;
+          padding: 11px 60px; }
+      .pricing-page .column .casuta span {
+        display: inline-block; }
+      .pricing-page .column .casuta .text1 {
+        padding: 16px 30px 0 30px;
+        font-size: 18px;
+        color: #484848; }
+      .pricing-page .column .casuta .text2 {
+        padding: 8px 30px 0 30px;
+        line-height: 43px;
+        font-size: 47px;
+        text-transform: uppercase;
+        color: #5d052a; }
+      .pricing-page .column .casuta .text3 {
+        padding: 11px 60px;
+        font-size: 13px;
+        color: #484848; }
+  .pricing-page table {
+    width: 95%;
+    margin: 115px 2%; }
+    .pricing-page table .pro-cell {
+      font-size: 32px !important;
+      color: #5d052a; }
+    .pricing-page table .first-cell {
+      padding: 20px 0 0 0;
+      font-size: 23px;
+      border-top: none !important;
+      border-bottom: 1px dashed #a5a5a5; }
+    .pricing-page table tr > th {
+      padding: 5px 0 0 0 !important;
+      font-size: 23px;
+      font-weight: normal;
+      border-bottom: none !important; }
+    .pricing-page table tr > td:not(.first-cell) {
+      text-align: center;
+      font-size: 18px;
+      border-top: none;
+      border-bottom: 1px dashed #a5a5a5;
+      vertical-align: inherit; }
+    .pricing-page table .corner {
       background: url("../meemim/images/corner_left_casuta.png") no-repeat; }
-    .pricing-page table .bg-table .corner-rt {
-      right: 0px;
-      background: url("../meemim/images/corner_right_casuta.png") no-repeat -4px 0; }
+    .pricing-page table .bg-table {
+      position: relative;
+      text-align: center;
+      background-color: #94ad3c;
+      color: #fff; }
+      .pricing-page table .bg-table:last-child span {
+        margin-right: 20px;
+        display: inline-block; }
+      .pricing-page table .bg-table .corner-lf,
+      .pricing-page table .bg-table .corner-rt {
+        width: 38px;
+        height: 100%;
+        top: 0;
+        position: absolute; }
+      .pricing-page table .bg-table .corner-lf {
+        left: 0;
+        background: url("../meemim/images/corner_left_casuta.png") no-repeat; }
+      .pricing-page table .bg-table .corner-rt {
+        right: 0px;
+        background: url("../meemim/images/corner_right_casuta.png") no-repeat -4px 0; }
 
 .product-page p {
   font-size: 23px;
@@ -770,8 +744,9 @@ footer {
   color: #6d6d6d;
   text-transform: uppercase; }
 .product-page .main-img {
-  max-width: 100%;
+  max-width: 1366px;
   height: 453px;
+  margin: auto;
   background: url("../meemim/images/about-us-img2.jpg") no-repeat;
   background-size: contain; }
   .product-page .main-img .rectangle {
@@ -789,7 +764,7 @@ footer {
       display: inline-block;
       color: #fff; }
 .product-page .row {
-  padding: 165px 0 140px;
+  padding: 115px 0 100px;
   border-bottom: 1px solid #a8a8a8; }
   .product-page .row.even h1 {
     text-align: right; }
@@ -807,7 +782,8 @@ footer {
     text-align: justify; }
 
 .blog-index {
-  margin-top: 80px; }
+  max-width: 1366px;
+  margin: 80px auto; }
   .blog-index:after {
     content: '';
     display: block;
@@ -954,24 +930,28 @@ footer {
             float: right; }
 
 .blog-index form,
-.blog-single form {
+.blog-single form,
+.pricing-page form {
   max-width: 413px;
-  margin: 30px auto 0; }
+  margin: 28px auto 0; }
   .blog-index form .form-control:focus,
-  .blog-single form .form-control:focus {
+  .blog-single form .form-control:focus,
+  .pricing-page form .form-control:focus {
     border-color: #5d052a;
     box-shadow: none; }
   .blog-index form input#exampleInputEmail2,
-  .blog-single form input#exampleInputEmail2 {
+  .blog-single form input#exampleInputEmail2,
+  .pricing-page form input#exampleInputEmail2 {
     width: 278px;
-    height: 33px;
+    height: 31px;
     border-radius: 13px 0 0 13px;
     border-color: #5d052a;
     font-size: 17px;
-    color: #7f7f7f; }
+    color: #4b4949; }
   .blog-index form button,
-  .blog-single form button {
-    height: 35px;
+  .blog-single form button,
+  .pricing-page form button {
+    height: 33px;
     width: 83px;
     margin-left: -3px;
     border: none;
@@ -981,14 +961,18 @@ footer {
     font-size: 17px;
     color: #fff; }
     .blog-index form button.btn-default:hover,
-    .blog-single form button.btn-default:hover {
+    .blog-single form button.btn-default:hover,
+    .pricing-page form button.btn-default:hover {
       color: #fff;
       background-color: #5d052a;
       border: none; }
     .blog-index form button.btn:hover, .blog-index form button .btn:focus, .blog-index form button .btn.focus,
     .blog-single form button.btn:hover,
     .blog-single form button .btn:focus,
-    .blog-single form button .btn.focus {
+    .blog-single form button .btn.focus,
+    .pricing-page form button.btn:hover,
+    .pricing-page form button .btn:focus,
+    .pricing-page form button .btn.focus {
       text-decoration: none; }
 
 .pagination-blog {

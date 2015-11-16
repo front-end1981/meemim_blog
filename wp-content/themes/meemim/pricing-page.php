@@ -30,7 +30,7 @@
                 </div>
                 <div class="column">
                     <div class="title-casuta"><span>PRO</span></div>
-                    <div class="casuta">
+                    <div class="casuta selected">
                         <span class="text1">
                            Online meetings with unlimited
                             audio conferencing
@@ -75,7 +75,7 @@
             <div class="form-group">
                 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
             </div>
-            <button type="submit" class="btn btn-default">sing up</button>
+            <button type="submit" class="btn btn-default">Sign Up</button>
         </form>
 
 

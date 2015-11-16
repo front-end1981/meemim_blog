@@ -14,6 +14,22 @@ function special_nav_class($classes, $item){
     return $classes;
 }
 
+add_filter( 'wp_nav_menu_objects', 'add_menu_custom_url' );
+function add_menu_custom_url( $items ) {
+
+//    print_r($items);
+    foreach ( $items as $item ) {
+        if ( $item->title == 'Sing In' ) {
+            $item->url = 'https://portal.meemim.com/login';
+        }
+
+    }
+
+    return $items;
+}
+
+
+
 function enqueue_styles() {
     wp_enqueue_style('meemim-styles', get_stylesheet_uri().'style.css');
     wp_enqueue_style('meemim-font-awesome', dirname(get_stylesheet_uri()).'/font/font-awesome/css/meemim.css');

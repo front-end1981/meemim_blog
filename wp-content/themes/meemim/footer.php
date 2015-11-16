@@ -67,14 +67,26 @@
 
         $('.casuta').hover(
             function () {
-                $(this).removeClass('animation-none');
-                $(this).addClass('animation');
+                if ( $(this).hasClass('selected-none') ) {
+                    $(this).removeClass('over');
+                    $(this).addClass('hover');
+                }
+
             },
             function () {
-                $(this).removeClass('animation');
-                $(this).addClass('animation-none');
+                if ( $(this).hasClass('selected-none') ) {
+                    $(this).removeClass('hover');
+                    $(this).addClass('over');
+                }
             }
         );
+
+        $('.casuta').on('click', function () {
+            $('.casuta').removeClass('selected');
+            $('.casuta').not($(this)).addClass('selected-none');
+            $(this).removeClass('selected-none');
+            $(this).addClass('selected');
+        });
 
         $('.bwWrapper').BlackAndWhite({
             hoverEffect: true,
