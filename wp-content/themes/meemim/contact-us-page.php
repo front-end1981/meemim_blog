@@ -11,26 +11,25 @@
 
         <div class="contact-us-block">
 
-            <div class="rectangle">
-                <p>
-                     Please fill out the form below, and we will
-                be in touch shortly.
-                </p>
-            </div>
-
             <div class="contact-data">
                 <div class="contact-email">
                     <span class="phone">1-800-503-3027</span>
-                    <span class="email">Email: info@meemim.com</span>
+                    <a href="mailto:info@meemim.com" class="email">Email: info@meemim.com</a>
                 </div>
                 <div class="contact-address">
-                    <p>
-                        238 Dunforest Ave.
-                        Toronto, ON
-                        M2N 4J9
-                    </p>
+                    <p>238 Dunforest Ave.</p>
+                    <p>Toronto, ON</p>
+                    <p>M2N 4J9</p>
                 </div>
             </div>
+
+            <div class="rectangle">
+                <p>
+                    Please fill out the form below, and we will
+                    be in touch shortly.
+                </p>
+            </div>
+
         </div>
 
         <div class="massage-sign-up">

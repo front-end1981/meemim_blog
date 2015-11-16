@@ -4,6 +4,11 @@
 @font-face {
   font-family: Capsuula;
   src: url(../meemim/font/Capsuula.ttf); }
+/*Black and White plugin*/
+.bwWrapper {
+  position: relative;
+  display: block; }
+
 * {
   -webkit-box-sizing: inherit !important;
   -moz-box-sizing: inherit !important;
@@ -121,7 +126,7 @@ body {
       text-decoration: none; }
 
 header {
-  max-width: 1366px;
+  max-width: 100%;
   height: 112px;
   margin: auto; }
   header .navbar-toggle {
@@ -173,27 +178,30 @@ header {
     font-weight: 500;
     border-radius: 3px; }
   header #menu-top-menu {
-    margin: 42px 0 0 67px;
+    margin: 39px 0 0 67px;
     padding: 0;
     display: inline-flex; }
-    header #menu-top-menu .current-menu-item a {
-      background-color: #F2B229; }
     header #menu-top-menu li {
       margin-right: 5px;
       list-style: none; }
       header #menu-top-menu li a:hover {
-        color: inherit;
+        color: #fff;
+        background-color: #F2B229;
         text-decoration: none; }
-    header #menu-top-menu li:last-child a {
-      background-color: #94ad3c;
-      color: #fff; }
-    header #menu-top-menu li:last-child a:hover {
-      background-color: #94ad3c;
-      text-decoration: none; }
+      header #menu-top-menu li a:active {
+        color: #fff;
+        background-color: #F2B229;
+        text-decoration: none; }
+      header #menu-top-menu li:last-child a {
+        background-color: #94ad3c;
+        color: #fff; }
+      header #menu-top-menu li:last-child a:hover {
+        background-color: #94ad3c;
+        text-decoration: none; }
 
 .wrapper {
   margin: auto;
-  max-width: 1366px; }
+  max-width: 100%; }
 
 .wrapper.home-page {
   min-height: calc(100vh - 262px);
@@ -202,23 +210,16 @@ header {
   justify-content: center; }
 
 footer {
-  max-width: 1366px;
+  max-width: 100%;
   margin: auto;
   padding-bottom: 19px;
-  top: 115px;
   position: relative; }
-  footer.animation-top {
-    top: 0;
-    transition: top 500ms ease-out 0s; }
-  footer.animation-bottom {
-    top: 115px;
-    transition: top 500ms ease-out 0s; }
   footer:after {
     content: '';
     display: block;
     clear: both; }
   footer hr {
-    top: 13px;
+    top: 14px;
     left: 0;
     width: 100%;
     position: absolute;
@@ -234,14 +235,21 @@ footer {
   footer .left-side {
     position: relative;
     z-index: 2; }
-  footer.home-page .first-row {
-    border-bottom: 1px solid #212121; }
+  footer.home-page {
+    top: 115px; }
+    footer.home-page .left-side ul li > a,
+    footer.home-page .left-side ul > li {
+      color: #8f8f8f; }
+    footer.home-page .first-row {
+      border-bottom: 1px solid #212121; }
+    footer.home-page .social a {
+      color: #8f8f8f; }
   footer .first-row {
     padding-left: 57px;
     border-bottom: 1px solid #727272; }
-  footer .first-row ul {
-    margin: 19px 0 9px 0;
-    display: inline-flex; }
+    footer .first-row ul {
+      margin: 19px 0 9px 0;
+      display: inline-flex; }
   footer .left-side ul > li {
     list-style: none; }
   footer .left-side ul {
@@ -256,9 +264,6 @@ footer {
   footer .left-side ul li > a,
   footer .left-side ul > li {
     color: #2d2d2d; }
-  footer.home-page .left-side ul li > a,
-  footer.home-page .left-side ul > li {
-    color: #8f8f8f; }
   footer .first-row ul {
     padding: 0; }
   footer .first-row ul li {
@@ -276,19 +281,21 @@ footer {
     float: left; }
   footer .fourth-column {
     float: right;
-    margin-top: 5px;
+    margin-top: 7px;
     margin-right: 148px; }
+  footer .menu-item-has-children.current-menu-item > a {
+    border-bottom: 7px solid transparent; }
   footer .menu-item-has-children > a {
     display: inline-block;
     border-bottom: 7px solid transparent; }
+  footer .menu-item-has-children > a:hover {
+    border-bottom: 7px solid #5d052a; }
   footer .sub-menu {
-    margin-top: 10px; }
-  footer .sub-menu .current-menu-item > a {
-    border-bottom: 2px solid #390042; }
-  footer .current-menu-item > a {
-    border-bottom: 7px solid #390042; }
-  footer.home-page .social a {
-    color: #8f8f8f; }
+    margin-top: 5px; }
+    footer .sub-menu .current-menu-item > a {
+      border-bottom: none; }
+    footer .sub-menu li > a:hover {
+      border-bottom: 2px solid #5d052a; }
   footer .social {
     top: 5px;
     right: 35px;
@@ -304,7 +311,7 @@ footer {
   opacity: 0.3; }
 
 .main-page {
-  max-width: 1366px;
+  max-width: 100%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -313,7 +320,7 @@ footer {
   .main-page .center-block {
     width: 100%;
     height: 218px;
-    max-width: 1366px;
+    max-width: 100%;
     margin: auto;
     background: url("../meemim/images/bg_main_block.png") no-repeat center;
     background-size: cover;
@@ -388,7 +395,7 @@ footer {
           text-decoration: none; }
 
 .main-heading-title {
-  max-width: 1366px;
+  max-width: 100%;
   margin: 60px auto 0;
   text-align: center; }
   .main-heading-title h1 {
@@ -415,7 +422,7 @@ footer {
     font-size: 23px; }
 
 .about-us-page {
-  max-width: 1366px;
+  max-width: 100%;
   margin: 65px auto 150px;
   color: #484848; }
   .about-us-page p {
@@ -445,7 +452,7 @@ footer {
   .about-us-page .about-us-block,
   .about-us-page .about-us-block2 {
     margin: 108px 0 0 0;
-    max-width: 1366px;
+    max-width: 100%;
     height: 376px;
     background: url("../meemim/images/about-us-img1.png") no-repeat;
     background-size: cover; }
@@ -480,7 +487,7 @@ footer {
       text-align: center; }
 
 .contact-us-page {
-  max-width: 1366px;
+  max-width: 100%;
   margin: 65px auto 150px;
   color: #484848; }
   .contact-us-page p {
@@ -488,20 +495,41 @@ footer {
     padding: 0px 130px;
     text-align: center; }
   .contact-us-page .contact-us-block {
-    max-width: 1366px;
+    max-width: 100%;
     height: 278px;
     margin: 90px 0 0 0;
     position: relative;
     background: url("../meemim/images/about-us-img2.jpg") no-repeat;
+    background-size: cover;
     overflow: hidden; }
     .contact-us-page .contact-us-block .rectangle {
-      left: 321px;
-      top: 147px;
-      width: 750px;
-      height: 300px;
-      position: absolute;
-      background: url("../meemim/images/rectangele.png") no-repeat 0 -90px;
+      left: 4px;
+      top: -4px;
+      max-width: 1014px;
+      height: 131px;
+      margin: auto;
+      position: relative;
+      background: url("../meemim/images/rectangele-about-us.png");
       background-size: contain; }
+      .contact-us-page .contact-us-block .rectangle:after {
+        content: '';
+        top: 0;
+        width: 100px;
+        height: 126px;
+        margin: 0 0 0 -72px;
+        background: url("../meemim/images/corner-left-about-us.png") no-repeat;
+        background-size: contain;
+        position: absolute; }
+      .contact-us-page .contact-us-block .rectangle:before {
+        content: '';
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 126px;
+        margin: 0 -100px 0 0;
+        background: url("../meemim/images/corner-right-about-us.png") no-repeat;
+        background-size: contain;
+        position: absolute; }
       .contact-us-page .contact-us-block .rectangle p {
         padding: 35px 170px;
         color: #fff;
@@ -520,7 +548,9 @@ footer {
         color: #fff; }
         .contact-us-page .contact-us-block .contact-data .contact-email .email {
           padding: 0 40px;
-          font-size: 22px; }
+          text-decoration: none;
+          font-size: 22px;
+          color: inherit; }
         .contact-us-page .contact-us-block .contact-data .contact-email .phone {
           padding: 0 40px;
           display: inherit;
@@ -529,10 +559,12 @@ footer {
       .contact-us-page .contact-us-block .contact-data .contact-address {
         width: 354px;
         height: 87px;
+        padding: 2px 0;
         float: right;
         background: url("../meemim/images/rectangele3.png") no-repeat; }
         .contact-us-page .contact-us-block .contact-data .contact-address p {
-          padding: 3px 60px 0 140px;
+          margin: 0 0 0 126px;
+          padding: 0;
           color: #fff;
           font-size: 20px;
           text-align: left; }
@@ -555,7 +587,8 @@ footer {
     .contact-us-page form .form-control {
       height: 42px;
       border: 1px solid #6e6e6e;
-      border-radius: 9px; }
+      border-radius: 9px;
+      font-size: 20px; }
     .contact-us-page form .form-control:focus {
       border-color: #6e6e6e;
       box-shadow: none; }
@@ -737,7 +770,7 @@ footer {
   color: #6d6d6d;
   text-transform: uppercase; }
 .product-page .main-img {
-  max-width: 1366px;
+  max-width: 100%;
   height: 453px;
   background: url("../meemim/images/about-us-img2.jpg") no-repeat;
   background-size: contain; }

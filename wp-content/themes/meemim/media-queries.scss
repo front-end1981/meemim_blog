@@ -336,17 +336,26 @@
         .contact-us-block {
             .contact-data {
                 .contact-email {
+                    width: 100%;
                     margin: auto;
                     float: none;
                     background: none;
                     text-align: center;
+                    .phone,
+                    .email {
+                        padding: 0;
+                    }
                 }
                 .contact-address {
+                    width: 100%;
                     margin: auto;
                     float: none;
                     background: none;
                     p {
-                        padding: 3px 60px 0 70px;
+                        margin-left: 0;
+                        padding: 0;
+                        text-align: center;
+                        //padding: 3px 60px 0 70px;
                     }
                 }
             }
@@ -582,7 +591,7 @@
         }
 
         .social {
-            top: 0px;
+            top: 3px;
             left: 170px;
             position: absolute;
         }

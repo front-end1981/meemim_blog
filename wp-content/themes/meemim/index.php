@@ -87,7 +87,10 @@ get_header(); ?>
                     <div class="featured">
                         <span>Featured</span>
                     </div>
-                    <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
+                    <div class="bwWrapper">
+                        <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
+                    </div>
+
                     <div class="title">
                         Our New Plan to Educate 1 Million Social Media
                         Professionals for Free by 2017
@@ -112,7 +115,9 @@ get_header(); ?>
             <div class="block first">
 
                 <div class="group">
-                    <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
+                    <div class="bwWrapper">
+                        <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
+                    </div>
                     <div class="title">
                         Our New Plan to Educate 1 Million Social Media
                         Professionals for Free by 2017
@@ -135,7 +140,9 @@ get_header(); ?>
                 </div>
 
                 <div class="group">
-                    <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
+                    <div class="bwWrapper">
+                        <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
+                    </div>
                     <div class="title">
                         Our New Plan to Educate 1 Million
                     </div>
@@ -171,7 +178,9 @@ get_header(); ?>
             </div>
             <div class="block second">
                 <div class="group">
-                    <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
+                    <div class="bwWrapper">
+                        <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
+                    </div>
                     <div class="title">
                         Our New Plan to Educate 1 Million
                     </div>
@@ -185,7 +194,9 @@ get_header(); ?>
                 </div>
 
                 <div class="group">
-                    <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
+                    <div class="bwWrapper">
+                        <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
+                    </div>
                     <div class="title">
                         Our New Plan to Educate 1 Million
                     </div>
@@ -199,7 +210,9 @@ get_header(); ?>
                 </div>
 
                 <div class="group">
-                    <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
+                    <div class="bwWrapper">
+                        <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
+                    </div>
                     <div class="title">
                         Our New Plan to Educate 1 Million
                     </div>
@@ -215,7 +228,9 @@ get_header(); ?>
             </div>
             <div class="block third">
                 <div class="group">
-                    <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
+                    <div class="bwWrapper">
+                        <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
+                    </div>
                     <div class="title">
                         Our New Plan to Educate 1 Million
                     </div>
@@ -229,7 +244,9 @@ get_header(); ?>
                 </div>
 
                 <div class="group">
-                    <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
+                    <div class="bwWrapper">
+                        <img src="<?php bloginfo('template_url'); ?>/images/about-us-img2.jpg">
+                    </div>
                     <div class="title">
                         Our New Plan to Educate 1 Million Social Media Professionals for Free by 2017
                     </div>

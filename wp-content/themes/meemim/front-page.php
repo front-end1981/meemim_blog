@@ -19,7 +19,7 @@
             <div class="massage-sign-up">
                 <div class="corner-left"></div>
                 <div class="corner-right"></div>
-                <span>Sing up for free</span>
+                <span>Sign up for free</span>
                 <div class="arrow-bottom"></div>
             </div>
         </div>
@@ -29,7 +29,7 @@
             <div class="form-group">
                 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
             </div>
-            <button type="submit" class="btn btn-default">sing up</button>
+            <button type="submit" class="btn btn-default">sing Up</button>
         </form>
 <!--        -->
 <!--        <form>-->

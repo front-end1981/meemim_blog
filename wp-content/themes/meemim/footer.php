@@ -10,6 +10,10 @@
             <div class="col first-column">
                 <ul>
                     <li>Made by Meemim</li>
+
+                </ul>
+                <ul>
+                    <li>with magic and pixie dust</li>
                 </ul>
             </div>
 
@@ -24,8 +28,8 @@
             <div class="col fourth-column">
                 <?php wp_nav_menu(array('menu' => 'footer-menu-third-column', 'menu_class' => 'footer-menu-third-column')); ?>
                 <ul class="social">
-                    <li><a href="#" class="icon-linkedin"></a></li>
-                    <li><a href="#" class="icon-twitter"></a></li>
+                    <li><a href="https://www.linkedin.com/company/meemim" target="_blank" class="icon-linkedin"></a></li>
+                    <li><a href="https://twitter.com/Meemim_Inc" target="_blank" class="icon-twitter"></a></li>
                 </ul>
             </div>
 
@@ -43,15 +47,19 @@
 
         $(window).mousemove(function( event ) {
             var targetTop = $('.form-inline').offset().top,
-                footer = $('footer');
+                footer = $('footer'),
+                footerHeight = footer.height();
 
             if ( $('body').hasClass('home') ) {
-                if ( event.pageY > targetTop ) {
+                if ( event.pageY > targetTop && !footer.hasClass('animation-top') ) {
                     footer.removeClass('animation-bottom');
                     footer.addClass('animation-top');
-                } else {
+                    footer.stop(true, false).animate( {'top': 0}, 500 );
+                }
+                if ( event.pageY < targetTop && !footer.hasClass('animation-bottom') ) {
                     footer.removeClass('animation-top');
                     footer.addClass('animation-bottom');
+                    footer.stop(true, false).animate( {'top': footerHeight - 15}, 500);
                 }
             }
 
@@ -67,6 +75,28 @@
                 $(this).addClass('animation-none');
             }
         );
+
+        $('.bwWrapper').BlackAndWhite({
+            hoverEffect: true,
+            invertHoverEffect: true
+        });
+
+
+        function footerToBottom() {
+            var footer = $('footer'),
+                footerHeight = footer.height();
+
+            if ( $('body').hasClass('home') ) {
+                footer.css( {'top': footerHeight - 15} );
+            } else {
+                footer.css( {'top': 0} );
+            }
+
+        };
+        footerToBottom();
+        $(window).resize(function () {
+            footerToBottom();
+        });
 
     })(jQuery);
 </script>

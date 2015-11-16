@@ -33,6 +33,7 @@ function enqueue_scripts () {
     wp_enqueue_script('jquery-js', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
     wp_enqueue_script('bootstrap-js', dirname(get_stylesheet_uri()).'/css/bootstrap/js/bootstrap.min.js');
     wp_enqueue_script('function-js', dirname(get_stylesheet_uri()).'/js/functions.js');
+    wp_enqueue_script('BlackWhite-js', dirname(get_stylesheet_uri()).'/js/jquery.BlackAndWhite.js');
 
 }
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
