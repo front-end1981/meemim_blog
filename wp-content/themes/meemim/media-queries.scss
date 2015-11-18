@@ -1,13 +1,3 @@
-@media screen and (max-width: 1280px) {
-    .blog-single {
-        .main-img{
-            .rectangle {
-                left: 14%;
-            }
-        }
-    }
-}
-
 @media screen and (max-width: 1160px) {
     .blog-single {
 
@@ -21,22 +11,12 @@
                 }
             }
         }
-
-       .social {
-           top:320px;
-       }
+    }
+    .social-blog-single {
+        top: 640px;
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .blog-single {
-        .main-img{
-            .rectangle {
-                left: 5%;
-            }
-        }
-    }
-}
 
 @media screen and (max-width: 1107px) {
     .pricing-page {
@@ -50,13 +30,7 @@
 
 
 @media screen and (max-width: 980px) {
-    .blog-single {
-        .main-img{
-            .rectangle {
-                left: 4%;
-            }
-        }
-    }
+
 }
 
 @media screen and (max-width: 800px) {

@@ -203,7 +203,7 @@ header {
   max-width: 100%;
   margin: auto; }
   .wrapper.home-page {
-    min-height: calc(100vh - 262px);
+    min-height: calc(100vh - 280px);
     display: flex;
     align-items: center;
     justify-content: center; }
@@ -932,7 +932,8 @@ footer {
           color: #fff;
           background-color: #5d052a;
           background-size: cover;
-          cursor: pointer; }
+          cursor: pointer;
+          z-index: 1; }
           .blog-index .content .block .group .featured:after {
             right: -38px;
             top: 0;
@@ -958,6 +959,10 @@ footer {
           margin-top: 20px;
           font-size: 26px;
           font-weight: bold; }
+          .blog-index .content .block .group .title a {
+            color: #3c3c3c; }
+            .blog-index .content .block .group .title a:hover {
+              text-decoration: none !important; }
         .blog-index .content .block .group .date {
           font-size: 26px; }
         .blog-index .content .block .group .share {
@@ -1097,26 +1102,91 @@ footer {
     .blog-single .content .massage-sign-up {
       margin-top: 104px; }
   .blog-single .main-img {
-    height: 279px;
+    display: block;
     margin-top: 70px;
-    position: relative;
-    background: url("../meemim/images/BLOG-INNER-PAGE.jpg") no-repeat; }
+    text-align: center; }
+    .blog-single .main-img .img-block {
+      position: relative; }
+      .blog-single .main-img .img-block img {
+        height: auto;
+        max-width: 100%;
+        min-height: 279px; }
     .blog-single .main-img .rectangle {
-      left: 16%;
-      height: 100%;
-      width: 913px;
+      top: 0;
+      left: 50%;
+      width: 912px;
+      margin-left: -456px;
+      padding: 92px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: url("../meemim/images/rectangele4.png") no-repeat;
+      background-size: cover;
       position: absolute; }
       .blog-single .main-img .rectangle .main-img-title {
         max-width: 760px;
-        margin: 7% auto;
+        margin: auto;
         color: #fff;
         text-align: center; }
         .blog-single .main-img .rectangle .main-img-title span {
           display: inline-block;
           font-size: 34px; }
-          .blog-single .main-img .rectangle .main-img-title span:first-child {
-            font-weight: bold; }
+  .blog-single .title-form {
+    margin-top: 100px;
+    font-size: 21px !important;
+    font-weight: normal;
+    color: #414141 !important;
+    text-align: center; }
+  .blog-single #comments {
+    box-sizing: border-box !important; }
+    .blog-single #comments #respond h3 {
+      display: none; }
+    .blog-single #comments #respond form {
+      max-width: 100%;
+      margin: 0 auto 0; }
+      .blog-single #comments #respond form .logged-in-as {
+        display: none; }
+      .blog-single #comments #respond form .comment-form-comment label {
+        display: none; }
+      .blog-single #comments #respond form .comment-form-comment textarea {
+        width: 100%;
+        padding: 6px 12px;
+        border-radius: 8px;
+        border-color: #828282;
+        outline: none; }
+      .blog-single #comments #respond form .form-submit {
+        text-align: right; }
+        .blog-single #comments #respond form .form-submit input[type='submit'] {
+          padding: 3px 23px;
+          color: #fff;
+          background-color: #5d052a;
+          border-radius: 4px;
+          border: none; }
+    .blog-single #comments .comment-list {
+      margin-bottom: 130px;
+      padding: 0;
+      list-style: none; }
+      .blog-single #comments .comment-list li p {
+        margin-left: 76px;
+        font-size: 16px; }
+      .blog-single #comments .comment-list .children {
+        list-style: none; }
+      .blog-single #comments .comment-list .commentmetadata {
+        display: none; }
+      .blog-single #comments .comment-list .comment-author img {
+        width: 57px;
+        height: 63px;
+        margin-right: 16px;
+        border-radius: 5px; }
+      .blog-single #comments .comment-list .comment-author .fn {
+        font-size: 23px;
+        text-align: left;
+        color: #414141; }
+        .blog-single #comments .comment-list .comment-author .fn a {
+          color: inherit;
+          text-decoration: none; }
+      .blog-single #comments .comment-list .comment-author .says {
+        display: none; }
   .blog-single form.set-comments {
     max-width: 100%;
     margin-top: 100px;
@@ -1171,32 +1241,33 @@ footer {
       font-size: 23px; }
     .blog-single .comments .block-user .user-comment {
       font-size: 16px; }
-  .blog-single .social {
-    top: 410px;
-    position: absolute; }
-    .blog-single .social ul:first-child {
-      border-bottom: 1px solid; }
-      .blog-single .social ul:first-child li {
-        margin-bottom: 15px; }
-    .blog-single .social ul:last-child li:first-child {
-      margin-top: 15px; }
-    .blog-single .social ul {
-      margin-bottom: 0;
-      list-style: none; }
-      .blog-single .social ul li {
-        margin-bottom: 30px;
-        margin-right: 14px;
-        position: relative; }
-        .blog-single .social ul li .posted {
-          top: -5px;
-          left: 20px;
-          position: absolute;
-          font-size: 14px; }
-        .blog-single .social ul li a {
-          font-size: 16px;
-          color: #000; }
-          .blog-single .social ul li a:hover {
-            color: #5d052a;
-            text-decoration: none; }
+
+.social-blog-single {
+  top: 900px;
+  position: absolute; }
+  .social-blog-single ul:first-child {
+    border-bottom: 1px solid; }
+    .social-blog-single ul:first-child li {
+      margin-bottom: 15px; }
+  .social-blog-single ul:last-child li:first-child {
+    margin-top: 15px; }
+  .social-blog-single ul {
+    margin-bottom: 0;
+    list-style: none; }
+    .social-blog-single ul li {
+      margin-bottom: 30px;
+      margin-right: 14px;
+      position: relative; }
+      .social-blog-single ul li .posted {
+        top: -5px;
+        left: 20px;
+        position: absolute;
+        font-size: 14px; }
+      .social-blog-single ul li a {
+        font-size: 16px;
+        color: #000; }
+        .social-blog-single ul li a:hover {
+          color: #5d052a;
+          text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */

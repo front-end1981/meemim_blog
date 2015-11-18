@@ -131,6 +131,8 @@ function add_menu_custom_url( $items ) {
     return $items;
 }
 
+add_theme_support( 'post-thumbnails', array( 'post' ) );
+
 
 
 function enqueue_styles() {

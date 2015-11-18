@@ -15,7 +15,6 @@
  */
 
 get_header(); ?>
-
     <div class="main-heading-title">
         <h1>Meemim Blog</h1>
         <p>
@@ -96,7 +95,7 @@ get_header(); ?>
                             if ( is_single() ) :
                                 the_title( '<h1 class="entry-title">', '</h1>' );
                             else :
-                                the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+                                the_title( '<a href="' . esc_url( get_permalink() ) . '">', '</a>' );
                             endif;
                         ?>
                     </div>
@@ -108,38 +107,33 @@ get_header(); ?>
                                     echo '<span class="featured-post">' . __( 'Sticky', 'twentyfourteen' ) . '</span>';
                                 }
 
-                            // Set up and print post meta information.
-                            printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>',
-                                esc_url( get_permalink() ),
-                                esc_attr( get_the_date( 'c' ) ),
-                                esc_html( get_the_date('F, Y') ),
-                                esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-                                get_the_author()
-                            );
+//                            // Set up and print post meta information.
+//                            printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>',
+//                                esc_url( get_permalink() ),
+//                                esc_attr( get_the_date( 'c' ) ),
+//                                esc_html( get_the_date('F, Y') ),
+//                                esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+//                                get_the_author()
+//                            );
+                            echo get_the_date('F, Y');
 
                             if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
                                 ?>
+
+
                                 <?php
                             endif;
 
                             edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' );
                             ?>
                         </div><!-- .entry-meta -->
-<!--                        October 2015 Roundup-->
                     </div>
                     <div class="share">
                         <div class="days-ago">
                             <?php
-                            $happyday = get_the_date('d.m.Y');
-                            $curday = date('d.m.Y');
-                            $d1 = strtotime($happyday);
-                            $d2 = strtotime($curday);
-                            $diff = $d2-$d1;
-                            $diff = $diff/(60*60*24*365);
-                            $years = floor($diff);
-                            echo $years;
+                                $time_diff = current_time('timestamp') - get_the_time('U');
+                                echo human_time_diff(get_the_time('U'), current_time('timestamp')) . ' AGO' ;
                             ?>
-                            2 days ago
                         </div>
                         <button  class="btn btn-default">Share</button>
                         <div class="social" style="display: none">

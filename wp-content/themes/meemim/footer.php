@@ -112,6 +112,14 @@
             footerToBottom();
         });
 
+        $('.blog-index .share').on('click', 'button', function () {
+            var self = $(this);
+
+            $(this).fadeOut(function() {
+                self.parent().find('.social').fadeIn();
+            });
+        });
+
     })(jQuery);
 </script>
 </body>

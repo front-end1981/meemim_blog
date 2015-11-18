@@ -1,24 +1,16 @@
-@media screen and (max-width: 1280px) {
-  .blog-single .main-img .rectangle {
-    left: 14%; } }
 @media screen and (max-width: 1160px) {
   .blog-single .content .user {
     margin: 108px 0 90px 100px; }
   .blog-single .content .comments .user {
     margin: 108px auto 100px; }
-  .blog-single .social {
-    top: 320px; } }
-@media screen and (max-width: 1024px) {
-  .blog-single .main-img .rectangle {
-    left: 5%; } }
+
+  .social-blog-single {
+    top: 640px; } }
 @media screen and (max-width: 1107px) {
   .pricing-page .column {
     width: 340px;
     margin: auto;
     float: none; } }
-@media screen and (max-width: 980px) {
-  .blog-single .main-img .rectangle {
-    left: 4%; } }
 @media screen and (max-width: 800px) {
   .blog-single .main-img .rectangle {
     left: 0;
