@@ -92,14 +92,55 @@ get_header(); ?>
                     </div>
 
                     <div class="title">
-                        Our New Plan to Educate 1 Million Social Media
-                        Professionals for Free by 2017
+                        <?php
+                            if ( is_single() ) :
+                                the_title( '<h1 class="entry-title">', '</h1>' );
+                            else :
+                                the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+                            endif;
+                        ?>
                     </div>
                     <div class="date">
-                        October 2015 Roundup
+                        <div class="entry-meta">
+                            <?php
+                            if ( 'post' == get_post_type() )
+                                if ( is_sticky() && is_home() && ! is_paged() ) {
+                                    echo '<span class="featured-post">' . __( 'Sticky', 'twentyfourteen' ) . '</span>';
+                                }
+
+                            // Set up and print post meta information.
+                            printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>',
+                                esc_url( get_permalink() ),
+                                esc_attr( get_the_date( 'c' ) ),
+                                esc_html( get_the_date('F, Y') ),
+                                esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+                                get_the_author()
+                            );
+
+                            if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
+                                ?>
+                                <?php
+                            endif;
+
+                            edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' );
+                            ?>
+                        </div><!-- .entry-meta -->
+<!--                        October 2015 Roundup-->
                     </div>
                     <div class="share">
-                        <div class="days-ago">2 days ago</div>
+                        <div class="days-ago">
+                            <?php
+                            $happyday = get_the_date('d.m.Y');
+                            $curday = date('d.m.Y');
+                            $d1 = strtotime($happyday);
+                            $d2 = strtotime($curday);
+                            $diff = $d2-$d1;
+                            $diff = $diff/(60*60*24*365);
+                            $years = floor($diff);
+                            echo $years;
+                            ?>
+                            2 days ago
+                        </div>
                         <button  class="btn btn-default">Share</button>
                         <div class="social" style="display: none">
                             <ul>

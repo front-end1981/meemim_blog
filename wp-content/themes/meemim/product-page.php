@@ -50,5 +50,19 @@
             </div>
         </div>
 
+        <div class="massage-sign-up">
+            <span>
+                Sign up to our blog updates
+            </span>
+            <div class="arrow-bottom"></div>
+        </div>
+
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+            </div>
+            <button type="submit" class="btn btn-default">Sign Up</button>
+        </form>
+
     </section>
 <?php get_footer(); ?>

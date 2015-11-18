@@ -200,14 +200,13 @@ header {
         text-decoration: none; }
 
 .wrapper {
-  margin: auto;
-  max-width: 100%; }
-
-.wrapper.home-page {
-  min-height: calc(100vh - 262px);
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+  max-width: 100%;
+  margin: auto; }
+  .wrapper.home-page {
+    min-height: calc(100vh - 262px);
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 footer {
   max-width: 100%;
@@ -430,8 +429,8 @@ footer {
     padding: 0px 130px;
     text-align: center; }
   .about-us-page .leadership-user {
-    width: 626px;
-    margin: 150px auto 0; }
+    margin: 150px auto 0;
+    text-align: center; }
     .about-us-page .leadership-user:after {
       content: ' ';
       clear: both;
@@ -439,7 +438,7 @@ footer {
     .about-us-page .leadership-user .users {
       max-width: 258px;
       margin-right: 55px;
-      float: left; }
+      display: inline-block; }
       .about-us-page .leadership-user .users img {
         width: 100%;
         height: auto; }
@@ -732,54 +731,109 @@ footer {
         right: 0px;
         background: url("../meemim/images/corner_right_casuta.png") no-repeat -4px 0; }
 
-.product-page p {
-  font-size: 23px;
-  padding: 0px 130px 90px;
-  text-align: center; }
-.product-page h1 {
-  margin: 56px 0 45px 0;
-  font-family: Capsuula;
-  font-size: 40px;
-  font-weight: normal;
-  color: #6d6d6d;
-  text-transform: uppercase; }
-.product-page .main-img {
+.legal-page {
   max-width: 1366px;
-  height: 453px;
-  margin: auto;
-  background: url("../meemim/images/about-us-img2.jpg") no-repeat;
-  background-size: contain; }
-  .product-page .main-img .rectangle {
-    max-width: 737px;
-    height: 230px;
-    width: 70%;
-    margin: auto;
-    background: url("../meemim/images/rectangele.png") no-repeat;
-    background-size: contain;
-    font-size: 100%;
-    text-align: center; }
-    .product-page .main-img .rectangle span {
-      margin: 16% 20%;
-      font-size: 21px;
-      display: inline-block;
-      color: #fff; }
-.product-page .row {
-  padding: 115px 0 100px;
-  border-bottom: 1px solid #a8a8a8; }
-  .product-page .row.even h1 {
-    text-align: right; }
-  .product-page .row h1 {
-    color: #6d6d6d;
-    font-family: Calibri;
+  margin: auto; }
+  .legal-page h1 {
+    margin: 56px 0 45px 0;
+    font-family: Capsuula;
     font-size: 40px;
-    font-weight: 500;
-    text-transform: none; }
-  .product-page .row img {
-    width: 100%; }
-  .product-page .row p {
-    color: #4a4a4a;
+    font-weight: normal;
+    color: #6d6d6d;
+    text-transform: uppercase; }
+  .legal-page .policies {
+    max-width: 960px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px 30px 20px;
+    margin: 0 auto 50px;
+    position: relative;
+    border: 1px solid #e8e8e8; }
+  .legal-page ul {
+    margin: 0;
     padding: 0;
-    text-align: justify; }
+    list-style: none; }
+    .legal-page ul li a {
+      margin-bottom: 5px;
+      padding: 8px 10px;
+      border: 1px solid transparent;
+      font-size: 25px;
+      font-weight: bold;
+      color: #555459;
+      display: block;
+      position: relative; }
+      .legal-page ul li a span {
+        top: 9px;
+        right: 0;
+        font-size: 25px;
+        font-weight: normal;
+        position: absolute;
+        color: #e8e8e8; }
+      .legal-page ul li a:hover {
+        background: #fbfbfa;
+        border-radius: 4px;
+        border-color: #e8e8e8;
+        text-decoration: none; }
+        .legal-page ul li a:hover span {
+          color: #555459; }
+
+.product-page {
+  max-width: 1366px;
+  margin: auto; }
+  .product-page .massage-sign-up {
+    max-width: 880px;
+    margin: 100px auto 0; }
+  .product-page .form-inline {
+    margin-bottom: 100px; }
+  .product-page p {
+    font-size: 23px;
+    padding: 0px 130px 90px;
+    text-align: center; }
+  .product-page h1 {
+    margin: 56px 0 45px 0;
+    font-family: Capsuula;
+    font-size: 40px;
+    font-weight: normal;
+    color: #6d6d6d;
+    text-transform: uppercase; }
+  .product-page .main-img {
+    max-width: 1366px;
+    height: 453px;
+    margin: auto;
+    background: url("../meemim/images/about-us-img2.jpg") no-repeat;
+    background-size: contain; }
+    .product-page .main-img .rectangle {
+      max-width: 737px;
+      height: 230px;
+      width: 70%;
+      margin: auto;
+      background: url("../meemim/images/rectangele.png") no-repeat;
+      background-size: contain;
+      font-size: 100%;
+      text-align: center; }
+      .product-page .main-img .rectangle span {
+        margin: 16% 20%;
+        font-size: 21px;
+        display: inline-block;
+        color: #fff; }
+  .product-page .row {
+    padding: 115px 0 100px;
+    border-bottom: 1px solid #a8a8a8; }
+    .product-page .row.even h1 {
+      text-align: right; }
+    .product-page .row h1 {
+      color: #6d6d6d;
+      font-family: Calibri;
+      font-size: 40px;
+      font-weight: 500;
+      text-transform: none; }
+    .product-page .row img {
+      width: 100%; }
+    .product-page .row p {
+      color: #4a4a4a;
+      padding: 0;
+      text-align: justify; }
 
 .blog-index {
   max-width: 1366px;
@@ -931,17 +985,20 @@ footer {
 
 .blog-index form,
 .blog-single form,
-.pricing-page form {
+.pricing-page form,
+.product-page form {
   max-width: 413px;
   margin: 28px auto 0; }
   .blog-index form .form-control:focus,
   .blog-single form .form-control:focus,
-  .pricing-page form .form-control:focus {
+  .pricing-page form .form-control:focus,
+  .product-page form .form-control:focus {
     border-color: #5d052a;
     box-shadow: none; }
   .blog-index form input#exampleInputEmail2,
   .blog-single form input#exampleInputEmail2,
-  .pricing-page form input#exampleInputEmail2 {
+  .pricing-page form input#exampleInputEmail2,
+  .product-page form input#exampleInputEmail2 {
     width: 278px;
     height: 31px;
     border-radius: 13px 0 0 13px;
@@ -950,7 +1007,8 @@ footer {
     color: #4b4949; }
   .blog-index form button,
   .blog-single form button,
-  .pricing-page form button {
+  .pricing-page form button,
+  .product-page form button {
     height: 33px;
     width: 83px;
     margin-left: -3px;
@@ -962,7 +1020,8 @@ footer {
     color: #fff; }
     .blog-index form button.btn-default:hover,
     .blog-single form button.btn-default:hover,
-    .pricing-page form button.btn-default:hover {
+    .pricing-page form button.btn-default:hover,
+    .product-page form button.btn-default:hover {
       color: #fff;
       background-color: #5d052a;
       border: none; }
@@ -972,7 +1031,10 @@ footer {
     .blog-single form button .btn.focus,
     .pricing-page form button.btn:hover,
     .pricing-page form button .btn:focus,
-    .pricing-page form button .btn.focus {
+    .pricing-page form button .btn.focus,
+    .product-page form button.btn:hover,
+    .product-page form button .btn:focus,
+    .product-page form button .btn.focus {
       text-decoration: none; }
 
 .pagination-blog {

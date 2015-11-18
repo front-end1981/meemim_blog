@@ -67,14 +67,16 @@
 
         $('.casuta').hover(
             function () {
-                if ( $(this).hasClass('selected-none') ) {
+                if ( !$(this).hasClass('selected') ) {
+                    $(this).removeClass('selected-none');
                     $(this).removeClass('over');
                     $(this).addClass('hover');
                 }
 
             },
             function () {
-                if ( $(this).hasClass('selected-none') ) {
+                if ( !$(this).hasClass('selected') ) {
+                    $(this).addClass('selected-none');
                     $(this).removeClass('hover');
                     $(this).addClass('over');
                 }

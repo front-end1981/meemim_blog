@@ -309,19 +309,16 @@ header {
     }
 }
 
-.wrapper{
-    margin: auto;
-    //max-width: 1366px;
-    max-width: 100%;
-}
-
 .wrapper {
+    max-width: 100%;
+    margin: auto;
     &.home-page {
         min-height: calc(100vh - 262px);
         display: flex;
         align-items: center;
         justify-content: center;
     }
+    .legal-page {}
 }
 
 footer{
@@ -658,8 +655,9 @@ footer{
 
     .leadership-user {
 
-        width: 626px;
+        //width: 626px;
         margin: 150px auto 0;
+        text-align: center;
 
         &:after {
             content: ' ';
@@ -669,7 +667,8 @@ footer{
         .users {
             max-width: 258px;
             margin-right: 55px;
-            float: left;
+            display: inline-block;
+            //float: left;
 
             img {
                 width: 100%;
@@ -1091,7 +1090,77 @@ footer{
     }
 }
 
+.legal-page {
+    max-width: $max-width-page;
+    margin: auto;
+    h1 {
+        margin: 56px 0 45px 0;
+        font-family: Capsuula;
+        font-size: 40px;
+        font-weight: normal;
+        color: #6d6d6d;
+        text-transform: uppercase;
+    }
+
+    .policies {
+        max-width: 960px;
+        margin: auto;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 30px 30px 20px;
+        margin: 0 auto 50px;
+        position: relative;
+        border: 1px solid #e8e8e8
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            a {
+                margin-bottom: 5px;
+                padding: 8px 10px;
+                border: 1px solid transparent;
+                font-size: 25px;
+                font-weight: bold;
+                color: #555459;
+                display: block;
+                position: relative;
+                span {
+                    top: 9px;
+                    right: 0;
+                    font-size: 25px;
+                    font-weight: normal;
+                    position: absolute;
+                    color: #e8e8e8;
+                }
+                &:hover {
+                    background: #fbfbfa;
+                    border-radius: 4px;
+                    border-color: #e8e8e8;
+                    text-decoration: none;
+                    span {
+                        color: #555459;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
 .product-page {
+    max-width: $max-width-page;
+    margin: auto;
+
+    .massage-sign-up {
+        max-width: 880px;
+        margin: 100px auto 0;
+    }
+    .form-inline {
+        margin-bottom: 100px;
+    }
 
     p {
         font-size: 23px;
@@ -1383,7 +1452,8 @@ footer{
 
 .blog-index,
 .blog-single,
-.pricing-page
+.pricing-page,
+.product-page
 {
     form {
         max-width: 413px;
