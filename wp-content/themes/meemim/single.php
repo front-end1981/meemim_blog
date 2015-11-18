@@ -123,28 +123,30 @@ get_header(); ?>
 <!--        </div>-->
 
     </section>
+
     <div class="social-blog-single">
         <ul>
             <li>
                 <a href="#" class="icon-export"></a>
             </li>
         </ul>
-        <ul>
-            <li>
-                <a href="#" class="icon-linkedin"></a>
-            </li>
-            <li>
-                <a href="#" class="icon-twitter"></a>
-            </li>
-            <li>
-                <a href="#" class="icon-facebook"></a>
-            </li>
-            <li>
-                <a href="#" class="icon-gplus"></a>
-            </li>
-        </ul>
-    </div>
 
+        <?php echo do_shortcode('[TheChamp-Sharing count="1" total_shares="ON type="vertical"]') ?>
+
+    </div>
+    <script>
+        (function ($) {
+            $('.the_champ_sharing_container').find('.theChampFacebookSvg').addClass('icon-facebook');
+            $('.the_champ_sharing_container').find('.theChampTwitterSvg').addClass('icon-twitter');
+            $('.the_champ_sharing_container').find('.theChampLinkedinSvg').addClass('icon-linkedin');
+            $('.the_champ_sharing_container').find('.theChampGoogleSvg').addClass('icon-gplus');
+
+            $('.social-blog-single .icon-export').on('click', function (e) {
+                e.preventDefault();
+                $('.the_champ_sharing_container').slideToggle('slow');
+            });
+        })(jQuery);
+    </script>
 <?php
 //get_sidebar( 'content' );
 //get_sidebar();

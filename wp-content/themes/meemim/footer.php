@@ -90,10 +90,7 @@
             $(this).addClass('selected');
         });
 
-        $('.bwWrapper').BlackAndWhite({
-            hoverEffect: true,
-            invertHoverEffect: true
-        });
+
 
 
         function footerToBottom() {
@@ -112,13 +109,6 @@
             footerToBottom();
         });
 
-        $('.blog-index .share').on('click', 'button', function () {
-            var self = $(this);
-
-            $(this).fadeOut(function() {
-                self.parent().find('.social').fadeIn();
-            });
-        });
 
     })(jQuery);
 </script>

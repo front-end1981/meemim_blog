@@ -904,8 +904,34 @@ footer {
         float: left;
         position: relative; }
         .blog-index .content .block .group .social {
-          margin-top: 20px;
+          margin-top: 17px;
+          margin-right: 10px;
           float: right; }
+          .blog-index .content .block .group .social .theChampSharingRound {
+            margin-left: 15px !important; }
+            .blog-index .content .block .group .social .theChampSharingRound .the_champ_share_count {
+              top: -5px;
+              left: 20px;
+              margin: 0 !important;
+              padding: 0 !important;
+              color: #000 !important;
+              position: absolute;
+              font-family: Calibri !important;
+              font-size: 14px !important;
+              font-weight: normal !important;
+              box-shadow: none;
+              text-shadow: none;
+              background-color: transparent !important;
+              visibility: visible; }
+            .blog-index .content .block .group .social .theChampSharingRound .theChampSharing {
+              background-color: transparent; }
+              .blog-index .content .block .group .social .theChampSharingRound .theChampSharing ss {
+                font-size: 16px;
+                color: #000;
+                background: none; }
+                .blog-index .content .block .group .social .theChampSharingRound .theChampSharing ss:hover {
+                  color: #5d052a;
+                  text-decoration: none; }
           .blog-index .content .block .group .social ul {
             margin-bottom: 0;
             list-style: none; }
@@ -1245,6 +1271,59 @@ footer {
 .social-blog-single {
   top: 900px;
   position: absolute; }
+  .social-blog-single .the_champ_sharing_container {
+    position: static !important;
+    margin-left: 28px;
+    width: 10px !important; }
+    .social-blog-single .the_champ_sharing_container > div {
+      display: none; }
+    .social-blog-single .the_champ_sharing_container .the_champ_sharing_ul {
+      margin-bottom: 0;
+      list-style: none; }
+      .social-blog-single .the_champ_sharing_container .the_champ_sharing_ul li {
+        margin-bottom: 32px !important;
+        margin-right: 14px !important;
+        position: relative; }
+        .social-blog-single .the_champ_sharing_container .the_champ_sharing_ul li .posted {
+          top: -5px;
+          left: 20px;
+          position: absolute;
+          font-size: 14px; }
+        .social-blog-single .the_champ_sharing_container .the_champ_sharing_ul li a {
+          font-size: 16px;
+          color: #000; }
+          .social-blog-single .the_champ_sharing_container .the_champ_sharing_ul li a:hover {
+            color: #5d052a;
+            text-decoration: none; }
+      .social-blog-single .the_champ_sharing_container .the_champ_sharing_ul:first-child {
+        border-bottom: 1px solid; }
+        .social-blog-single .the_champ_sharing_container .the_champ_sharing_ul:first-child li {
+          margin-bottom: 15px; }
+      .social-blog-single .the_champ_sharing_container .the_champ_sharing_ul:last-child li:first-child {
+        margin-top: 15px; }
+      .social-blog-single .the_champ_sharing_container .the_champ_sharing_ul .the_champ_share_count {
+        top: -5px;
+        left: 20px;
+        margin: 0 !important;
+        padding: 0 !important;
+        color: #000 !important;
+        position: absolute;
+        font-family: Calibri !important;
+        font-size: 14px !important;
+        font-weight: normal !important;
+        box-shadow: none;
+        text-shadow: none;
+        background-color: transparent !important;
+        visibility: visible; }
+      .social-blog-single .the_champ_sharing_container .the_champ_sharing_ul .theChampSharing {
+        background-color: #fff !important; }
+        .social-blog-single .the_champ_sharing_container .the_champ_sharing_ul .theChampSharing ss {
+          font-size: 16px;
+          color: #000;
+          background: none; }
+          .social-blog-single .the_champ_sharing_container .the_champ_sharing_ul .theChampSharing ss:hover {
+            color: #5d052a;
+            text-decoration: none; }
   .social-blog-single ul:first-child {
     border-bottom: 1px solid; }
     .social-blog-single ul:first-child li {
@@ -1265,9 +1344,12 @@ footer {
         font-size: 14px; }
       .social-blog-single ul li a {
         font-size: 16px;
-        color: #000; }
+        color: #000;
+        text-decoration: none; }
         .social-blog-single ul li a:hover {
           color: #5d052a;
+          text-decoration: none; }
+        .social-blog-single ul li a:active {
           text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */
