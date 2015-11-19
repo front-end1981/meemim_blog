@@ -6,6 +6,7 @@
             <?php the_content(); ?>
         <?php endwhile; endif; ?>
 
+        <h3>Policies</h3>
         <div class="policies">
 
             <?php wp_nav_menu(

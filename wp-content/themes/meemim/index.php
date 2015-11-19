@@ -71,26 +71,53 @@ get_header(); ?>
 
             </div>
         </div>
-        <?php
-            if ( have_posts() ) :
-                // Start the Loop.
-                while ( have_posts() ) : the_post();
+        <div class="content">
+            <?php
+                if ( have_posts() ) :
+                    // Start the Loop.
+                    while ( have_posts() ) : the_post();
 
-                    /*
-                     * Include the post format-specific template for the content. If you want to
-                     * use this in a child theme, then include a file called called content-___.php
-                     * (where ___ is the post format) and that will be used instead.
-                     */
-                    get_template_part( 'content', get_post_format() );
+                        /*
+                         * Include the post format-specific template for the content. If you want to
+                         * use this in a child theme, then include a file called called content-___.php
+                         * (where ___ is the post format) and that will be used instead.
+                         */
+                        get_template_part( 'content', get_post_format() );
 
-                endwhile;
+                    endwhile;
 
-            else :
-                // If no content, include the "No posts found" template.
-                get_template_part( 'content', 'none' );
+                else :
+                    // If no content, include the "No posts found" template.
+                    get_template_part( 'content', 'none' );
 
-            endif;
-        ?>
+                endif;
+            ?>
+
+            <div class="pagination-blog">
+                <ul>
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#" class="more">...</a></li>
+                </ul>
+            </div>
+            <div class="massage-sign-up">
+                    <span>
+                     Sign up to our blog updates
+                    </span>
+                <div class="arrow-bottom"></div>
+            </div>
+            <form class="form-inline" role="form">
+                <div class="form-group" id="blog-index">
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+                </div>
+                <button type="submit" class="btn btn-default">sing up</button>
+            </form>
+        </div>
+
         <div class="sidebar">
             <div class="suggested-readings">
                 <h3>Suggested readings</h3>
@@ -139,18 +166,6 @@ get_header(); ?>
             </div>
         </div>
     </section>
-
-    <div class="pagination-blog">
-        <ul>
-            <li><a href="#" class="active">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">6</a></li>
-            <li><a href="#" class="more">...</a></li>
-        </ul>
-    </div>
 
 
     <script>

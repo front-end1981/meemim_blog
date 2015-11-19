@@ -313,7 +313,9 @@ header {
     max-width: 100%;
     margin: auto;
     &.home-page {
-        min-height: calc(100vh - 280px);
+        //min-height: calc(100vh - 280px);
+        //min-height: 100vh;
+        //height:100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -357,7 +359,8 @@ footer{
     }
 
     &.home-page {
-        top:115px;
+        //top:115px;
+
 
         .left-side ul li > a,
         .left-side ul > li {
@@ -527,7 +530,7 @@ footer{
     .form-sing-up {
         width: 100%;
         height: 200px;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.4);
 
         .wrapper-block {
             padding: 0 36px;
@@ -642,9 +645,13 @@ footer{
 }
 
 .about-us-page {
-    max-width: $max-width-page;
+    max-width: 100%;
     margin: 65px auto 150px;
     color: #484848;
+    > p {
+        max-width: $max-width-page;
+        margin: auto;
+    }
 
     p {
         font-size: 23px;
@@ -699,6 +706,7 @@ footer{
             max-width: 737px;
             height: 230px;
             background: url("../meemim/images/rectangele.png") no-repeat;
+            background-size: cover;
             text-align: center;
 
             span {
@@ -714,7 +722,7 @@ footer{
     .about-us-block2 {
         height: 453px;
         background: url("../meemim/images/about-us-img2.jpg") no-repeat;
-        //background-size: contain;
+        background-size: cover;
 
         .rectangle {
             width: 70%;
@@ -756,16 +764,6 @@ footer{
 
 
         .rectangle {
-            ////left: 321px;
-            ////top: 147px;
-            //width: 750px;
-            //height: 300px;
-            //margin: auto;
-            //position: relative;
-            ////background: url("../meemim/images/rectangele.png") no-repeat 0 -90px;
-            //background: url("../meemim/images/rectangele-about-us.png");
-            //background-size: contain;
-
             left: 4px;
             top: -4px;
             max-width: 35%;
@@ -1093,13 +1091,19 @@ footer{
 .legal-page {
     max-width: $max-width-page;
     margin: auto;
-    h1 {
+    h1, h3 {
         margin: 56px 0 45px 0;
         font-family: Capsuula;
         font-size: 40px;
         font-weight: normal;
         color: #6d6d6d;
         text-transform: uppercase;
+    }
+
+    h3 {
+        max-width: 960px;
+        margin: 56px auto 20px;
+        padding: 0 60px 0 0px;
     }
 
     .policies {
@@ -1150,6 +1154,32 @@ footer{
     }
 }
 
+.main-img {
+    max-width: 100%;
+    height: 453px;
+    margin: auto;
+    background: url("../meemim/images/about-us-img2.jpg") no-repeat center;
+    background-size: cover;
+
+    .rectangle {
+        max-width: 737px;
+        height: 230px;
+        width: 70%;
+        margin: auto;
+        background: url("../meemim/images/rectangele.png") no-repeat;
+        background-size: contain;
+        font-size: 100%;
+        text-align: center;
+
+        span {
+            margin: 16% 20%;
+            font-size: 21px;
+            display: inline-block;
+            color: #fff;
+        }
+    }
+}
+
 .product-page {
     max-width: $max-width-page;
     margin: auto;
@@ -1175,31 +1205,6 @@ footer{
         font-weight: normal;
         color: #6d6d6d;
         text-transform: uppercase;
-    }
-    .main-img {
-        max-width: $max-width-page;
-        height: 453px;
-        margin: auto;
-        background: url("../meemim/images/about-us-img2.jpg") no-repeat;
-        background-size: contain;
-
-        .rectangle {
-            max-width: 737px;
-            height: 230px;
-            width: 70%;
-            margin: auto;
-            background: url("../meemim/images/rectangele.png") no-repeat;
-            background-size: contain;
-            font-size: 100%;
-            text-align: center;
-
-            span {
-                margin: 16% 20%;
-                font-size: 21px;
-                display: inline-block;
-                color: #fff;
-            }
-        }
     }
 
     .row {
@@ -1353,18 +1358,17 @@ footer{
                     margin-left: 15px!important;
                     .the_champ_share_count {
                         top: -5px;
-                        left: 20px;
+                        left: 17px;
                         margin: 0!important;
                         padding: 0!important;
                         color: #000!important;
                         position: absolute;
                         font-family: Calibri!important;
-                        font-size: 14px!important;
+                        font-size: 12px!important;
                         font-weight: normal!important;
                         box-shadow: none;
                         text-shadow: none;
                         background-color: transparent!important;
-                        visibility: visible;
                     }
                     .theChampSharing {
                         background-color: transparent;
@@ -1630,7 +1634,7 @@ footer{
     }
 
 
-    .main-img {
+    .main-img-post {
         display: block;
         margin-top: 70px;
         text-align: center;
@@ -1712,6 +1716,7 @@ footer{
                         background-color: #5d052a;
                         border-radius: 4px;
                         border: none;
+                        font-size: 18px;
                     }
                 }
             }
@@ -1861,13 +1866,29 @@ footer{
         > div {
             display: none;
         }
+
         .the_champ_sharing_ul {
             margin-bottom: 0;
             list-style: none;
-            li{
+
+            li {
                 margin-bottom: 32px!important;
                 margin-right: 14px!important;
                 position: relative;
+                & > ss {
+                    top: -8px;
+                    left: 20px;
+                    margin: 0!important;
+                    padding: 0!important;
+                    color: #000!important;
+                    position: absolute;
+                    font-family: Calibri!important;
+                    font-size: 12px!important;
+                    font-weight: normal!important;
+                    box-shadow: none;
+                    text-shadow: none;
+                    background-color: transparent!important;
+                }
 
                 .posted{
                     top: -5px;

@@ -203,7 +203,6 @@ header {
   max-width: 100%;
   margin: auto; }
   .wrapper.home-page {
-    min-height: calc(100vh - 280px);
     display: flex;
     align-items: center;
     justify-content: center; }
@@ -234,15 +233,13 @@ footer {
   footer .left-side {
     position: relative;
     z-index: 2; }
-  footer.home-page {
-    top: 115px; }
-    footer.home-page .left-side ul li > a,
-    footer.home-page .left-side ul > li {
-      color: #8f8f8f; }
-    footer.home-page .first-row {
-      border-bottom: 1px solid #212121; }
-    footer.home-page .social a {
-      color: #8f8f8f; }
+  footer.home-page .left-side ul li > a,
+  footer.home-page .left-side ul > li {
+    color: #8f8f8f; }
+  footer.home-page .first-row {
+    border-bottom: 1px solid #212121; }
+  footer.home-page .social a {
+    color: #8f8f8f; }
   footer .first-row {
     padding-left: 57px;
     border-bottom: 1px solid #727272; }
@@ -341,7 +338,7 @@ footer {
   .main-page .form-sing-up {
     width: 100%;
     height: 200px;
-    background: rgba(0, 0, 0, 0.7); }
+    background: rgba(0, 0, 0, 0.4); }
     .main-page .form-sing-up .wrapper-block {
       padding: 0 36px; }
       .main-page .form-sing-up .wrapper-block .massage-sign-up {
@@ -421,9 +418,12 @@ footer {
     font-size: 23px; }
 
 .about-us-page {
-  max-width: 1366px;
+  max-width: 100%;
   margin: 65px auto 150px;
   color: #484848; }
+  .about-us-page > p {
+    max-width: 1366px;
+    margin: auto; }
   .about-us-page p {
     font-size: 23px;
     padding: 0px 130px;
@@ -461,6 +461,7 @@ footer {
       max-width: 737px;
       height: 230px;
       background: url("../meemim/images/rectangele.png") no-repeat;
+      background-size: cover;
       text-align: center; }
       .about-us-page .about-us-block .rectangle span,
       .about-us-page .about-us-block2 .rectangle span {
@@ -472,7 +473,8 @@ footer {
         color: #fff; }
   .about-us-page .about-us-block2 {
     height: 453px;
-    background: url("../meemim/images/about-us-img2.jpg") no-repeat; }
+    background: url("../meemim/images/about-us-img2.jpg") no-repeat;
+    background-size: cover; }
     .about-us-page .about-us-block2 .rectangle {
       width: 70%;
       margin: auto;
@@ -734,13 +736,17 @@ footer {
 .legal-page {
   max-width: 1366px;
   margin: auto; }
-  .legal-page h1 {
+  .legal-page h1, .legal-page h3 {
     margin: 56px 0 45px 0;
     font-family: Capsuula;
     font-size: 40px;
     font-weight: normal;
     color: #6d6d6d;
     text-transform: uppercase; }
+  .legal-page h3 {
+    max-width: 960px;
+    margin: 56px auto 20px;
+    padding: 0 60px 0 0px; }
   .legal-page .policies {
     max-width: 960px;
     margin: auto;
@@ -778,6 +784,27 @@ footer {
         .legal-page ul li a:hover span {
           color: #555459; }
 
+.main-img {
+  max-width: 100%;
+  height: 453px;
+  margin: auto;
+  background: url("../meemim/images/about-us-img2.jpg") no-repeat center;
+  background-size: cover; }
+  .main-img .rectangle {
+    max-width: 737px;
+    height: 230px;
+    width: 70%;
+    margin: auto;
+    background: url("../meemim/images/rectangele.png") no-repeat;
+    background-size: contain;
+    font-size: 100%;
+    text-align: center; }
+    .main-img .rectangle span {
+      margin: 16% 20%;
+      font-size: 21px;
+      display: inline-block;
+      color: #fff; }
+
 .product-page {
   max-width: 1366px;
   margin: auto; }
@@ -797,26 +824,6 @@ footer {
     font-weight: normal;
     color: #6d6d6d;
     text-transform: uppercase; }
-  .product-page .main-img {
-    max-width: 1366px;
-    height: 453px;
-    margin: auto;
-    background: url("../meemim/images/about-us-img2.jpg") no-repeat;
-    background-size: contain; }
-    .product-page .main-img .rectangle {
-      max-width: 737px;
-      height: 230px;
-      width: 70%;
-      margin: auto;
-      background: url("../meemim/images/rectangele.png") no-repeat;
-      background-size: contain;
-      font-size: 100%;
-      text-align: center; }
-      .product-page .main-img .rectangle span {
-        margin: 16% 20%;
-        font-size: 21px;
-        display: inline-block;
-        color: #fff; }
   .product-page .row {
     padding: 115px 0 100px;
     border-bottom: 1px solid #a8a8a8; }
@@ -911,18 +918,17 @@ footer {
             margin-left: 15px !important; }
             .blog-index .content .block .group .social .theChampSharingRound .the_champ_share_count {
               top: -5px;
-              left: 20px;
+              left: 17px;
               margin: 0 !important;
               padding: 0 !important;
               color: #000 !important;
               position: absolute;
               font-family: Calibri !important;
-              font-size: 14px !important;
+              font-size: 12px !important;
               font-weight: normal !important;
               box-shadow: none;
               text-shadow: none;
-              background-color: transparent !important;
-              visibility: visible; }
+              background-color: transparent !important; }
             .blog-index .content .block .group .social .theChampSharingRound .theChampSharing {
               background-color: transparent; }
               .blog-index .content .block .group .social .theChampSharingRound .theChampSharing ss {
@@ -1127,17 +1133,17 @@ footer {
       color: #4a4a4a; }
     .blog-single .content .massage-sign-up {
       margin-top: 104px; }
-  .blog-single .main-img {
+  .blog-single .main-img-post {
     display: block;
     margin-top: 70px;
     text-align: center; }
-    .blog-single .main-img .img-block {
+    .blog-single .main-img-post .img-block {
       position: relative; }
-      .blog-single .main-img .img-block img {
+      .blog-single .main-img-post .img-block img {
         height: auto;
         max-width: 100%;
         min-height: 279px; }
-    .blog-single .main-img .rectangle {
+    .blog-single .main-img-post .rectangle {
       top: 0;
       left: 50%;
       width: 912px;
@@ -1149,12 +1155,12 @@ footer {
       background: url("../meemim/images/rectangele4.png") no-repeat;
       background-size: cover;
       position: absolute; }
-      .blog-single .main-img .rectangle .main-img-title {
+      .blog-single .main-img-post .rectangle .main-img-title {
         max-width: 760px;
         margin: auto;
         color: #fff;
         text-align: center; }
-        .blog-single .main-img .rectangle .main-img-title span {
+        .blog-single .main-img-post .rectangle .main-img-title span {
           display: inline-block;
           font-size: 34px; }
   .blog-single .title-form {
@@ -1187,7 +1193,8 @@ footer {
           color: #fff;
           background-color: #5d052a;
           border-radius: 4px;
-          border: none; }
+          border: none;
+          font-size: 18px; }
     .blog-single #comments .comment-list {
       margin-bottom: 130px;
       padding: 0;
@@ -1284,6 +1291,19 @@ footer {
         margin-bottom: 32px !important;
         margin-right: 14px !important;
         position: relative; }
+        .social-blog-single .the_champ_sharing_container .the_champ_sharing_ul li > ss {
+          top: -8px;
+          left: 20px;
+          margin: 0 !important;
+          padding: 0 !important;
+          color: #000 !important;
+          position: absolute;
+          font-family: Calibri !important;
+          font-size: 12px !important;
+          font-weight: normal !important;
+          box-shadow: none;
+          text-shadow: none;
+          background-color: transparent !important; }
         .social-blog-single .the_champ_sharing_container .the_champ_sharing_ul li .posted {
           top: -5px;
           left: 20px;

@@ -20,6 +20,7 @@ if ( post_password_required() ) {
 
 <div id="comments" class="comments-area">
 
+	<?php comment_form(); ?>
 	<?php if ( have_comments() ) : ?>
 
 <!--	<h2 class="comments-title">-->
@@ -29,7 +30,6 @@ if ( post_password_required() ) {
 //		?>
 <!--	</h2>-->
 
-		<?php comment_form(); ?>
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 	<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">

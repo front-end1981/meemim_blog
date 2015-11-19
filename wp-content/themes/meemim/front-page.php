@@ -29,16 +29,10 @@
             <div class="form-group">
                 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
             </div>
-            <button type="submit" class="btn btn-default">sing Up</button>
+            <button type="submit" class="btn btn-default">Sign Up</button>
         </form>
-<!--        -->
-<!--        <form>-->
-<!--            <input type="text" >-->
-<!--            <div class="button-form">-->
-<!--                <span>sing up</span>-->
-<!--            </div>-->
-<!--        </form>-->
     </div>
+
 </section>
 
 <?php get_footer(); ?>

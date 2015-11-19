@@ -14,7 +14,7 @@ get_header(); ?>
         <h1>Meemim Blog</h1>
     </div>
     <section class="blog-single">
-        <div class="main-img">
+        <div class="main-img-post">
             <div class="img-block">
                 <div class="rectangle">
                     <div class="main-img-title">
@@ -25,7 +25,6 @@ get_header(); ?>
                 </div>
                 <?php the_post_thumbnail();?>
             </div>
-
         </div>
         <div class="content">
             <div class="user">

@@ -2,7 +2,7 @@
 
 
 </div>
-<div style="overflow: hidden">
+<div class="footer-block" style="overflow: hidden;">
     <footer class="<?php echo is_page('Home')? 'home-page' : ''?>">
         <hr>
         <?php echo is_page('Home')? '<div class="bg"></div>' : ''?>
@@ -92,23 +92,29 @@
 
 
 
+        function ToBottom() {
+            var browserHeight = $(window).height(),
+                footerOuterHeight = $('footer').outerHeight(true),
+                mainHeightMarginPaddingBorderHomePage = $('.wrapper.home-page').outerHeight(true) - $('.wrapper.home-page').height(),
+                mainHeightMarginPaddingBorder = $('.wrapper').outerHeight(true) - $('.wrapper').height();
 
-        function footerToBottom() {
-            var footer = $('footer'),
-                footerHeight = footer.height();
-
-            if ( $('body').hasClass('home') ) {
-                footer.css( {'top': footerHeight - 15} );
+            if ($('footer').hasClass('home-page')) {
+                $('footer').css({top:footerOuterHeight - 35});
+                $('.wrapper.home-page').css({
+                    'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorderHomePage - $('header').height()
+                });
             } else {
-                footer.css( {'top': 0} );
+                if ( $('section').hasClass('legal-page') ) {
+                    $('.wrapper').css({
+                        'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorder - $('header').height()  - $('header').height()
+                    });
+                }
             }
-
         };
-        footerToBottom();
+        ToBottom();
         $(window).resize(function () {
-            footerToBottom();
+            ToBottom();
         });
-
 
     })(jQuery);
 </script>
