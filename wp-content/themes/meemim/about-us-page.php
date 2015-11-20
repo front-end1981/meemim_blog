@@ -28,12 +28,9 @@
         <?php foreach(AboutPageHelper::getAllImages(13, 'meemim') as $index=>$image): ?>
         <?php if ( $index < 2 ):?>
             <div class="users">
-                <img src="<?php echo $image[0]; ?>" alt="">
-                <div class="users-name">ALEXANDRE PESTOV</div>
-                <div class="users-data">
-                    Online meetings with unlimited
-                    audio conferencing
-                </div>
+                <img src="<?php echo $image['src']; ?>" alt="">
+                <div class="users-name"><?php echo trim($image['caption']); ?></div>
+                <div class="users-data"><?php echo trim($image['description']); ?></div>
             </div>
             <?php endif;?>
         <?php endforeach; ?>
@@ -55,13 +52,9 @@
         <?php foreach(AboutPageHelper::getAllImages(13, 'meemim') as $index=>$image): ?>
             <?php if ( $index > 1 ):?>
             <div class="users">
-
-                <img src="<?php echo $image[0]; ?>" alt="">
-                <div class="users-name">ALEXANDRE PESTOV</div>
-                <div class="users-data">
-                    Online meetings with unlimited
-                    audio conferencing
-                </div>
+                <img src="<?php echo $image['src']; ?>" alt="">
+                <div class="users-name"><?php echo trim($image['caption']); ?></div>
+                <div class="users-data"><?php echo trim($image['description']); ?></div>
             </div>
             <?php endif;?>
         <?php endforeach; ?>

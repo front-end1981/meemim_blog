@@ -2,9 +2,12 @@
     <div class="team_metabox_body">
         <?php if (is_array($attachments) && count($attachments) > 0): ?>
             <?php foreach ($attachments as $id): ?>
+                <?php $data = wp_prepare_attachment_for_js($id); ?>
                 <div class="photo" data-attachment-id="<?php echo $id; ?>">
                     <a href="#" class="remove-photo">&times;</a>
-                    <img src="<?php $attachment = wp_get_attachment_image_src($id, 'thumbnail'); echo $attachment[0] ?>" alt="" />
+                    <a href="<?php echo $data['editLink']; ?>">
+                        <img src="<?php $attachment = wp_get_attachment_image_src($id, 'thumbnail'); echo $attachment[0] ?>" alt="" />
+                    </a>
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>

@@ -153,6 +153,12 @@ body {
                 background-color: #F2B229;
                 text-decoration: none;
             }
+            &a:active,
+            &a:focus,
+            &a:visited
+            {
+                text-decoration: none!important;
+            }
         }
         ul {
             margin: 10px 0;
@@ -288,9 +294,9 @@ header {
                 background-color: #F2B229;
                 text-decoration: none;
             }
-            a:active {
-                color: #fff;
-                background-color: #F2B229;
+
+            a:active,
+            a:focus {
                 text-decoration: none;
             }
             &:last-child {
@@ -326,8 +332,7 @@ header {
 footer{
     max-width: $max-width-screen;
     margin: auto;
-    padding-bottom: 19px;
-    //top: 0;
+    //padding-bottom: 19px;
     position: relative;
 
     &:after {
@@ -690,6 +695,7 @@ footer{
         .users-data{
             font-size: 13px;
             text-align: center;
+            display: inline-flex;
         }
     }
 
@@ -743,7 +749,7 @@ footer{
 
 
 .contact-us-page {
-    $max-width-page: 1366px;
+    $max-width-page: 100%;
     max-width: $max-width-page;
     margin: 65px auto 150px;
     color: #484848;
@@ -766,7 +772,8 @@ footer{
         .rectangle {
             left: 4px;
             top: -4px;
-            max-width: 35%;
+            //max-width: 35%;
+            max-width: 53%;
             height: 131px;
             margin: auto;
             position: relative;
@@ -839,7 +846,6 @@ footer{
                 p {
                     margin: 0 0 0 126px;
                     padding: 0;
-                    //padding: 3px 60px 0 140px;
                     color: #fff;
                     font-size: 20px;
                     text-align: left;
@@ -850,7 +856,8 @@ footer{
     }
 
     .massage-sign-up {
-        max-width: 474px;
+        //max-width: 474px;
+        max-width: 52%;
         margin: 0  auto 40px;
         span {
             display: none;
@@ -1256,9 +1263,44 @@ footer{
     }
 
 
+    .grid {
+        width: 850px;
+        //background: #EEE;
+        max-width: 876px;
+        margin: 0 auto;
+        -webkit-box-sizing: border-box!important;
+        box-sizing: border-box!important;
+        :after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        /* ---- grid-item ---- */
+
+        .grid-item {
+            width: 160px;
+            height: 120px;
+            margin-bottom: 15px;
+            float: left;
+            //background: #D26;
+            //border: 2px solid #333;
+            //border-color: hsla(0, 0%, 0%, 0.5);
+            //border-radius: 5px;
+        }
+
+        .grid-item--width2 { width: 200px; }
+        .grid-item--width3 { width: 96%; }
+        .grid-item--width4 { width: 47%; }
+
+        .grid-item--height2 { height: 300px; }
+        .grid-item--height3 { height: 480px; }
+        .grid-item--height4 { height: 465px; }
+
+    }
+
     .suggested-readings {
         max-width: 248px;
-        margin-right: 60px;
+        //margin-right: 60px;
         float: left;
 
 
@@ -1270,12 +1312,20 @@ footer{
         p {
             font-size: 20px;
             color: #707070;
+            a {
+                color: inherit;
+                text-decoration: none
+            }
         }
 
         .title {
             margin-top: 20px;
             font-size: 26px;
             font-weight: bold;
+            a {
+                color: inherit;
+                text-decoration: none
+            }
         }
         .date {
             font-size: 26px;
@@ -1283,7 +1333,7 @@ footer{
     }
 
     .content {
-        max-width: 970px;
+        max-width: 876px;
         margin-left: 92px;
         float: left;
 
@@ -1339,14 +1389,14 @@ footer{
         &.block-title {
 
           .group {
-            max-width: 568px;
+            //max-width: 568px;
             img {
               height: 286px;
             }
           }
         }
         .group {
-            float: left;
+            //float: left;
             position: relative;
 
 
@@ -1451,7 +1501,9 @@ footer{
               font-size: 26px;
               font-weight: bold;
               a {
+                  min-height: 74px;
                   color: #3c3c3c;
+                  display: block;
                   &:hover {
                       text-decoration: none!important;
                   }

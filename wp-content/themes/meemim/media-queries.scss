@@ -28,6 +28,17 @@
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .blog-index {
+        .grid {
+            .grid-item--width3 {
+                width: 100%;
+            }
+        }
+
+    }
+}
+
 
 @media screen and (max-width: 980px) {
 
@@ -349,41 +360,21 @@
         .content {
             max-width: 100%;
             margin-left: 30px;
+            float: none;
+            .grid {
+                width: 100%;
+                max-width: 100%;
+                .grid-item--width2 {
+                    width: 300px
+                }
+            }
             .block {
-                &.block-title {
-                    .group {
-                        max-width: 67%;
-                    }
-                }
 
-                &.first {
-                    .group:first-child {
-                        max-width: 67%;
-                    }
-                    .group {
-                        max-width: 26%;
-                    }
-                }
-
-                &.second {
-                    .group {
-                        max-width: 30%;
-                        margin-right: 42px;
-                    }
-                }
-                &.third {
-                    .group:first-child {
-                        max-width: 26%;
-                    }
-                    .group {
-                        max-width: 67%;
-                    }
-                }
             }
 
         }
         .suggested-readings {
-            max-width: 24%;
+            //max-width: 24%;
         }
 
         .sidebar{

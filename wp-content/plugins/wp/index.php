@@ -39,7 +39,13 @@ class AboutPageHelper
 
     public static function getPostPhotos($postId)
     {
-        return get_post_meta((int)$postId, AboutPageHelper::META_KEY, true);
+        $meta = get_post_meta((int)$postId, AboutPageHelper::META_KEY, true);
+
+        if (!is_array($meta)) {
+            $meta = array();
+        }
+
+        return $meta;
     }
 
     public static function getAllImages($postId = 13, $size = 'thumbnail')
@@ -52,7 +58,11 @@ class AboutPageHelper
         }
 
         foreach ($attachments as $attachment) {
-            $data[] = wp_get_attachment_image_src($attachment, $size);
+            $url = wp_get_attachment_image_src($attachment, $size);
+
+            $data[] = array_merge(wp_prepare_attachment_for_js($attachment), array(
+                'src' => $url[0]
+            ));
         }
 
         return $data;

@@ -29,70 +29,86 @@ get_header(); ?>
                 <h3>Suggested readings</h3>
                 <div class="block-sidebar">
                     <div class="title">
-                        Social Media News You
-                        Need to Know:
+                        <a href="">
+                            Social Media News You
+                            Need to Know:
+                        </a>
                     </div>
                     <div class="date">
                         October 2015 Roundup
                     </div>
                     <p>
-                        Hatching the ideas and techno
-                        Shape the future of the social
+                        <a href="#">
+                            Hatching the ideas and techno
+                            Shape the future of the social
+                        </a>
                     </p>
                 </div>
 
                 <div class="block-sidebar">
                     <div class="title">
-                        Social Media News You
-                        Need to Know:
+                        <a href="">
+                            Social Media News You
+                            Need to Know:
+                        </a>
                     </div>
                     <div class="date">
                         October 2015 Roundup
                     </div>
                     <p>
-                        Hatching the ideas and techno
-                        Shape the future of the social
+                        <a href="#">
+                            Hatching the ideas and techno
+                            Shape the future of the social
+                        </a>
                     </p>
                 </div>
 
                 <div class="block-sidebar">
                     <div class="title">
-                        Social Media News You
-                        Need to Know:
+                        <a href="">
+                            Social Media News You
+                            Need to Know:
+                        </a>
                     </div>
                     <div class="date">
                         October 2015 Roundup
                     </div>
                     <p>
-                        Hatching the ideas and techno
-                        Shape the future of the social
+                        <a href="#">
+                            Hatching the ideas and techno
+                            Shape the future of the social
+                        </a>
                     </p>
                 </div>
 
             </div>
         </div>
+
+
         <div class="content">
-            <?php
-                if ( have_posts() ) :
-                    // Start the Loop.
-                    while ( have_posts() ) : the_post();
+            <div class="block block-title grid">
 
-                        /*
-                         * Include the post format-specific template for the content. If you want to
-                         * use this in a child theme, then include a file called called content-___.php
-                         * (where ___ is the post format) and that will be used instead.
-                         */
-                        get_template_part( 'content', get_post_format() );
+                <?php
+                    if ( have_posts() ) :
+                        // Start the Loop.
+                        while ( have_posts() ) : the_post();
 
-                    endwhile;
+                            /*
+                             * Include the post format-specific template for the content. If you want to
+                             * use this in a child theme, then include a file called called content-___.php
+                             * (where ___ is the post format) and that will be used instead.
+                             */
+                            get_template_part( 'content', get_post_format() );
 
-                else :
-                    // If no content, include the "No posts found" template.
-                    get_template_part( 'content', 'none' );
+                        endwhile;
 
-                endif;
-            ?>
+                    else :
+                        // If no content, include the "No posts found" template.
+                        get_template_part( 'content', 'none' );
 
+                    endif;
+                ?>
+            </div>
             <div class="pagination-blog">
                 <ul>
                     <li><a href="#" class="active">1</a></li>
@@ -123,43 +139,55 @@ get_header(); ?>
                 <h3>Suggested readings</h3>
                 <div class="block-sidebar">
                     <div class="title">
-                        Social Media News You
-                        Need to Know:
+                        <a href="">
+                            Social Media News You
+                            Need to Know:
+                        </a>
                     </div>
                     <div class="date">
                         October 2015 Roundup
                     </div>
                     <p>
-                        Hatching the ideas and techno
-                        Shape the future of the social
+                        <a href="#">
+                            Hatching the ideas and techno
+                            Shape the future of the social
+                        </a>
                     </p>
                 </div>
 
                 <div class="block-sidebar">
                     <div class="title">
-                        Social Media News You
-                        Need to Know:
+                        <a href="">
+                            Social Media News You
+                            Need to Know:
+                        </a>
                     </div>
                     <div class="date">
                         October 2015 Roundup
                     </div>
                     <p>
-                        Hatching the ideas and techno
-                        Shape the future of the social
+                        <a href="#">
+                            Hatching the ideas and techno
+                            Shape the future of the social
+                        </a>
                     </p>
                 </div>
 
                 <div class="block-sidebar">
                     <div class="title">
-                        Social Media News You
-                        Need to Know:
+                        <a href="">
+                            Social Media News You
+                            Need to Know:
+                        </a>
                     </div>
                     <div class="date">
                         October 2015 Roundup
                     </div>
                     <p>
-                        Hatching the ideas and techno
-                        Shape the future of the social
+                        <a href="#">
+                            Hatching the ideas and techno
+                            Shape the future of the social
+                        </a>
                     </p>
                 </div>
 
@@ -167,25 +195,6 @@ get_header(); ?>
         </div>
     </section>
 
-
-    <script>
-
-        $('.blog-index .share').find('.theChampFacebookSvg').addClass('icon-facebook');
-        $('.blog-index .share').find('.theChampTwitterSvg').addClass('icon-twitter');
-        $('.blog-index .share').find('.theChampLinkedinSvg').addClass('icon-linkedin');
-        $('.blog-index .share').find('.theChampGoogleSvg').addClass('icon-gplus');
-        $('.bwWrapper').BlackAndWhite({
-            hoverEffect: true,
-            invertHoverEffect: true
-        });
-
-        $('.blog-index .share').on('click', 'button', function () {
-            var self = $(this);
-
-            $(this).hide();
-            $(this).parent().find('.social').fadeIn();
-        });
-    </script>
 <?php
 //get_sidebar();
 get_footer();

@@ -11,6 +11,9 @@
     width: 340px;
     margin: auto;
     float: none; } }
+@media screen and (max-width: 1024px) {
+  .blog-index .grid .grid-item--width3 {
+    width: 100%; } }
 @media screen and (max-width: 800px) {
   .blog-single .main-img .rectangle {
     left: 0;
@@ -185,22 +188,13 @@
 @media screen and (max-width: 1350px) {
   .blog-index .content {
     max-width: 100%;
-    margin-left: 30px; }
-    .blog-index .content .block.block-title .group {
-      max-width: 67%; }
-    .blog-index .content .block.first .group:first-child {
-      max-width: 67%; }
-    .blog-index .content .block.first .group {
-      max-width: 26%; }
-    .blog-index .content .block.second .group {
-      max-width: 30%;
-      margin-right: 42px; }
-    .blog-index .content .block.third .group:first-child {
-      max-width: 26%; }
-    .blog-index .content .block.third .group {
-      max-width: 67%; }
-  .blog-index .suggested-readings {
-    max-width: 24%; }
+    margin-left: 30px;
+    float: none; }
+    .blog-index .content .grid {
+      width: 100%;
+      max-width: 100%; }
+      .blog-index .content .grid .grid-item--width2 {
+        width: 300px; }
   .blog-index .sidebar {
     display: none; }
     .blog-index .sidebar.top {

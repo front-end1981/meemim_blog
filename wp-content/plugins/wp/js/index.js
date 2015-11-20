@@ -73,10 +73,13 @@
 
         function drawAttachmentPreview(index, attachment) {
             var $photo = $('<div/>', { class: 'photo' }).attr('data-attachment-id', attachment.id),
+                $edit  = $('<a/>', { href: attachment.editLink }),
                 $image = $('<img/>', { src: attachment.sizes.thumbnail.url }),
                 $cross = $('<a/>', { href: '#', class: 'remove-photo' }).html('&times;').on('click', removePhoto);
 
-            $photo.append($cross).append($image).appendTo($containerBody);
+            $image.appendTo($edit);
+
+            $photo.append($cross).append($edit).appendTo($containerBody);
         }
     });
 
