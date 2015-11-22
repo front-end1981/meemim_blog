@@ -90,9 +90,9 @@ get_header(); ?>
 
                 <?php
                     if ( have_posts() ) :
+
                         // Start the Loop.
                         while ( have_posts() ) : the_post();
-
                             /*
                              * Include the post format-specific template for the content. If you want to
                              * use this in a child theme, then include a file called called content-___.php
@@ -101,7 +101,7 @@ get_header(); ?>
                             get_template_part( 'content', get_post_format() );
 
                         endwhile;
-
+                        paginate_links();
                     else :
                         // If no content, include the "No posts found" template.
                         get_template_part( 'content', 'none' );
@@ -109,7 +109,10 @@ get_header(); ?>
                     endif;
                 ?>
             </div>
+
+
             <div class="pagination-blog">
+                <?php paginate_links(); ?>
                 <ul>
                     <li><a href="#" class="active">1</a></li>
                     <li><a href="#">2</a></li>

@@ -13,25 +13,26 @@ get_header(); ?>
     <div class="main-heading-title">
         <h1>Meemim Blog</h1>
     </div>
-    <section class="blog-single">
-        <div class="main-img-post">
-            <div class="img-block">
-                <div class="rectangle">
-                    <div class="main-img-title">
+
+    <div class="main-img-post" style="background-image: url(' <?php echo wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0]?>')">
+<!--        <div class="img-block">-->
+            <div class="rectangle">
+                <div class="main-img-title">
                      <span>
                          <?php the_title()?>
                     </span>
-                    </div>
                 </div>
-                <?php the_post_thumbnail();?>
             </div>
-        </div>
+<!--            --><?php //the_post_thumbnail();?>
+<!--        </div>-->
+    </div>
+    <section class="blog-single">
         <div class="content">
             <div class="user">
-                <img src="<?php bloginfo('template_url'); ?>/images/user.jpg">
+                <img src="<?php echo get_avatar( $post->post_author, 102 );?>">
                 <div class="block-user">
-                    <div class="user-name"><?php the_author_meta('last_name', get_post( $id )->post_author) . ' ' .  the_author_meta('first_name', get_post( $id )->post_author);?></div>
-                    <div class="user-data">16 October / 1 views / 3 shares</div>
+                    <div class="user-name"><?php the_author_meta('last_name', get_post( $id )->post_author)?> &nbsp; <?php the_author_meta('first_name', get_post( $id )->post_author);?></div>
+<!--                    <div class="user-data">16 October / 1 views / 3 shares</div>-->
                 </div>
             </div>
 
@@ -63,12 +64,11 @@ get_header(); ?>
             </form>
 
             <div class="user written-by">
-                <span>Written By</span>
-                <img src="<?php bloginfo('template_url'); ?>/images/user.jpg">
+                <span>Written&nbsp;By</span>
+                <img src="<?php echo get_avatar( $post->post_author, 102 );?>">
                 <div class="block-user">
-                    <div class="user-name">Alexandre Pestov and the Meemim Team</div>
-                    <div class="user-data"> Dara is a Blog Writer at Hootsuite. She writes about social media,<br>
-                        technology, and Hootsuite happenings.</div>
+                    <div class="user-name"><?php the_author_meta('last_name', get_post( $id )->post_author)?> &nbsp; <?php the_author_meta('first_name', get_post( $id )->post_author);?></div>
+                    <div class="user-data"><?php the_author_meta('description', get_post( $id )->post_author)?></div>
                 </div>
             </div>
 
