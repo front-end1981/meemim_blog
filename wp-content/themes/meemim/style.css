@@ -198,10 +198,11 @@ header {
         background-color: #F2B229;
         text-decoration: none; }
       header #menu-top-menu li a:focus {
-        color: #5d052a;
         text-decoration: none; }
       header #menu-top-menu li a:active {
         color: #fff;
+        text-decoration: none; }
+      header #menu-top-menu li a:visited {
         text-decoration: none; }
       header #menu-top-menu li:last-child a {
         background-color: #94ad3c;
@@ -216,7 +217,8 @@ header {
   .wrapper.home-page {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    position: relative; }
 
 footer {
   max-width: 100%;
@@ -464,7 +466,6 @@ footer {
     margin: 108px 0 0 0;
     max-width: 100%;
     height: 376px;
-    background: url("../meemim/images/about-us-img1.png") no-repeat;
     background-size: cover; }
     .about-us-page .about-us-block .rectangle,
     .about-us-page .about-us-block2 .rectangle {
@@ -484,7 +485,6 @@ footer {
         color: #fff; }
   .about-us-page .about-us-block2 {
     height: 453px;
-    background: url("../meemim/images/about-us-img2.jpg") no-repeat;
     background-size: cover; }
     .about-us-page .about-us-block2 .rectangle {
       width: 70%;
@@ -511,7 +511,6 @@ footer {
     height: 278px;
     margin: 90px 0 0 0;
     position: relative;
-    background: url("../meemim/images/about-us-img2.jpg") no-repeat;
     background-size: cover;
     overflow: hidden; }
     .contact-us-page .contact-us-block .rectangle {
@@ -522,10 +521,15 @@ footer {
       margin: auto;
       position: relative;
       background: url("../meemim/images/rectangele-about-us.png");
-      background-size: contain; }
+      background-size: contain;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-wrap: wrap; }
       .contact-us-page .contact-us-block .rectangle:after {
         content: '';
         top: 0;
+        left: 0;
         width: 100px;
         height: 126px;
         margin: 0 0 0 -72px;
@@ -543,7 +547,9 @@ footer {
         background-size: contain;
         position: absolute; }
       .contact-us-page .contact-us-block .rectangle p {
-        padding: 35px 80px;
+        margin: 0;
+        padding: 0;
+        align-self: center;
         color: #fff;
         font-size: 23px; }
     .contact-us-page .contact-us-block .contact-data {
@@ -799,7 +805,6 @@ footer {
   max-width: 100%;
   height: 453px;
   margin: auto;
-  background: url("../meemim/images/about-us-img2.jpg") no-repeat center;
   background-size: cover; }
   .main-img .rectangle {
     max-width: 737px;
@@ -861,6 +866,22 @@ footer {
       content: '';
       display: block;
       clear: both; }
+    .product-page .sounds_good .block-employees {
+      left: 280px;
+      top: 30px;
+      width: 200px;
+      margin: auto;
+      position: relative;
+      color: #7f7f7f;
+      font-size: 20px; }
+      .product-page .sounds_good .block-employees:after {
+        content: '';
+        display: block;
+        clear: both; }
+      .product-page .sounds_good .block-employees div {
+        float: left; }
+    .product-page .sounds_good .slick-dots li button :before {
+      font-size: 9px !important; }
     .product-page .sounds_good #slider {
       width: 295px;
       height: 11px;
@@ -983,7 +1004,6 @@ footer {
     -webkit-animation-play-state: paused;
     animation-play-state: paused; }
   .product-page .meemim_and_me {
-    min-height: 678px;
     padding: 180px 0 0 0;
     border-top: 1px solid #a8a8a8;
     text-align: center; }
@@ -998,8 +1018,8 @@ footer {
       font-size: 28px;
       color: #474646;
       margin: auto;
-      max-width: 1000px;
-      min-height: 500px;
+      max-width: 850px;
+      min-height: 450px;
       position: relative;
       display: flex;
       align-items: center;
@@ -1020,7 +1040,7 @@ footer {
       .product-page .meemim_and_me .employees .manager {
         top: 130px;
         left: 480px;
-        background: url("../meemim/images/icons/rounded-rectangle-2.png") no-repeat;
+        background: url("../meemim/images/icons/rounded-rectangle-4.png") no-repeat;
         cursor: pointer; }
       .product-page .meemim_and_me .employees .hr {
         top: 255px;
@@ -1048,9 +1068,9 @@ footer {
       color: #868686;
       text-align: left; }
   .product-page .statement {
-    margin: 0 20px 0 20px;
+    margin: 100px 20px 0 20px;
     background: url("../meemim/images/icons/rounded-rectangle-clear-.png") no-repeat;
-    background-size: cover;
+    background-size: contain;
     max-width: 391px;
     height: 154px;
     padding: 18px 19px; }
@@ -1075,6 +1095,8 @@ footer {
       color: #868686; }
   .product-page .slick-slider {
     margin: -30px auto 50px; }
+  .product-page .slick-slide {
+    outline: none; }
   .product-page .multiple-items {
     max-width: 1300px;
     box-sizing: border-box !important; }
@@ -1177,20 +1199,20 @@ footer {
       font-size: 40px;
       color: #6d6d6d; }
     .blog-index .suggested-readings p {
-      font-size: 20px;
+      font-size: 18px;
       color: #707070; }
       .blog-index .suggested-readings p a {
         color: inherit;
         text-decoration: none; }
     .blog-index .suggested-readings .title {
       margin-top: 20px;
-      font-size: 26px;
+      font-size: 24px;
       font-weight: bold; }
       .blog-index .suggested-readings .title a {
         color: inherit;
         text-decoration: none; }
     .blog-index .suggested-readings .date {
-      font-size: 26px; }
+      font-size: 24px; }
   .blog-index .content {
     max-width: 876px;
     margin-left: 92px;
@@ -1305,7 +1327,7 @@ footer {
           border-radius: 8px; }
         .blog-index .content .block .group .title {
           margin-top: 20px;
-          font-size: 26px;
+          font-size: 24px;
           font-weight: bold; }
           .blog-index .content .block .group .title a {
             min-height: 74px;
@@ -1314,7 +1336,7 @@ footer {
             .blog-index .content .block .group .title a:hover {
               text-decoration: none !important; }
         .blog-index .content .block .group .date {
-          font-size: 26px; }
+          font-size: 24px; }
         .blog-index .content .block .group .share {
           margin: 8px 0 0 0;
           font-size: 13px;
@@ -1392,22 +1414,34 @@ footer {
     .product-page form button .btn.focus {
       text-decoration: none; }
 
-.pagination-blog {
+#pagination-blog {
   margin: 20px 0 57px 0;
   display: block !important;
   text-align: right; }
-  .pagination-blog ul {
-    list-style: none; }
-    .pagination-blog ul li {
-      margin-right: 14px;
-      display: inline-block; }
-      .pagination-blog ul li a {
-        font-size: 18px;
-        color: #cacaca; }
-        .pagination-blog ul li a:hover {
-          text-decoration: none; }
-        .pagination-blog ul li a.active {
-          border-bottom: 3px solid #5d052a; }
+  #pagination-blog .current {
+    border-bottom: 3px solid #5d052a; }
+  #pagination-blog a,
+  #pagination-blog span {
+    margin-right: 20px;
+    display: inline-block;
+    font-size: 18px;
+    color: #cacaca; }
+    #pagination-blog a:hover,
+    #pagination-blog span:hover {
+      text-decoration: none !important; }
+    #pagination-blog a:focus,
+    #pagination-blog span:focus {
+      text-decoration: none !important;
+      box-sizing: border-box !important; }
+    #pagination-blog a:visited,
+    #pagination-blog span:visited {
+      text-decoration: none !important;
+      box-sizing: border-box !important; }
+    #pagination-blog a.active,
+    #pagination-blog span.active {
+      box-sizing: border-box !important;
+      border-bottom: 3px solid #5d052a;
+      text-decoration: none !important; }
 
 .main-img-post {
   margin-top: 70px;
@@ -1436,6 +1470,13 @@ footer {
   .blog-single .content {
     max-width: 916px;
     margin: auto; }
+    .blog-single .content div[id^='attachment_'] {
+      width: 100% !important; }
+      .blog-single .content div[id^='attachment_'] img {
+        width: 100%;
+        height: auto; }
+    .blog-single .content #disqus_thread {
+      margin-bottom: 100px; }
     .blog-single .content .user {
       margin: 108px auto 90px;
       text-align: center; }

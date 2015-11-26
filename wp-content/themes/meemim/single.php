@@ -9,30 +9,26 @@
 
 get_header(); ?>
 
-
     <div class="main-heading-title">
         <h1>Meemim Blog</h1>
     </div>
 
     <div class="main-img-post" style="background-image: url(' <?php echo wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0]?>')">
-<!--        <div class="img-block">-->
-            <div class="rectangle">
-                <div class="main-img-title">
+        <div class="rectangle">
+            <div class="main-img-title">
                      <span>
                          <?php the_title()?>
                     </span>
-                </div>
             </div>
-<!--            --><?php //the_post_thumbnail();?>
-<!--        </div>-->
+        </div>
     </div>
     <section class="blog-single">
         <div class="content">
             <div class="user">
-                <img src="<?php echo get_avatar( $post->post_author, 102 );?>">
+               <?php echo get_avatar( $post->post_author, 102 );?>
                 <div class="block-user">
                     <div class="user-name"><?php the_author_meta('last_name', get_post( $id )->post_author)?> &nbsp; <?php the_author_meta('first_name', get_post( $id )->post_author);?></div>
-<!--                    <div class="user-data">16 October / 1 views / 3 shares</div>-->
+                    <div class="user-data">   <?php echo get_post_meta ($post->ID,'views', true); ?> views / <?php echo pssc_all($post->ID) ?> shares</div>
                 </div>
             </div>
 
@@ -60,12 +56,12 @@ get_header(); ?>
                 <div class="form-group" id="blog-index">
                     <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
                 </div>
-                <button type="submit" class="btn btn-default">sing up</button>
+                <button type="submit" class="btn btn-default">Sign In</button>
             </form>
 
             <div class="user written-by">
                 <span>Written&nbsp;By</span>
-                <img src="<?php echo get_avatar( $post->post_author, 102 );?>">
+               <?php echo get_avatar( $post->post_author, 102 );?>
                 <div class="block-user">
                     <div class="user-name"><?php the_author_meta('last_name', get_post( $id )->post_author)?> &nbsp; <?php the_author_meta('first_name', get_post( $id )->post_author);?></div>
                     <div class="user-data"><?php the_author_meta('description', get_post( $id )->post_author)?></div>
@@ -87,39 +83,7 @@ get_header(); ?>
                 }
             endwhile;
             ?>
-<!--            <form role="form" class="set-comments">-->
-<!--                <div class="form-group">-->
-<!--                    <label for="exampleInputEmail1">Sign in or Post as Guest</label>-->
-<!--                    <textarea class="form-control" rows="10"></textarea>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <ul>-->
-<!--                        <li><a href="">Newest</a></li>-->
-<!--                        <li><a href="">Oldest</a></li>-->
-<!--                        <li><a href="">Top Comments</a></li>-->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--            </form>-->
-<!---->
-<!--            <div class="comments">-->
-<!---->
-<!--                <div class="user">-->
-<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/images/user.jpg">-->
-<!--                    <div class="block-user">-->
-<!--                        <div class="user-name">suyantof</div>-->
-<!--                        <div class="user-data">-->
-<!--                            Dara is a Blog Writer at Hootsuite. She writes about social media,technology, and Hootsuite happenings.-->
-<!--                            Dara is a Blog Writer at Hootsuite. She writes about social media,technology, and Hootsuite happenings.-->
-<!--                            Dara is a Blog Writer at Hootsuite. She writes about social media,technology, and Hootsuite happenings.-->
-<!--                            Dara is a Blog Writer at Hootsuite. She writes about social media,technology, and Hootsuite happenings.-->
-<!--                            Dara is a Blog Writer at Hootsuite. She writes about social media,technology, and Hootsuite happenings.-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!---->
-<!--            </div>-->
-<!---->
-<!--        </div>-->
+
 
     </section>
 
@@ -136,4 +100,6 @@ get_header(); ?>
 <?php
 //get_sidebar( 'content' );
 //get_sidebar();
+
+
 get_footer();

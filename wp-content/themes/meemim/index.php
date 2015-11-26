@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * The main template file
@@ -14,6 +16,7 @@
  * @since Twenty Fourteen 1.0
  */
 
+
 get_header(); ?>
     <div class="main-heading-title">
         <h1>Meemim Blog</h1>
@@ -22,7 +25,7 @@ get_header(); ?>
             will shape the future of the social web
         </p>
     </div>
-
+<?php echo get_post_field( 'post_content', get_option( 'page_for_posts' ) );?>
     <section class="blog-index">
         <div class="sidebar top">
             <div class="suggested-readings">
@@ -101,8 +104,7 @@ get_header(); ?>
                             get_template_part( 'content', get_post_format() );
 
                         endwhile;
-                        paginate_links();
-                    else :
+                        else :
                         // If no content, include the "No posts found" template.
                         get_template_part( 'content', 'none' );
 
@@ -110,19 +112,10 @@ get_header(); ?>
                 ?>
             </div>
 
+            <?php if(function_exists('wp_simple_pagination')) {
+                wp_simple_pagination();
+            }?>
 
-            <div class="pagination-blog">
-                <?php paginate_links(); ?>
-                <ul>
-                    <li><a href="#" class="active">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">6</a></li>
-                    <li><a href="#" class="more">...</a></li>
-                </ul>
-            </div>
             <div class="massage-sign-up">
                     <span>
                      Sign up to our blog updates

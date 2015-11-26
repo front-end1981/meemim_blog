@@ -9,7 +9,7 @@
             <?php the_content(); ?>
         <?php endwhile; endif; ?>
 
-        <div class="contact-us-block">
+        <div class="contact-us-block" style="background-image: url(' <?php echo wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0]?>')">
 
             <div class="contact-data">
                 <div class="contact-email">

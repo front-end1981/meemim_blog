@@ -18,9 +18,9 @@
         <?php the_content(); ?>
     <?php endwhile; endif; ?>
 
-    <div class="about-us-block">
+    <div class="about-us-block" style="background-image: url(' <?php echo wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0]?>')">
         <div class="rectangle">
-            <span>Meet the leadership</span>
+            <span><?php echo get_post(get_post_thumbnail_id())->post_title;?></span>
         </div>
     </div>
 
@@ -36,14 +36,12 @@
         <?php endforeach; ?>
     </div>
 
-    <div class="about-us-block2">
+    <div class="about-us-block2" style="background-image: url(' <?php echo $dynamic_featured_image->get_featured_images($post->ID )[0]['full']?>')">
         <div class="rectangle">
-            <span>Meet the team</span>
+            <span><?php  echo $dynamic_featured_image->get_image_title($dynamic_featured_image->get_featured_images($post->ID )[0]['full'])?></span>
         </div>
         <div class="content-block">
-                 COMPANIES around the world use Meemim
-            to make sure EMPLOYEES can find the information
-            they need to do their job.
+            <?php  echo $dynamic_featured_image->get_image_caption($dynamic_featured_image->get_featured_images($post->ID )[0]['full'])?>
 
         </div>
     </div>

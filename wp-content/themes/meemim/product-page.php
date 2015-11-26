@@ -6,11 +6,11 @@
     <div class="main-heading-title" style="margin-bottom: 50px">
         <h1><?php the_title(); ?></h1>
     </div>
-    <div class="main-img">
+    <div class="main-img" style="background-image: url(' <?php echo wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0]?>')">
         <div class="rectangle product-page">
-                <span>COMPANIES around the world use Meemim
-            to make sure EMPLOYEES can find the information
-            they need to do their job.</span>
+             <span>
+                 <?php echo get_post(get_post_thumbnail_id())->post_excerpt;?>
+             </span>
         </div>
     </div>
     <section class="product-page">
@@ -19,36 +19,20 @@
         <?php endwhile; endif; ?>
 
         <div class="container">
-           <div class="row">
-               <div class="col-md-6"><img src="<?php bloginfo('template_url'); ?>/images/discover.png"></div>
-               <div class="col-md-5">
-                   <h1>Find</h1>
-                   <p>With high engagement rates and over 400 million active monthly users, it comes as no surprise then that gaining more Instagram followers is a high priority for any business using the platform.</p>
+            <?php foreach($dynamic_featured_image->get_featured_images($post->ID) as $index=>$imageOption):?>
+               <div class="row <?php echo $index % 2? 'even': ''?>">
+                    <?php if ( $index % 2 == 0):?>
+                    <div class="col-md-6"><img src="<?php echo $imageOption['full']?>"></div>
+                    <?php endif?>
+                    <div class="col-md-5">
+                       <h1><?php echo $dynamic_featured_image->get_image_title($dynamic_featured_image->get_featured_images($post->ID )[$index]['full'])?></h1>
+                       <p><?php  echo $dynamic_featured_image->get_image_description($dynamic_featured_image->get_featured_images($post->ID )[$index]['full'])?></p>
+                   </div>
+                   <?php if ( $index % 2 == 1):?>
+                       <div class="col-md-6"><img src="<?php echo $imageOption['full']?>"></div>
+                   <?php endif?>
                </div>
-           </div>
-            <div class="row even">
-                <div class="col-md-5">
-                    <h1>Share</h1>
-                    <p>With high engagement rates and over 400 million active monthly users, it comes as no surprise then that gaining more Instagram followers is a high priority for any business using the platform.</p>
-                </div>
-                <div class="col-md-6"><img src="<?php bloginfo('template_url'); ?>/images/relevant.png"></div>
-
-            </div>
-            <div class="row">
-                <div class="col-md-6"><img src="<?php bloginfo('template_url'); ?>/images/discover.png"></div>
-                <div class="col-md-5">
-                    <h1>Find</h1>
-                    <p>With high engagement rates and over 400 million active monthly users, it comes as no surprise then that gaining more Instagram followers is a high priority for any business using the platform.</p>
-                </div>
-            </div>
-            <div class="row even">
-                <div class="col-md-5">
-                    <h1>Share</h1>
-                    <p>With high engagement rates and over 400 million active monthly users, it comes as no surprise then that gaining more Instagram followers is a high priority for any business using the platform.</p>
-                </div>
-                <div class="col-md-6"><img src="<?php bloginfo('template_url'); ?>/images/relevant.png"></div>
-
-            </div>
+            <?php endforeach?>
         </div>
 
 
@@ -63,7 +47,7 @@
             </p>
 
             <div id="slider" data-value="10"></div>
-            <div class="block-employees" style="display: none">
+            <div class="block-employees">
                 <div class="result" data-value="10" data-step="5">10</div>
                 <div>&nbsp;employees</div>
             </div>
@@ -158,11 +142,11 @@
                     I am from HR
                 </div>
 
-                <div class="employee-blocks company" rel="popover1" data-employees="company" data-placement="right">
-                    The COMPANY
-                </div>
+<!--                <div class="employee-blocks company" rel="popover1" data-employees="company" data-placement="right">-->
+<!--                    The COMPANY-->
+<!--                </div>-->
 
-                <div class="additional_block hide">
+                <div class="additional_block employee hide">
                     <div class="user-photo">
                         <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
                     </div>
@@ -175,180 +159,291 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="multiple-items" data-employees="employee" style="display: none">
-            <div >
-                <div  class="statement">
+                <div class="additional_block manager hide">
                     <div class="user-photo">
                         <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
                     </div>
-                    <div class="name">Jason Elliot, <span>Employee</span></div>
-                    <div class="user_text">
-                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    <div class="user_block">
+                        <div class="name">Alex Pestov</div>
+                        <div class="position">CEO Virgin Group</div>
+                        <div class="user_text">
+                            Companies put their trust in us when it comes to selecting ERP systems for them.
+                            Companies put their trust in us when it comes to selecting ERP systems for them.
+                        </div>
                     </div>
                 </div>
-
-            </div>
-            <div >
-                <div  class="statement">
+                <div class="additional_block hr hide">
                     <div class="user-photo">
                         <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
                     </div>
-                    <div class="name">Jason Elliot, <span>Employee</span></div>
-                    <div class="user_text">
-                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    <div class="user_block">
+                        <div class="name">Mario Casas</div>
+                        <div class="position">CEO Virgin Group</div>
+                        <div class="user_text">
+                            Companies put their trust in us when it comes to selecting ERP systems for them.
+                            Companies put their trust in us when it comes to selecting ERP systems for them.
+                        </div>
                     </div>
                 </div>
-
-            </div>
-            <div >
-                <div  class="statement">
+                <div class="additional_block company hide">
                     <div class="user-photo">
                         <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
                     </div>
-                    <div class="name">Jason Elliot, <span>Employee</span></div>
-                    <div class="user_text">
-                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    <div class="user_block">
+                        <div class="name">Cristiano Ronaldo</div>
+                        <div class="position">CEO Virgin Group</div>
+                        <div class="user_text">
+                            Companies put their trust in us when it comes to selecting ERP systems for them.
+                            Companies put their trust in us when it comes to selecting ERP systems for them.
+                        </div>
                     </div>
                 </div>
 
-            </div>
-            <div >
-                <div  class="statement">
-                    <div class="user-photo">
-                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
-                    </div>
-                    <div class="name">Jason Elliot, <span>Employee</span></div>
-                    <div class="user_text">
-                        Companies put their trust in us when it comes to selecting ERP systems for them.
-                    </div>
-                </div>
             </div>
         </div>
 
 
-<!--        <div class="multiple-items" data-employees="manager" style="display: none">-->
-<!---->
-<!--            <div class="statement">-->
-<!--                <div class="user-photo">-->
-<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/images/user.jpg" class="img-responsive">-->
-<!--                </div>-->
-<!--                <div class="name">Jason Elliot, <span>Manager</span></div>-->
-<!--                <div class="user_text">-->
-<!--                    Companies put their trust in us when it comes to selecting ERP systems for them.-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="statement">-->
-<!--                <div class="user-photo">-->
-<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/images/user.jpg" class="img-responsive">-->
-<!--                </div>-->
-<!--                <div class="name">Jason Elliot, <span>Manager</span></div>-->
-<!--                <div class="user_text">-->
-<!--                    Companies put their trust in us when it comes to selecting ERP systems for them.-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="statement">-->
-<!--                <div class="user-photo">-->
-<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/images/user.jpg" class="img-responsive">-->
-<!--                </div>-->
-<!--                <div class="name">Jason Elliot, <span>Manager</span></div>-->
-<!--                <div class="user_text">-->
-<!--                    Companies put their trust in us when it comes to selecting ERP systems for them.-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="statement">-->
-<!--                <div class="user-photo">-->
-<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/images/user.jpg" class="img-responsive">-->
-<!--                </div>-->
-<!--                <div class="name">Jason Elliot, <span>Manager</span></div>-->
-<!--                <div class="user_text">-->
-<!--                    Companies put their trust in us when it comes to selecting ERP systems for them.-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="multiple-items" data-employees="hr" style="display: none">-->
-<!--            <div class="statement">-->
-<!--                <div class="user-photo">-->
-<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/images/user.jpg" class="img-responsive">-->
-<!--                </div>-->
-<!--                <div class="name">Jason Elliot, <span>HR</span></div>-->
-<!--                <div class="user_text">-->
-<!--                    Companies put their trust in us when it comes to selecting ERP systems for them.-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="statement">-->
-<!--                <div class="user-photo">-->
-<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/images/user.jpg" class="img-responsive">-->
-<!--                </div>-->
-<!--                <div class="name">Jason Elliot, <span>HR</span></div>-->
-<!--                <div class="user_text">-->
-<!--                    Companies put their trust in us when it comes to selecting ERP systems for them.-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="statement">-->
-<!--                <div class="user-photo">-->
-<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/images/user.jpg" class="img-responsive">-->
-<!--                </div>-->
-<!--                <div class="name">Jason Elliot, <span>HR</span></div>-->
-<!--                <div class="user_text">-->
-<!--                    Companies put their trust in us when it comes to selecting ERP systems for them.-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="statement">-->
-<!--                <div class="user-photo">-->
-<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/images/user.jpg" class="img-responsive">-->
-<!--                </div>-->
-<!--                <div class="name">Jason Elliot, <span>HR</span></div>-->
-<!--                <div class="user_text">-->
-<!--                    Companies put their trust in us when it comes to selecting ERP systems for them.-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="multiple-items" data-employees="company" style="display: none">-->
-<!--            <div class="statement">-->
-<!--                <div class="user-photo">-->
-<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/images/user.jpg" class="img-responsive">-->
-<!--                </div>-->
-<!--                <div class="name">Jason Elliot, <span>Company</span></div>-->
-<!--                <div class="user_text">-->
-<!--                    Companies put their trust in us when it comes to selecting ERP systems for them.-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="statement">-->
-<!--                <div class="user-photo">-->
-<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/images/user.jpg" class="img-responsive">-->
-<!--                </div>-->
-<!--                <div class="name">Jason Elliot, <span>Company</span></div>-->
-<!--                <div class="user_text">-->
-<!--                    Companies put their trust in us when it comes to selecting ERP systems for them.-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="statement">-->
-<!--                <div class="user-photo">-->
-<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/images/user.jpg" class="img-responsive">-->
-<!--                </div>-->
-<!--                <div class="name">Jason Elliot, <span>Company</span></div>-->
-<!--                <div class="user_text">-->
-<!--                    Companies put their trust in us when it comes to selecting ERP systems for them.-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="statement">-->
-<!--                <div class="user-photo">-->
-<!--                    <img src="--><?php //bloginfo('template_url'); ?><!--/images/user.jpg" class="img-responsive">-->
-<!--                </div>-->
-<!--                <div class="name">Jason Elliot, <span>Company</span></div>-->
-<!--                <div class="user_text">-->
-<!--                    Companies put their trust in us when it comes to selecting ERP systems for them.-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+        <div class="responsive" data-employees="manager" style="display: none">
+            <div>
+                <div class="statement">
+                    <div class="user-photo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
+                    </div>
+                    <div class="name">Alex Pestov, <span>Manager</span></div>
+                    <div class="user_text">
+                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="statement">
+                    <div class="user-photo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
+                    </div>
+                    <div class="name">Alex Pestov, <span>Manager</span></div>
+                    <div class="user_text">
+                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="statement">
+                    <div class="user-photo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
+                    </div>
+                    <div class="name">Alex Pestov, <span>Manager</span></div>
+                    <div class="user_text">
+                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="statement">
+                    <div class="user-photo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
+                    </div>
+                    <div class="name">Alex Pestov, <span>Manager</span></div>
+                    <div class="user_text">
+                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="responsive" data-employees="employee" style="display: none">
+            <div>
+                <div  class="statement">
+                    <div class="user-photo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
+                    </div>
+                    <div class="name">Jason Elliot, <span>Employee</span></div>
+                    <div class="user_text">
+                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div  class="statement">
+                    <div class="user-photo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
+                    </div>
+                    <div class="name">Jason Elliot, <span>Employee</span></div>
+                    <div class="user_text">
+                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div  class="statement">
+                    <div class="user-photo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
+                    </div>
+                    <div class="name">Jason Elliot, <span>Employee</span></div>
+                    <div class="user_text">
+                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div  class="statement">
+                    <div class="user-photo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
+                    </div>
+                    <div class="name">Jason Elliot, <span>Employee</span></div>
+                    <div class="user_text">
+                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="responsive" data-employees="hr" style="display: none">
+            <div>
+                <div class="statement">
+                    <div class="user-photo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
+                    </div>
+                    <div class="name">Mario Casas, <span>HR</span></div>
+                    <div class="user_text">
+                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="statement">
+                    <div class="user-photo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
+                    </div>
+                    <div class="name">Mario Casas, <span>HR</span></div>
+                    <div class="user_text">
+                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="statement">
+                    <div class="user-photo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
+                    </div>
+                    <div class="name">Mario Casas, <span>HR</span></div>
+                    <div class="user_text">
+                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="statement">
+                    <div class="user-photo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
+                    </div>
+                    <div class="name">Mario Casas, <span>HR</span></div>
+                    <div class="user_text">
+                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="responsive" data-employees="company" style="display: none">
+            <div>
+                <div class="statement">
+                    <div class="user-photo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
+                    </div>
+                    <div class="name">Cristiano Ronaldo, <span>Company</span></div>
+                    <div class="user_text">
+                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="statement">
+                    <div class="user-photo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
+                    </div>
+                    <div class="name">Cristiano Ronaldo, <span>Company</span></div>
+                    <div class="user_text">
+                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="statement">
+                    <div class="user-photo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
+                    </div>
+                    <div class="name">Cristiano Ronaldo, <span>Company</span></div>
+                    <div class="user_text">
+                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="statement">
+                    <div class="user-photo">
+                        <img src="<?php bloginfo('template_url'); ?>/images/user.jpg" class="img-responsive">
+                    </div>
+                    <div class="name">Cristiano Ronaldo, <span>Company</span></div>
+                    <div class="user_text">
+                        Companies put their trust in us when it comes to selecting ERP systems for them.
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <script>
+            $(function() {
+                $('.responsive').slick({
+                    dots: true,
+                    infinite: false,
+                    speed: 300,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1000,
+                    responsive: [
+                        {
+                            breakpoint: 1280,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+//                                infinite: true,
+                                dots: true,
+                                adaptiveHeight: true
+                            }
+                        },
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1
+//                                adaptiveHeight: true
+                            }
+                        },
+                        {
+                            breakpoint: 980,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+//                                adaptiveHeight: true
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+//                                adaptiveHeight: true
+                            }
+                        }
+                        // You can unslick at a given breakpoint now by adding:
+                        // settings: "unslick"
+                        // instead of a settings object
+                    ]
+                });
+            })
+
+        </script>
 
         <div class="massage-sign-up">
             <span>

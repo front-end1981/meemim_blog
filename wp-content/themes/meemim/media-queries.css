@@ -31,6 +31,9 @@
   .main-img-post .rectangle {
     background: none; }
 
+  .product-page .statement {
+    margin: 0 0 0 250px; }
+
   .blog-single #comments {
     margin: 0 20px; }
 
@@ -69,6 +72,8 @@
   .product-page .meemim_and_me .employees {
     margin: 50px 0 60px 200px;
     align-items: flex-start; }
+  .product-page .statement {
+    margin: 0 0 0 200px; }
 
   .main-img .rectangle.product-page {
     height: 100%;
@@ -87,14 +92,17 @@
 
   .blog-index .form-inline,
   .blog-single .form-inline,
-  .product-page .form-inline {
+  .product-page .form-inline,
+  .pricing-page .form-inline {
     padding: 0 0 0 5px; }
     .blog-index .form-inline #blog-index.form-group,
     .blog-index .form-inline .form-group,
     .blog-single .form-inline #blog-index.form-group,
     .blog-single .form-inline .form-group,
     .product-page .form-inline #blog-index.form-group,
-    .product-page .form-inline .form-group {
+    .product-page .form-inline .form-group,
+    .pricing-page .form-inline #blog-index.form-group,
+    .pricing-page .form-inline .form-group {
       margin: 0;
       padding: 0;
       float: none;
@@ -104,14 +112,17 @@
       .blog-single .form-inline #blog-index.form-group input#exampleInputEmail2,
       .blog-single .form-inline .form-group input#exampleInputEmail2,
       .product-page .form-inline #blog-index.form-group input#exampleInputEmail2,
-      .product-page .form-inline .form-group input#exampleInputEmail2 {
+      .product-page .form-inline .form-group input#exampleInputEmail2,
+      .pricing-page .form-inline #blog-index.form-group input#exampleInputEmail2,
+      .pricing-page .form-inline .form-group input#exampleInputEmail2 {
         height: 45px;
         width: 98%;
         border-radius: 10px;
         box-sizing: border-box !important; }
     .blog-index .form-inline button.btn,
     .blog-single .form-inline button.btn,
-    .product-page .form-inline button.btn {
+    .product-page .form-inline button.btn,
+    .pricing-page .form-inline button.btn {
       height: 45px;
       width: 98%;
       margin: 10px 0 0 0;
@@ -121,6 +132,8 @@
   .product-page .meemim_and_me .employees {
     margin: 50px 0 60px 50px;
     align-items: flex-start; }
+  .product-page .statement {
+    margin: 0 0 0 100px; }
 
   .blog-single .content .user.written-by span {
     padding: 0px 0px 0px 15px; }
@@ -131,43 +144,52 @@
   .main-img .rectangle.product-page span {
     margin: 16% 14%; }
 
-  .main-page .form-inline,
-  .pricing-page .form-inline {
+  .product-page .statement {
+    margin: 0 0 0 85px; }
+
+  .main-page .form-inline {
     padding: 0 0 0 5px; }
-    .main-page .form-inline .form-group,
-    .pricing-page .form-inline .form-group {
+    .main-page .form-inline .form-group {
       margin: 0;
       padding: 0;
       float: none !important; }
-      .main-page .form-inline .form-group input,
-      .pricing-page .form-inline .form-group input {
+      .main-page .form-inline .form-group input {
         height: 35px;
         width: 98%;
         border-radius: 10px;
         box-sizing: border-box !important; }
-    .main-page .form-inline button,
-    .pricing-page .form-inline button {
+    .main-page .form-inline button {
       height: 35px !important;
       width: 98% !important;
       margin: 10px 0 0 0 !important;
       border-radius: 10px !important;
       box-sizing: border-box !important; }
 
+  .pricing-page .form-inline,
   .blog-index .form-inline,
   .blog-single .form-inline {
     padding: 0 0 0 5px; }
+    .pricing-page .form-inline #blog-index.form-group,
+    .pricing-page .form-inline .form-group,
     .blog-index .form-inline #blog-index.form-group,
-    .blog-single .form-inline #blog-index.form-group {
+    .blog-index .form-inline .form-group,
+    .blog-single .form-inline #blog-index.form-group,
+    .blog-single .form-inline .form-group {
       margin: 0;
       padding: 0;
       float: none;
       display: block; }
+      .pricing-page .form-inline #blog-index.form-group input#exampleInputEmail2,
+      .pricing-page .form-inline .form-group input#exampleInputEmail2,
       .blog-index .form-inline #blog-index.form-group input#exampleInputEmail2,
-      .blog-single .form-inline #blog-index.form-group input#exampleInputEmail2 {
+      .blog-index .form-inline .form-group input#exampleInputEmail2,
+      .blog-single .form-inline #blog-index.form-group input#exampleInputEmail2,
+      .blog-single .form-inline .form-group input#exampleInputEmail2 {
         height: 45px;
         width: 98%;
         border-radius: 10px;
         box-sizing: border-box !important; }
+    .pricing-page .form-inline button.btn,
     .blog-index .form-inline button.btn,
     .blog-single .form-inline button.btn {
       height: 45px;
@@ -178,8 +200,6 @@
 
   .pricing-page .massage-sign-up span {
     font-size: 14px; }
-  .pricing-page .form-inline button {
-    width: 100% !important; }
   .pricing-page .table th {
     font-size: 16px; }
   .pricing-page .table td {
@@ -190,6 +210,17 @@
   .product-page .meemim_and_me .employees {
     margin: 50px 0 60px 0;
     align-items: center; }
+  .product-page .statement {
+    margin: 0 0 0 25px; }
+  .product-page .sounds_good .block-employees {
+    top: -30px;
+    width: 200px;
+    position: relative;
+    color: #7F7F7F;
+    font-size: 20px;
+    left: 50%;
+    margin-left: -100px;
+    padding: 0% 5%; }
 
   .pricing-page .col-xs-6 {
     min-width: 315px; }
@@ -200,7 +231,10 @@
     margin: 16% 3%; } }
 @media screen and (max-width: 380px) {
   .pricing-page .column {
-    width: 320px; } }
+    width: 320px; }
+
+  .product-page .statement {
+    margin: 0 7px 0 10px; } }
 @media screen and (max-width: 360px) {
   .blog-index .grid .grid-item--width4 {
     width: 100%; }
@@ -225,6 +259,11 @@
     margin: 50px 0 60px 0;
     align-items: center; } }
 @media screen and (max-width: 320px) {
+  .pricing-page .column {
+    width: 290px; }
+  .pricing-page .massage-sign-up span {
+    font-size: 13px; }
+
   .product-page .main-img {
     height: 120px !important; }
     .product-page .main-img .rectangle {
@@ -233,6 +272,8 @@
       .product-page .main-img .rectangle span {
         font-size: 15px !important;
         margin: 5% 0 !important; }
+  .product-page .statement .user_text {
+    font-size: 15px; }
 
   .blog-single .content .user img {
     margin-bottom: 10px;
@@ -364,12 +405,6 @@
     .about-us-page .leadership-user .users {
       margin-right: 0; } }
 @media screen and (max-width: 767px) {
-  .pricing-page .form-inline input {
-    width: 100% !important;
-    border-radius: 10px; }
-  .pricing-page .form-inline button {
-    width: 100%;
-    border-radius: 10px; }
   .pricing-page .table-responsive {
     margin-bottom: 100px;
     border: none; } }

@@ -71,12 +71,18 @@
 
 }
 @media screen and (max-width: 900px) {
+
     .main-img-post {
         .rectangle {
             background: none;
             .main-img-title {
 
             }
+        }
+    }
+    .product-page {
+        .statement {
+            margin: 0 0 0 250px;
         }
     }
     .blog-single {
@@ -152,6 +158,10 @@
                 align-items: flex-start;
             }
         }
+        .statement {
+            margin: 0 0 0 200px;
+        }
+
     }
     .main-img {
         .rectangle {
@@ -180,7 +190,8 @@
 
     .blog-index,
     .blog-single,
-    .product-page
+    .product-page,
+    .pricing-page
     {
         .form-inline {
             padding: 0 0 0 5px;
@@ -217,6 +228,9 @@
                 align-items: flex-start;
             }
         }
+        .statement {
+            margin: 0 0 0 100px;
+        }
     }
     .blog-single {
         .content {
@@ -251,8 +265,16 @@
         }
     }
 
-    .main-page,
-    .pricing-page
+
+    .product-page {
+        .statement {
+            margin: 0 0 0 85px;
+        }
+    }
+
+
+    .main-page
+    //.pricing-page
     {
         .form-inline {
             padding: 0 0 0 5px;
@@ -276,12 +298,15 @@
             }
         }
     }
+    .pricing-page,
     .blog-index,
     .blog-single
     {
         .form-inline {
             padding: 0 0 0 5px;
-            #blog-index.form-group {
+            #blog-index.form-group,
+            .form-group
+            {
                 margin: 0;
                 padding: 0;
                 float: none;
@@ -312,12 +337,6 @@
             }
         }
 
-        .form-inline {
-            button {
-                width: 100%!important;
-            }
-        }
-
         .table {
             th {
                 font-size: 16px;
@@ -340,6 +359,21 @@
             .employees {
                 margin: 50px 0 60px 0;
                 align-items: center;
+            }
+        }
+        .statement {
+            margin: 0 0 0 25px;
+        }
+        .sounds_good {
+            .block-employees {
+                top: -30px;
+                width: 200px;
+                position: relative;
+                color: #7F7F7F;
+                font-size: 20px;
+                left: 50%;
+                margin-left: -100px;
+                padding: 0% 5%;
             }
         }
     }
@@ -368,6 +402,11 @@
     .pricing-page {
         .column {
             width: 320px;
+        }
+    }
+    .product-page {
+        .statement {
+            margin: 0 7px 0 10px;
         }
     }
 }
@@ -435,6 +474,17 @@
 
 
 @media screen and (max-width: 320px) {
+    .pricing-page {
+
+        .column {
+            width: 290px;
+        }
+        .massage-sign-up {
+            span {
+                font-size: 13px;
+            }
+        }
+    }
     .product-page {
         .main-img {
             height: 120px!important;
@@ -445,6 +495,11 @@
                     font-size: 15px!important;
                     margin: 5% 0!important;
                 }
+            }
+        }
+        .statement  {
+            .user_text {
+                font-size: 15px;
             }
         }
     }
@@ -749,16 +804,6 @@
 @media screen and (max-width: 767px) {
 
     .pricing-page {
-        .form-inline {
-            input {
-                width: 100%!important;
-                border-radius: 10px;
-            }
-            button {
-                width: 100%;
-                border-radius: 10px;
-            }
-        }
 
         .table-responsive {
             //tr > th {

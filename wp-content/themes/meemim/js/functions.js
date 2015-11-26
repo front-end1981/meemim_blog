@@ -1,5 +1,11 @@
 $(function ( ) {
 
+    /* Main page, slide up down footer*/
+
+    $('.wrapper.home-page').css({
+        'top': Math.round( $('footer').outerHeight(true) / 2 )
+    });
+
     $(window).mousemove(function( event ) {
         var targetTop = $('.form-inline').offset().top,
             footer = $('footer'),
@@ -9,16 +15,45 @@ $(function ( ) {
             if ( event.pageY > targetTop && !footer.hasClass('animation-top') ) {
                 footer.removeClass('animation-bottom');
                 footer.addClass('animation-top');
-                footer.stop(true, false).animate( {'top': 0}, 500 );
+                //$('.wrapper.home-page').stop(true, false).animate( {'top': 0}, 500 );
+                footer.stop(true, false).stop(true, false).animate( {'top': 0}, 500 );
             }
             if ( event.pageY < targetTop && !footer.hasClass('animation-bottom') ) {
                 footer.removeClass('animation-top');
                 footer.addClass('animation-bottom');
-                footer.stop(true, false).animate( {'top': footerHeight - 34}, 500);
+                //$('.wrapper.home-page').stop(true, false).animate( {'top':  Math.round( footerHeight / 2 )}, 500 );
+                footer.stop(true, false).stop(true, false).animate( {'top': footerHeight - 34}, 500);
             }
         }
-
     });
+
+    /* All pages, bottom footer in the page*/
+
+    function ToBottom() {
+        var browserHeight = $(window).height(),
+            footerOuterHeight = $('footer').outerHeight(true),
+            mainHeightMarginPaddingBorderHomePage = $('.wrapper.home-page').outerHeight(true) - $('.wrapper.home-page').height(),
+            mainHeightMarginPaddingBorder = $('.wrapper').outerHeight(true) - $('.wrapper').height();
+
+        if ($('footer').hasClass('home-page')) {
+            $('footer').css({top:footerOuterHeight - 35});
+            $('.wrapper.home-page').css({
+                'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorderHomePage - $('header').height()
+            });
+        } else {
+            if ( $('section') ) {
+                $('.wrapper').css({
+                    'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorder - $('header').height()  - $('header').height()
+                });
+            }
+        }
+    };
+    ToBottom();
+    $(window).resize(function (e) {
+        ToBottom();
+    });
+
+        /* Pricing page*/
 
     $('.casuta').hover(
         function () {
@@ -45,31 +80,7 @@ $(function ( ) {
         $(this).addClass('selected');
     });
 
-
-
-    function ToBottom() {
-        var browserHeight = $(window).height(),
-            footerOuterHeight = $('footer').outerHeight(true),
-            mainHeightMarginPaddingBorderHomePage = $('.wrapper.home-page').outerHeight(true) - $('.wrapper.home-page').height(),
-            mainHeightMarginPaddingBorder = $('.wrapper').outerHeight(true) - $('.wrapper').height();
-
-        if ($('footer').hasClass('home-page')) {
-            $('footer').css({top:footerOuterHeight - 35});
-            $('.wrapper.home-page').css({
-                'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorderHomePage - $('header').height()
-            });
-        } else {
-            if ( $('section') ) {
-                $('.wrapper').css({
-                    'min-height': browserHeight - footerOuterHeight - mainHeightMarginPaddingBorder - $('header').height()  - $('header').height()
-                });
-            }
-        }
-    };
-    ToBottom();
-    $(window).resize(function (e) {
-        ToBottom();
-    });
+        /* Blog single page */
 
     $('.the_champ_sharing_container').find('.theChampFacebookSvg').addClass('icon-facebook');
     $('.the_champ_sharing_container').find('.theChampTwitterSvg').addClass('icon-twitter');
@@ -81,6 +92,7 @@ $(function ( ) {
         $('.the_champ_sharing_container').slideToggle('slow');
     });
 
+        /* Blog index page */
 
     $('.blog-index .share').find('.theChampFacebookSvg').addClass('icon-facebook');
     $('.blog-index .share').find('.theChampTwitterSvg').addClass('icon-twitter');
@@ -128,52 +140,46 @@ $(function ( ) {
 
     /* Courusel */
 
-    $('.multiple-items').slick({
-        infinite: true,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll:1,
-        centerMode: true,
-        variableWidth: true,
-        adaptiveHeight: true,
-        responsive: [
-            {
-                breakpoint: 1020,
-                settings: {
-                    centerPadding: '260px',
-                    centerMode: true,
-                    variableWidth: true,
-                    adaptiveHeight: true,
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    dots: true
+    $('.multiple-items').each(function () {
+        $('#' + $(this).attr('id')).slick({
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll:1,
+            centerMode: true,
+            variableWidth: true,
+            adaptiveHeight: true,
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        adaptiveHeight: true
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        adaptiveHeight: true
+                    }
                 }
-            }
-//            {
-//                breakpoint: 600,
-//                settings: {
-//                    centerMode: true,
-//                    variableWidth: true,
-//                    adaptiveHeight: true,
-//                    slidesToShow: 2,
-//                    slidesToScroll: 1
-//                }
-//            },
-//            {
-//                breakpoint: 480,
-//                settings: {
-//                    centerMode: true,
-//                    variableWidth: true,
-//                    adaptiveHeight: true,
-//                    slidesToShow: 1,
-//                    slidesToScroll: 1
-//                }
-//            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-        ]
+            ]
+        });
     });
+
+
 
     /* Popover */
 
@@ -191,7 +197,8 @@ $(function ( ) {
             return $(source).attr('data-placement');
         },
         content: function () {
-            return $('.additional_block').html();
+            //return $('.additional_block').html();
+            return $('.additional_block.' + $(this).data('employees') ).html();
         }
     }).click(function(e) {
         e.preventDefault();
@@ -200,7 +207,8 @@ $(function ( ) {
 
     $('[rel="popover1"]').on('click', function (e) {
         var widthScreen = {'360': 360, '480': 480};
-        var currSlider = $(".multiple-items[data-employees='" + $(this).data('employees') +"']");
+        //var currSlider = $(".multiple-items[data-employees='" + $(this).data('employees') +"']");
+        var currSlider = $(".responsive[data-employees='" + $(this).data('employees') +"']");
 
         $('[rel="popover1"]').not(this).popover('hide');
 
@@ -211,7 +219,8 @@ $(function ( ) {
         }
 
 
-        $(".multiple-items[data-employees]").not(currSlider).hide();
+        //$(".multiple-items[data-employees]").not(currSlider).hide();
+        $(".responsive[data-employees]").not(currSlider).hide();
         $('.slick-track').css({'transform':'translate3d(-1339px, 0px, 0px)'});
         currSlider.fadeIn(500);
     });
@@ -277,7 +286,7 @@ sliderNumberObj = {
                     circles = $(this).parent().attr('id');
 
                 if( circles == 'circle1' ) {
-                    $(this).text( sliderNumberObj.roundingNumbers( (value) / 100 * 10 ) );
+                    $(this).text( sliderNumberObj.roundingNumbers( Math.ceil( (value) / 100 * 10 ) ) );
                 }
                 else if( circles == 'circle2' ) {
                     $(this).text( sliderNumberObj.roundingNumbers( (value * 6) / 10) );
@@ -301,15 +310,51 @@ sliderNumberObj = {
 sliderNumberObj.updateCircles(10);
 
 var blockResult = $('.result');
-$(".ui-slider-handle").on('moues', function() {
-    console.log("OK");
-});
+function stepIncrement(currIndex) {
+    var result = 10;
+
+    for (var i=1; i < currIndex; i++) {
+        switch(true) {
+            case ( i > 0 && i < 9 ): //range 10 - 50
+                result += 5;
+                break;
+            case (i > 8 && i < 14): //range 50 - 100
+                result += 10;
+                break;
+            case (i > 13 && i < 30): //range 100 - 500
+                result += 25;
+                break;
+            case (i > 29 && i < 35): //range 500 - 1000
+                result += 100;
+                break;
+            case (i > 34 && i < 43): //range 1000 - 3000
+                result += 250;
+                break;
+            case (i > 42 && i < 47): //range 3000 - 5000
+                result += 500;
+                break;
+            case (i > 46 && i < 52): //range 5000 - 10000
+                result += 1000;
+                break;
+            case (i > 51 && i < 58): //range 10000 - 25000
+                result += 2500;
+                break;
+            case (i > 57 && i < 63): //range 25000 - 50000
+                result += 5000;
+                break;
+            case (i > 62 && i < 68): //range 50000 - 100000
+                result += 10000;
+                break;
+        }
+    }
+    return result;
+}
 
 $("#slider").slider({
     value: 0,
-    min:1,
+    min: 1,
     max:10000,
-    step:146,
+    step:145,
     start: function (event, ui) {
         var images = $('.sounds_good .circles img');
 
@@ -321,123 +366,43 @@ $("#slider").slider({
         });
     },
     stop: function (event, ui) {
-        var currIndex = (ui.value / 146),
-            result = 10;
-        var images = $('.sounds_good .block_circles img');
+        var currIndex = (ui.value / 145),
+            images = $('.sounds_good .block_circles img'),
+            result = stepIncrement(currIndex);
 
         images.each(function(index) {
             $(this).addClass('paused');
         });
 
-        for (var i=1; i < currIndex; i++) {
-            switch(true) {
-                case ( i > 0 && i < 9 ):
-                    result += 5;
-                    break;
-                case (i > 8 && i < 14):
-                    result += 10;
-                    break;
-                case (i > 13 && i < 30):
-                    result += 25;
-                    break;
-                case (i > 29 && i < 35):
-                    result += 100;
-                    break;
-                case (i > 34 && i < 43):
-                    result += 250;
-                    break;
-                case (i > 42 && i < 47):
-                    result += 500;
-                    break;
-                case (i > 46 && i < 52):
-                    result += 1000;
-                    break;
-                case (i > 51 && i < 58):
-                    result += 2500;
-                    break;
-                case (i > 57 && i < 63):
-                    result += 5000;
-                    break;
-                case (i > 62 && i < 68):
-                    result += 10000;
-                    break;
-            }
-        }
-
         $('.result').text(result);
-        $('.ui-slider-float .ui-slider-tip').text(result + ' employees');
         sliderNumberObj.updateCircles(result);
     },
     slide: function (event, ui) {
-        var prev = $(this).slider('value'),
-            curr = ui.value,
-            val = parseInt(blockResult.text()),
-            result;
-
-        function setStep (step) {
-            if (prev < curr) {
-                result = parseInt(blockResult.text()) + step;
-            } else {
-                result = parseInt(blockResult.text()) - step;
-            }
-        }
-
-        if (prev < curr) {
-            val += 1;
-        } else {
-            val -= 1;
-        }
-
-        switch(true) {
-            case ( val > 10 && val < 50 ):
-                setStep(5);
-                break;
-            case (val > 50 && val < 100):
-                setStep(10);
-                break;
-            case (val > 100 && val < 500):
-                setStep(25);
-                break;
-            case (val > 500 && val < 1000):
-                setStep(100);
-                break;
-            case (val > 1000 && val < 3000):
-                setStep(250);
-                break;
-            case (val > 3000 && val < 5000):
-                setStep(500);
-                break;
-            case (val > 5000 && val < 10000):
-                setStep(1000);
-                break;
-            case (val > 10000 && val < 25000):
-
-                setStep(2500);
-                break;
-            case (val > 25000 && val < 50000):
-                setStep(5000);
-                break;
-            case (val > 50000 && val < 100000):
-                setStep(10000);
-                break;
-        }
-
-        if(!!!result && prev < curr) {
-            result = 100000;
-        }
-        if(!!!result && prev > curr) {
-            result = 10;
-        }
-
-        if (curr == 1) {
-            result = 10;
-        } else if (curr == 9929) {
-            result = 100000;
-        }
+        var currIndex = (ui.value / 145),
+            result = stepIncrement(currIndex);
 
         $('.result').text(result);
-        $('.ui-slider-float .ui-slider-tip').text(result + ' employees');
         sliderNumberObj.updateCircles(result);
     }
-})
+});
+
+
+
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+
+ga('create', 'UA-66463213-2', 'auto');
+
+ga('send', 'pageview');
+
+
+
 

@@ -131,8 +131,72 @@ function add_menu_custom_url( $items ) {
     return $items;
 }
 
-add_theme_support( 'post-thumbnails', array( 'post' ) );
+add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 
+
+    /*Show Default Editor on Blog Page ( Administration Panel )*/
+if( ! function_exists( 'fix_no_editor_on_posts_page' ) ) {
+
+    /**
+     * Add the wp-editor back into WordPress after it was removed in 4.2.2.
+     *
+     * @param Object $post
+     * @return void
+     */
+    function fix_no_editor_on_posts_page( $post ) {
+        if( isset( $post ) && $post->ID != get_option('page_for_posts') ) {
+            return;
+        }
+
+        remove_action( 'edit_form_after_title', '_wp_posts_page_notice' );
+        add_post_type_support( 'page', 'editor' );
+    }
+    add_action( 'edit_form_after_title', 'fix_no_editor_on_posts_page', 0 );
+}
+
+/* Подсчет количества посещений страниц
+---------------------------------------------------------- */
+add_action('wp_head', 'kama_postviews');
+function kama_postviews() {
+
+    /* ------------ Настройки -------------- */
+    $meta_key = 'views'; // Ключ мета поля, куда будет записываться количество просмотров.
+    $who_count = 0; // Чьи посещения считать? 0 - Всех. 1 - Только гостей. 2 - Только зарегистрированных пользователей.
+    $exclude_bots = 1; // Исключить ботов, роботов, пауков и прочую нечесть :)? 0 - нет, пусть тоже считаются. 1 - да, исключить из подсчета.
+
+
+    global $user_ID, $post;
+    if(is_singular()) {
+        $id = (int)$post->ID;
+        static $post_views = false;
+        if($post_views) return true; // чтобы 1 раз за поток
+        $post_views = (int)get_post_meta($id,$meta_key, true);
+        $should_count = false;
+        switch( (int)$who_count ) {
+            case 0: $should_count = true;
+                break;
+            case 1:
+                if( (int)$user_ID == 0 )
+                    $should_count = true;
+                break;
+            case 2:
+                if( (int)$user_ID > 0 )
+                    $should_count = true;
+                break;
+        }
+        if( (int)$exclude_bots==1 && $should_count ){
+            $useragent = $_SERVER['HTTP_USER_AGENT'];
+            $notbot = "Mozilla|Opera"; //Chrome|Safari|Firefox|Netscape - все равны Mozilla
+            $bot = "Bot/|robot|Slurp/|yahoo"; //Яндекс иногда как Mozilla представляется
+            if ( !preg_match("/$notbot/i", $useragent) || preg_match("!$bot!i", $useragent) )
+                $should_count = false;
+        }
+
+        if($should_count)
+            if( !update_post_meta($id, $meta_key, ($post_views+1)) ) add_post_meta($id, $meta_key, 1, true);
+    }
+    return true;
+}
 
 
 function enqueue_styles() {

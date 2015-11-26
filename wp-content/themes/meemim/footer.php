@@ -1,6 +1,3 @@
-
-
-
 </div>
 <div class="footer-block" style="overflow: hidden;">
     <footer class="<?php echo is_page('Home')? 'home-page' : ''?>">
@@ -36,8 +33,10 @@
             <div class="right-side"></div>
         </div>
     </footer>
-</div>
 
+</div>
 	<?php wp_footer(); ?>
+
+  
 </body>
 </html>
