@@ -17,16 +17,19 @@
  *
  * @package WordPress
  */
+@ini_set('display_errors', 0);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'meemim_blog');
 
 /** MySQL database username */
-define('DB_USER', 'meemim_blog');
+//define('DB_USER', 'meemim_blog');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'meemim_blog');
+//define('DB_PASSWORD', 'meemim_blog');
+define('DB_PASSWORD', 'pass@word1');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -77,8 +80,8 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', true);
-define("WP_DEBUG_DISPLAY", true);
+define('WP_DEBUG', false);
+define("WP_DEBUG_DISPLAY", false);
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 

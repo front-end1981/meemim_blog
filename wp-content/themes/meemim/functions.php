@@ -103,7 +103,7 @@ class True_Walker_Nav_Menu extends Walker_Nav_Menu {
     }
 }
 add_theme_support('post-thumbnails');
-add_image_size('meemim', 258, 282, array('x_crop_position' => 'center', 'y_crop_position' => 'center'));
+add_image_size('meemim', 150, 150, array('x_crop_position' => 'center', 'y_crop_position' => 'center'));
 
 if (function_exists('add_theme_support')) {
     add_theme_support('menus');
@@ -198,6 +198,11 @@ function kama_postviews() {
     return true;
 }
 
+        /* filter fore contact form url*/
+//add_filter( 'si_contact_form_action_url', 'new_form_action_url', 10);
+//function new_form_action_url ($url) {
+//    return $url.'#massage-sign-up-form';
+//}
 
 function enqueue_styles() {
     wp_enqueue_style('meemim-styles', get_stylesheet_uri().'style.css');
@@ -221,12 +226,13 @@ function enqueue_scripts () {
     wp_enqueue_script('html5-shim');
     wp_enqueue_script('jquery-js', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
     wp_enqueue_script('bootstrap-js', dirname(get_stylesheet_uri()).'/css/bootstrap/js/bootstrap.min.js');
+    wp_enqueue_script('masonry-js', dirname(get_stylesheet_uri()).'/js/masonry.pkgd.js');
     wp_enqueue_script('BlackWhite-js', dirname(get_stylesheet_uri()).'/js/jquery.BlackAndWhite.js');
     wp_enqueue_script('jquery-ui-js', dirname(get_stylesheet_uri()).'/js/jquery-ui.js');
     wp_enqueue_script('slick-js', dirname(get_stylesheet_uri()).'/js/slick-1.5.7/slick/slick.min.js');
-    wp_enqueue_script('masonry-js', dirname(get_stylesheet_uri()).'/js/masonry-master/dist/masonry.pkgd.min.js');
-    wp_enqueue_script('masonry-js', dirname(get_stylesheet_uri()).'/js/imagesloaded.pkgd.min.js');
-    wp_enqueue_script('imagefill-js', dirname(get_stylesheet_uri()).'/js/jquery-imagefill.js');
+
+//    wp_enqueue_script('masonry-js', dirname(get_stylesheet_uri()).'/js/imagesloaded.pkgd.min.js');
+//    wp_enqueue_script('imagefill-js', dirname(get_stylesheet_uri()).'/js/jquery-imagefill.js');
 
 
     wp_enqueue_script('function-js', dirname(get_stylesheet_uri()).'/js/functions.js', $deps = array(), $ver = false, true);

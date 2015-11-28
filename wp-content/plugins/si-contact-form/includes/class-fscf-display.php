@@ -22,6 +22,119 @@ class FSCF_Display {
 	static $printed_tooltip_filetypes, $fscf_use_window_onload;
 	static $add_fscf_script, $add_placeholder_script, $add_date_js_array, $add_date_js;
 
+
+    static function process_short_code_custom($atts) {
+        // Process shortcode and display the form
+        // and decide whether to send the email or not
+
+        self::$add_fscf_script = true;  // condition flag for add styles and scripts to page or post the form is on
+
+        // Extract shortcode atts
+        extract( shortcode_atts( array(
+            'form'		 => '',
+            'redirect'	 => '',
+            'hidden'	 => '',
+            'email_to'	 => '',
+        ), $atts ) );
+
+        // Verify form number
+        self::$global_options = FSCF_Util::get_global_options();
+
+        self::$form_id_num = '1';
+        if ( isset($form) && is_numeric($form) ) {
+            self::$form_id_num = (int)$form;
+        } else {
+            echo __( 'Contact Form Shortcode Error: Invalid form number in shortcode.', 'si-contact-form' );
+            return;
+        }
+
+        $frm_id = self::$form_id_num;
+
+        // Get the form options
+        self::$form_options = FSCF_Util::get_form_options( self::$form_id_num, false );  // Don't use defaults if it doesn't exist
+
+        if ( ! self::$form_options ) {
+            // Form does not exist in options table
+            // Display error message and return
+            echo  sprintf( __( 'Contact Form Shortcode Error: Form %s does not exist', 'si-contact-form' ), self::$form_id_num );
+            return;
+        }
+
+        // Update some language
+        // The update_lang function receives the array by reference, so it can be changed
+        FSCF_Util::update_lang(self::$form_options);
+
+        // Store shortcode atts
+        // http://www.fastsecurecontactform.com/shortcode-options
+        if (self::$global_options['enable_php_sessions'] == 'true') { // this feature only works when PHP sessions are enabled
+            $_SESSION["fsc_shortcode_redirect_$frm_id"] = $redirect;
+            $_SESSION["fsc_shortcode_hidden_$frm_id"] = $hidden;
+            $_SESSION["fsc_shortcode_email_to_$frm_id"] = $email_to;
+        } else {
+            if ( !empty($redirect) || !empty($hidden) || !empty($email_to)) {
+                // trying to use shorcode attributes with the required PHP sessions setting turn off
+                // Display error message and return
+                echo  __( 'Contact Form Shortcode Error: Using shorcode attributes requires the PHP sessions setting to be enabled on the Advanced tab in form settings.', 'si-contact-form' );
+                return;
+            }
+        }
+
+        self::$form_action_url = self::get_form_action_url();
+
+        // initialize vars
+        self::$contact_error = 0;
+
+        // Save parameters from query string, if any
+        self::get_query_parms();
+
+        // initialize external css
+        if (self::$form_options['external_style'] == 'true')
+            self::get_ext_css();
+
+        // Has a preview been selected?
+        $preview = ( isset($_POST['ctf_action']) && __('Preview Form', 'si-contact-form') == $_POST['ctf_action'] ) ? true : false;
+        if (is_admin() && $preview && self::$form_options['external_style'] == 'true')
+            self::external_style_head();
+
+        self::$req_field_ind = ( self::$form_options['req_field_indicator_enable'] == 'true' ) ? '<span '.self::get_this_css('required_style').'>'.self::$form_options['req_field_indicator'] . '</span>' : '';
+
+        // See if a form has been processed, and if so, if there were errors
+        if ( FSCF_Process::$form_processed && FSCF_Process::$form_id_num == self::$form_id_num  && empty(FSCF_Process::$form_errors) ) {
+            // Form was processed and has no errors--display thank you message
+//			$string = self::display_thank_you();
+
+            /*  modification code add Start*/
+            self::$placeholder = 0;
+            $string = "\n\n<!-- Fast Secure Contact Form plugin " . FSCF_VERSION . " - begin - FastSecureContactForm.com -->
+<div ".self::get_this_css('clear_style')."></div>\n" . self::$form_options['welcome'];
+            $string = self::display_form($string);
+            /*  modification code add END*/
+        } else {
+            if (!isset(self::$add_date_js)) {
+                self::$add_date_js_array = array();
+                self::$add_date_js = '';
+            }
+            if ( ! empty(FSCF_Process::$form_errors) && FSCF_Process::$form_id_num == self::$form_id_num ) {
+                // The form was processed, but had errors
+                if ( ! empty(FSCF_Process::$form_data) ) {
+                    // If this is not true, there is an internal error...
+                    self::$form_content = array_merge( self::$form_content, FSCF_Process::$form_data );
+                    self::$form_errors  = array_merge( self::$form_errors, FSCF_Process::$form_errors );
+                    // XXX later, improve variable usage for error tracking?
+                    self::$contact_error = true;
+                }
+            }
+            // ***** Display the Form *****
+            self::$placeholder = 0;
+            $string = "\n\n<!-- Fast Secure Contact Form plugin " . FSCF_VERSION . " - begin - FastSecureContactForm.com -->
+<div ".self::get_this_css('clear_style')."></div>\n" . self::$form_options['welcome'];
+            $string = self::display_form_custom($string);
+        }
+
+        return($string);
+    }	// end function process_short_code()
+
+
 	static function process_short_code($atts) {
 		// Process shortcode and display the form
 		// and decide whether to send the email or not
@@ -100,7 +213,14 @@ class FSCF_Display {
 		// See if a form has been processed, and if so, if there were errors
 		if ( FSCF_Process::$form_processed && FSCF_Process::$form_id_num == self::$form_id_num  && empty(FSCF_Process::$form_errors) ) {
 			// Form was processed and has no errors--display thank you message
-			$string = self::display_thank_you();
+            //$string = self::display_thank_you();
+
+            /*  modification code add Start*/
+                self::$placeholder = 0;
+                $string = "\n\n<!-- Fast Secure Contact Form plugin " . FSCF_VERSION . " - begin - FastSecureContactForm.com -->
+                <div ".self::get_this_css('clear_style')."></div>\n" . self::$form_options['welcome'];
+                $string = self::display_form($string);
+            /*  modification code add END*/
 		} else {
             if (!isset(self::$add_date_js)) {
                  self::$add_date_js_array = array();
@@ -2039,6 +2159,21 @@ $string .= "    </div>";
 		return $string;
 	}	// end function display_captcha()
 
+
+    static function display_thank_you_custom($form_id_num) {
+        self::$form_id_num = $form_id_num;
+        if ( FSCF_Process::$form_processed && FSCF_Process::$form_id_num == self::$form_id_num  && empty(FSCF_Process::$form_errors) ) {
+            // Form was processed and has no errors--display thank you message
+            return 	$text_message_sent = (self::$form_options['text_message_sent'] != '') ? self::$form_options['text_message_sent'] : __('Your message has been sent, thank you.', 'si-contact-form'); // can have HTML
+        }
+        elseif ( !empty(FSCF_Process::$form_errors) ) {
+            $errors = FSCF_Process::$form_errors;
+            $errors['error_correct'] = self::$form_options['error_correct'] != '' ? self::$form_options['error_correct'] : __( 'Please make corrections below and try again.', 'si-contact-form' );
+
+            return $errors;
+        }
+        return false;
+    }
 	static function display_thank_you() {
 		// Displays thank you message upon successful form submission
 	
@@ -2170,6 +2305,7 @@ if (!empty(self::$form_options['success_page_html'])) {
         // filter hook for html_before_after
 		return apply_filters( 'si_contact_html_before_after', $html,  self::$form_id_num);
 	}
+
 
 	static function get_form_action_url() {
 	// returns the URL for the WP page the form was on

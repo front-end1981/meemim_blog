@@ -445,19 +445,32 @@
 
         </script>
 
-        <div class="massage-sign-up">
-            <span>
+        <div id="FSContact2" class="massage-sign-up <?php $contact_form = $si_contact_form->si_display_thank_you_custom('2');
+        if ( !is_array($contact_form) && $contact_form){ echo 'form-sent-ok';}?>">
+            <?php if ( $contact_form && !is_array($contact_form) ):?>
+                <span><?php echo $contact_form?></span>
+            <?php elseif ( is_array($contact_form) ):?>
+                <span><?php echo $contact_form['error_correct']?></span>
+            <?php else:?>
+                <span>
                 Sign up to our blog updates
-            </span>
+                </span>
+            <?php endif?>
             <div class="arrow-bottom"></div>
         </div>
 
-        <form class="form-inline" role="form">
-            <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-            </div>
-            <button type="submit" class="btn btn-default">Sign Up</button>
-        </form>
+
+        <?php
+        if ( isset($si_contact_form) )  {
+            echo $si_contact_form->si_contact_form_short_code( array( 'form' => '2' ) );
+        }
+        ?>
+<!--        <form class="form-inline" role="form">-->
+<!--            <div class="form-group">-->
+<!--                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">-->
+<!--            </div>-->
+<!--            <button type="submit" class="btn btn-default">Sign Up</button>-->
+<!--        </form>-->
 
     </section>
 <?php get_footer(); ?>

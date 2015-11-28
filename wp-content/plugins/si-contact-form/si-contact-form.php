@@ -77,13 +77,21 @@ register_activation_hook( __FILE__, 'FSCF_Util::import' );
 
 if (!class_exists('siContactForm')) {
    class siContactForm {
-      function si_contact_form_short_code($atts) {
-         // backwards compatibility with manual PHP call from 3.xx
-         echo FSCF_Display::process_short_code($atts);
-      }
+       function si_contact_form_short_code($atts) {
+           // backwards compatibility with manual PHP call from 3.xx
+           echo FSCF_Display::process_short_code($atts);
+       }
+       function  si_display_thank_you_custom ($form_id_num) {
+           return  FSCF_Display::display_thank_you_custom($form_id_num);
+       }
+       function  si_get_form_action_url ($form_id_num) {
+           return  FSCF_Display::get_form_action_url_custom($form_id_num);
+       }
+
    }
 }
 $si_contact_form = new siContactForm();
+
 
 // Show activation time errors
 //echo get_option( 'plugin_error' );

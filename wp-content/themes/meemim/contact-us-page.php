@@ -32,27 +32,42 @@
 
         </div>
 
-        <div class="massage-sign-up">
+        <div class="massage-sign-up <?php $contact_form = $si_contact_form->si_display_thank_you_custom('1');
+        if ( !is_array($contact_form) && $contact_form){ echo 'form-sent-ok';}?>">
+            <?php if ( $contact_form && !is_array($contact_form) ):?>
+                <span><?php echo $contact_form?></span>
+            <?php elseif ( is_array($contact_form) ):?>
+                <span><?php echo $contact_form['error_correct']?></span>
+            <?php else:?>
+                <span>
+                Sign up to our blog updates
+                </span>
+            <?php endif?>
             <div class="arrow-bottom"></div>
         </div>
 
+        <?php
+            if ( isset($si_contact_form) )  {
+                echo $si_contact_form->si_contact_form_short_code( array( 'form' => '1' ) );
+            }
+        ?>
 
-        <form role="form">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Messages</label>
-                <textarea class="form-control" rows="10"></textarea>
-            </div>
-            <button type="submit" class="btn pull-right btn-default">Send</button>
-            <button type="submit" class="btn pull-right btn-default">Clear</button>
-        </form>
+<!--        <form role="form">-->
+<!--            <div class="form-group">-->
+<!--                <label for="exampleInputEmail1">Name</label>-->
+<!--                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--                <label for="exampleInputEmail1">Email</label>-->
+<!--                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="">-->
+<!--            </div>-->
+<!--            <div class="form-group">-->
+<!--                <label for="exampleInputEmail1">Messages</label>-->
+<!--                <textarea class="form-control" rows="10"></textarea>-->
+<!--            </div>-->
+<!--            <button type="submit" class="btn pull-right btn-default">Send</button>-->
+<!--            <button type="submit" class="btn pull-right btn-default">Clear</button>-->
+<!--        </form>-->
 
     </section>
 <?php get_footer(); ?>
