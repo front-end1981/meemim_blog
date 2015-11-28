@@ -103,7 +103,7 @@ class True_Walker_Nav_Menu extends Walker_Nav_Menu {
     }
 }
 add_theme_support('post-thumbnails');
-add_image_size('meemim', 150, 150, array('x_crop_position' => 'center', 'y_crop_position' => 'center'));
+add_image_size('meemim', 258, 282, array('x_crop_position' => 'center', 'y_crop_position' => 'center'));
 
 if (function_exists('add_theme_support')) {
     add_theme_support('menus');
@@ -198,11 +198,10 @@ function kama_postviews() {
     return true;
 }
 
-        /* filter fore contact form url*/
-//add_filter( 'si_contact_form_action_url', 'new_form_action_url', 10);
-//function new_form_action_url ($url) {
-//    return $url.'#massage-sign-up-form';
-//}
+function custom_theme_setup() {
+    add_theme_support( 'widgets' );
+}
+add_action( 'after_setup_theme', 'custom_theme_setup' );
 
 function enqueue_styles() {
     wp_enqueue_style('meemim-styles', get_stylesheet_uri().'style.css');

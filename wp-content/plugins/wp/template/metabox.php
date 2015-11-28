@@ -6,7 +6,7 @@
                 <div class="photo" data-attachment-id="<?php echo $id; ?>">
                     <a href="#" class="remove-photo">&times;</a>
                     <a href="<?php echo $data['editLink']; ?>">
-                        <img src="<?php $attachment = wp_get_attachment_image_src($id, 'thumbnail'); echo $attachment[0] ?>" alt="" />
+                        <img src="<?php $attachment = wp_get_attachment_image_src($id, 'thumbnail'); echo $attachment[0] ?>" alt="" style="width: 100%;height: auto"/>
                     </a>
                 </div>
             <?php endforeach; ?>

@@ -24,12 +24,12 @@
 define('DB_NAME', 'meemim_blog');
 
 /** MySQL database username */
-//define('DB_USER', 'meemim_blog');
-define('DB_USER', 'root');
+define('DB_USER', 'meemim_blog');
+//define('DB_USER', 'root');
 
 /** MySQL database password */
-//define('DB_PASSWORD', 'meemim_blog');
-define('DB_PASSWORD', 'pass@word1');
+define('DB_PASSWORD', 'meemim_blog');
+//define('DB_PASSWORD', 'pass@word1');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -82,8 +82,8 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', false);
 define("WP_DEBUG_DISPLAY", false);
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
 
 /* That's all, stop editing! Happy blogging. */
 

@@ -47,7 +47,7 @@
     </div>
 
     <div class="leadership-user">
-        <?php foreach(AboutPageHelper::getAllImages(13, 'meemim') as $index=>$image): ?>
+        <?php foreach(AboutPageHelper::getAllImages(13, 'thumbnail') as $index=>$image): ?>
             <?php if ( $index > 1 ):?>
             <div class="users">
                 <img src="<?php echo $image['src']; ?>" alt="">

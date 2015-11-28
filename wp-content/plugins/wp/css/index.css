@@ -16,3 +16,8 @@
 #team_metabox .team_metabox_footer {
     display: block;
 }
+
+.team_metabox_body .photo img{
+    width: 100%;
+    height: auto;
+}

@@ -25,64 +25,64 @@ get_header(); ?>
             will shape the future of the social web
         </p>
     </div>
-<?php echo get_post_field( 'post_content', get_option( 'page_for_posts' ) );?>
     <section class="blog-index">
         <div class="sidebar top">
             <div class="suggested-readings">
-                <h3>Suggested readings</h3>
-                <div class="block-sidebar">
-                    <div class="title">
-                        <a href="">
-                            Social Media News You
-                            Need to Know:
-                        </a>
-                    </div>
-                    <div class="date">
-                        October 2015 Roundup
-                    </div>
-                    <p>
-                        <a href="#">
-                            Hatching the ideas and techno
-                            Shape the future of the social
-                        </a>
-                    </p>
-                </div>
-
-                <div class="block-sidebar">
-                    <div class="title">
-                        <a href="">
-                            Social Media News You
-                            Need to Know:
-                        </a>
-                    </div>
-                    <div class="date">
-                        October 2015 Roundup
-                    </div>
-                    <p>
-                        <a href="#">
-                            Hatching the ideas and techno
-                            Shape the future of the social
-                        </a>
-                    </p>
-                </div>
-
-                <div class="block-sidebar">
-                    <div class="title">
-                        <a href="">
-                            Social Media News You
-                            Need to Know:
-                        </a>
-                    </div>
-                    <div class="date">
-                        October 2015 Roundup
-                    </div>
-                    <p>
-                        <a href="#">
-                            Hatching the ideas and techno
-                            Shape the future of the social
-                        </a>
-                    </p>
-                </div>
+                <?php echo get_post_field( 'post_content', get_option( 'page_for_posts' ) );?>
+<!--                <h3>Suggested readings</h3>-->
+<!--                <div class="block-sidebar">-->
+<!--                    <div class="title">-->
+<!--                        <a href="">-->
+<!--                            Social Media News You-->
+<!--                            Need to Know:-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                    <div class="date">-->
+<!--                        October 2015 Roundup-->
+<!--                    </div>-->
+<!--                    <p>-->
+<!--                        <a href="#">-->
+<!--                            Hatching the ideas and techno-->
+<!--                            Shape the future of the social-->
+<!--                        </a>-->
+<!--                    </p>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="block-sidebar">-->
+<!--                    <div class="title">-->
+<!--                        <a href="">-->
+<!--                            Social Media News You-->
+<!--                            Need to Know:-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                    <div class="date">-->
+<!--                        October 2015 Roundup-->
+<!--                    </div>-->
+<!--                    <p>-->
+<!--                        <a href="#">-->
+<!--                            Hatching the ideas and techno-->
+<!--                            Shape the future of the social-->
+<!--                        </a>-->
+<!--                    </p>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="block-sidebar">-->
+<!--                    <div class="title">-->
+<!--                        <a href="">-->
+<!--                            Social Media News You-->
+<!--                            Need to Know:-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                    <div class="date">-->
+<!--                        October 2015 Roundup-->
+<!--                    </div>-->
+<!--                    <p>-->
+<!--                        <a href="#">-->
+<!--                            Hatching the ideas and techno-->
+<!--                            Shape the future of the social-->
+<!--                        </a>-->
+<!--                    </p>-->
+<!--                </div>-->
 
             </div>
         </div>
@@ -147,61 +147,7 @@ get_header(); ?>
 
         <div class="sidebar">
             <div class="suggested-readings">
-                <h3>Suggested readings</h3>
-                <div class="block-sidebar">
-                    <div class="title">
-                        <a href="">
-                            Social Media News You
-                            Need to Know:
-                        </a>
-                    </div>
-                    <div class="date">
-                        October 2015 Roundup
-                    </div>
-                    <p>
-                        <a href="#">
-                            Hatching the ideas and techno
-                            Shape the future of the social
-                        </a>
-                    </p>
-                </div>
-
-                <div class="block-sidebar">
-                    <div class="title">
-                        <a href="">
-                            Social Media News You
-                            Need to Know:
-                        </a>
-                    </div>
-                    <div class="date">
-                        October 2015 Roundup
-                    </div>
-                    <p>
-                        <a href="#">
-                            Hatching the ideas and techno
-                            Shape the future of the social
-                        </a>
-                    </p>
-                </div>
-
-                <div class="block-sidebar">
-                    <div class="title">
-                        <a href="">
-                            Social Media News You
-                            Need to Know:
-                        </a>
-                    </div>
-                    <div class="date">
-                        October 2015 Roundup
-                    </div>
-                    <p>
-                        <a href="#">
-                            Hatching the ideas and techno
-                            Shape the future of the social
-                        </a>
-                    </p>
-                </div>
-
+                <?php echo get_post_field( 'post_content', get_option( 'page_for_posts' ) );?>
             </div>
         </div>
     </section>

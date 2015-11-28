@@ -1720,6 +1720,12 @@ footer {
       margin-top: 0;
       font-size: 40px;
       color: #6d6d6d; }
+    .blog-index .suggested-readings a {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: inherit;
+      text-decoration: none; }
     .blog-index .suggested-readings p {
       font-size: 18px;
       color: #707070; }
