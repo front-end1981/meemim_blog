@@ -25,7 +25,7 @@
     </div>
 
     <div class="leadership-user">
-        <?php foreach(AboutPageHelper::getAllImages(13, 'meemim') as $index=>$image): ?>
+        <?php foreach(AboutPageHelper::getAllImages(13, 'medium') as $index=>$image): ?>
         <?php if ( $index < 2 ):?>
             <div class="users">
                 <img src="<?php echo $image['src']; ?>" alt="">
@@ -38,16 +38,16 @@
 
     <div class="about-us-block2" style="background-image: url(' <?php echo $dynamic_featured_image->get_featured_images($post->ID )[0]['full']?>')">
         <div class="rectangle">
-            <span><?php  echo $dynamic_featured_image->get_image_title($dynamic_featured_image->get_featured_images($post->ID )[0]['full'])?></span>
+            <span><?php  echo $dynamic_featured_image->get_image_title_by_id($dynamic_featured_image->get_featured_images($post->ID )[0]['attachment_id'])?></span>
         </div>
         <div class="content-block">
-            <?php  echo $dynamic_featured_image->get_image_caption($dynamic_featured_image->get_featured_images($post->ID )[0]['full'])?>
+            <?php  echo $dynamic_featured_image->get_image_caption_by_id($dynamic_featured_image->get_featured_images($post->ID )[0]['attachment_id'])?>
 
         </div>
     </div>
 
     <div class="leadership-user">
-        <?php foreach(AboutPageHelper::getAllImages(13, 'thumbnail') as $index=>$image): ?>
+        <?php foreach(AboutPageHelper::getAllImages(13, 'medium') as $index=>$image): ?>
             <?php if ( $index > 1 ):?>
             <div class="users">
                 <img src="<?php echo $image['src']; ?>" alt="">

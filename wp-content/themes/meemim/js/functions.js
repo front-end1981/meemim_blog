@@ -108,19 +108,6 @@ $(function ( ) {
     });
 
 
-//    var $container = $('.group');
-//$container.imagesLoaded(function(){
-//    $container.masonry({
-//        itemSelector: '.grid-item',
-//        isFitWidth: true,
-//        "gutter": 10,
-//        columnWidth: 50
-//    });
-//    $('.group').imagefill();
-//});
-
-
-
     /* Courusel */
 
     $('.multiple-items').each(function () {
@@ -208,12 +195,9 @@ $(function ( ) {
         currSlider.fadeIn(500);
     });
 
+
 });
-/* Black and White image */
-$('.bwWrapper').BlackAndWhite({
-    hoverEffect: true,
-    invertHoverEffect: true
-});
+
 
 /* Masonry Cascading grid layout library */
 
@@ -225,6 +209,17 @@ if ($('section').hasClass('blog-index')) {
         columnWidth: 50
     });
 }
+
+/* Black and White image */
+
+    $(window).load(function() {
+        $('.bwWrapper').BlackAndWhite({
+            hoverEffect: true,
+            invertHoverEffect: true,
+            webworkerPath : false
+        });
+    });
+
 
 
         /* Slider */

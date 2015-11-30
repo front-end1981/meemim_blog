@@ -5,7 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<?php if (is_page('Home')):?>
 		<title>Meemim: put time back into your day</title>
-	<?php else:?>
+    <?php elseif (preg_match_all('/blog/',$_SERVER['PHP_SELF'])):?>
+        <title> Blog | Meemim</title>
+    <?php else:?>
 		<title><?php the_title()?> | Meemim</title>
 	<?php endif?>
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -32,7 +34,7 @@
 </head>
 <body <?php is_page('Home') ? body_class('front-page') : body_class(); ?> >
 
-	<header class="<?php echo is_page('Home')? 'home-page' : ''?>">
+<header class="<?php echo is_page('Home')? 'home-page' : ''?>">
 		<div class="logo">
 			<?php if (is_page('Home')): ?>
 				<a href="/"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="Meemim logo"></a>

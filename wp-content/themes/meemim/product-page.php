@@ -17,7 +17,6 @@
         <?php if (have_posts()): while (have_posts()): the_post(); ?>
             <?php the_content(); ?>
         <?php endwhile; endif; ?>
-
         <div class="container">
             <?php foreach($dynamic_featured_image->get_featured_images($post->ID) as $index=>$imageOption):?>
                <div class="row <?php echo $index % 2? 'even': ''?>">
@@ -25,8 +24,8 @@
                     <div class="col-md-6"><img src="<?php echo $imageOption['full']?>"></div>
                     <?php endif?>
                     <div class="col-md-5">
-                       <h1><?php echo $dynamic_featured_image->get_image_title($dynamic_featured_image->get_featured_images($post->ID )[$index]['full'])?></h1>
-                       <p><?php  echo $dynamic_featured_image->get_image_description($dynamic_featured_image->get_featured_images($post->ID )[$index]['full'])?></p>
+                       <h1><?php echo $dynamic_featured_image->get_image_title_by_id($dynamic_featured_image->get_featured_images($post->ID )[$index]['attachment_id'])?></h1>
+                       <p><?php  echo $dynamic_featured_image->get_image_description_by_id($dynamic_featured_image->get_featured_images($post->ID )[$index]['attachment_id'])?></p>
                    </div>
                    <?php if ( $index % 2 == 1):?>
                        <div class="col-md-6"><img src="<?php echo $imageOption['full']?>"></div>
