@@ -1983,11 +1983,14 @@ footer {
 
 .main-img-post {
   margin-top: 70px;
+  margin-bottom: 70px;
   min-height: 279px;
   display: block;
   background-repeat: no-repeat;
   background-size: cover;
-  text-align: center; }
+  background-position: 0 15%;
+  text-align: center;
+  position: relative; }
   .main-img-post .rectangle {
     min-height: 279px;
     display: flex;
@@ -2002,6 +2005,48 @@ footer {
       .main-img-post .rectangle .main-img-title span {
         display: inline-block;
         font-size: 34px; }
+  .main-img-post .user {
+    top: 71px;
+    left: 120px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    position: absolute; }
+    .main-img-post .user.written-by {
+      margin: 88px auto 53px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row; }
+      .main-img-post .user.written-by img {
+        height: 102px;
+        width: 92px;
+        align-self: flex-start; }
+      .main-img-post .user.written-by span {
+        margin-right: 12px;
+        padding: 0 0 0 90px;
+        font-size: 23px; }
+    .main-img-post .user img {
+      height: 102px;
+      width: 92px;
+      margin-right: 24px;
+      border-radius: 4px; }
+    .main-img-post .user .block-user {
+      vertical-align: middle;
+      display: inline-block;
+      align-self: center; }
+      .main-img-post .user .block-user:after {
+        content: '';
+        clear: both;
+        display: block; }
+      .main-img-post .user .block-user .user-name,
+      .main-img-post .user .block-user .user-data {
+        text-align: left;
+        color: #414141; }
+      .main-img-post .user .block-user .user-name {
+        font-size: 23px; }
+      .main-img-post .user .block-user .user-data {
+        font-size: 18px; }
 
 .blog-single {
   position: relative; }
@@ -2054,14 +2099,41 @@ footer {
         .blog-single .content .user .block-user .user-data {
           font-size: 18px; }
     .blog-single .content h1, .blog-single .content h2, .blog-single .content h3 {
-      font-size: 47px;
-      font-weight: bold;
-      color: #3c3c3c; }
-    .blog-single .content h2, .blog-single .content h3 {
-      font-size: 37px; }
-    .blog-single .content p {
+      margin: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      line-height: 1.364em;
+      font-family: "Open Sans","Helvetica Neue",Arial,Helvetica,sans-serif;
       font-size: 23px;
+      font-weight: 600;
+      color: #3c3c3c; }
+      .blog-single .content h1 a, .blog-single .content h2 a, .blog-single .content h3 a {
+        font-family: inherit; }
+    .blog-single .content h2 {
+      font-size: 32px; }
+    .blog-single .content p {
+      margin: 0;
+      padding-bottom: 1.1em;
+      font-family: "Open Sans","Helvetica Neue",Arial,Helvetica,sans-serif;
+      font-size: 16px;
+      line-height: 1.875em;
       color: #4a4a4a; }
+    .blog-single .content a {
+      font-family: "Open Sans";
+      text-decoration: none;
+      color: #00aeef;
+      -webkit-transition: all .15s ease-out;
+      -moz-transition: all .15s ease-out;
+      -ms-transition: all .15s ease-out;
+      -o-transition: all .15s ease-out;
+      transition: all .15s ease-out; }
+      .blog-single .content a:hover {
+        color: #006489;
+        -webkit-transition: all .15s ease-out;
+        -moz-transition: all .15s ease-out;
+        -ms-transition: all .15s ease-out;
+        -o-transition: all .15s ease-out;
+        transition: all .15s ease-out; }
     .blog-single .content .massage-sign-up {
       margin-top: 104px; }
   .blog-single .title-form {
@@ -2177,12 +2249,24 @@ footer {
       font-size: 16px; }
 
 .social-blog-single {
-  top: 900px;
+  top: 680px;
   position: absolute; }
+  .social-blog-single.small-screen {
+    display: none;
+    position: static; }
+    .social-blog-single.small-screen :after {
+      content: '';
+      display: block;
+      clear: both; }
+    .social-blog-single.small-screen ul:first-child {
+      border-bottom: none !important; }
+    .social-blog-single.small-screen .the_champ_sharing_container {
+      width: 152px;
+      margin-left: 0; }
   .social-blog-single .the_champ_sharing_container {
     position: static !important;
     margin-left: 28px;
-    width: 10px !important; }
+    width: 10px; }
     .social-blog-single .the_champ_sharing_container > div {
       display: none; }
     .social-blog-single .the_champ_sharing_container .the_champ_sharing_ul {
@@ -2245,9 +2329,11 @@ footer {
           .social-blog-single .the_champ_sharing_container .the_champ_sharing_ul .theChampSharing ss:hover {
             color: #5d052a;
             text-decoration: none; }
-  .social-blog-single ul:first-child {
+  .social-blog-single .the_champ_sharing_ul {
+    border-bottom: none !important; }
+  .social-blog-single > ul:first-child {
     border-bottom: 1px solid; }
-    .social-blog-single ul:first-child li {
+    .social-blog-single > ul:first-child li {
       margin-bottom: 15px; }
   .social-blog-single ul:last-child li:first-child {
     margin-top: 15px; }

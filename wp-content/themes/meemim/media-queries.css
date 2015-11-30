@@ -8,6 +8,12 @@
     width: 340px;
     margin: auto;
     float: none; } }
+@media screen and (max-width: 1100px) {
+  .social-blog-single {
+    display: none; }
+
+  .social-blog-single.small-screen {
+    display: block; } }
 @media screen and (max-width: 1024px) {
   .blog-index .grid .grid-item--width3 {
     width: 100%; }
@@ -34,6 +40,8 @@
   .product-page .statement {
     margin: 0 0 0 250px; }
 
+  .blog-single .content {
+    padding: 0 30px; }
   .blog-single #comments {
     margin: 0 20px; }
 
@@ -90,6 +98,35 @@
     margin: 0;
     padding: 0; }
 
+  .blog-index .fscf-div-form .fscf-div-field-left,
+  .blog-single .fscf-div-form .fscf-div-field-left,
+  .product-page .fscf-div-form .fscf-div-field-left,
+  .pricing-page .fscf-div-form .fscf-div-field-left {
+    float: none; }
+  .blog-index .fscf-div-form .fscf-button-submit,
+  .blog-single .fscf-div-form .fscf-button-submit,
+  .product-page .fscf-div-form .fscf-button-submit,
+  .pricing-page .fscf-div-form .fscf-button-submit {
+    margin: 0;
+    padding: 12px 12px; }
+  .blog-index .fscf-div-form input,
+  .blog-single .fscf-div-form input,
+  .product-page .fscf-div-form input,
+  .pricing-page .fscf-div-form input {
+    height: 45px;
+    width: 98%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: border-box !important; }
+  .blog-index .fscf-div-form button.btn,
+  .blog-single .fscf-div-form button.btn,
+  .product-page .fscf-div-form button.btn,
+  .pricing-page .fscf-div-form button.btn {
+    height: 45px;
+    width: 98%;
+    margin: 10px 0 0 0;
+    border-radius: 10px;
+    box-sizing: border-box !important; }
   .blog-index .form-inline,
   .blog-single .form-inline,
   .product-page .form-inline,

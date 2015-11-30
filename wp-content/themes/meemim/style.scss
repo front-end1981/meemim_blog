@@ -2333,11 +2333,14 @@ footer{
 
 .main-img-post {
     margin-top: 70px;
+    margin-bottom: 70px;
     min-height: 279px;
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 0 15%;
     text-align: center;
+    position: relative;
 
 //    .img-block {
 //        position: relative;
@@ -2375,6 +2378,64 @@ footer{
             }
         }
     }
+    .user {
+        top: 71px;
+        left: 120px;
+        padding: 20px;
+        text-align: center;
+        background-color: #fff;
+        position: absolute;
+
+        &.written-by {
+            margin: 88px auto 53px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            img {
+                height: 102px;
+                width: 92px;
+                align-self: flex-start;
+            }
+            span {
+                margin-right: 12px;
+                padding: 0 0 0 90px;
+                font-size: 23px;
+            }
+        }
+
+        img {
+            height: 102px;
+            width: 92px;
+            margin-right: 24px;
+            border-radius: 4px;
+        }
+        .block-user{
+            vertical-align: middle;
+            display: inline-block;
+            align-self: center;
+            &:after {
+                content: '';
+                clear: both;
+                display: block;
+            }
+
+            .user-name,
+            .user-data {
+                text-align: left;
+                color: #414141;
+            }
+
+            .user-name {
+                font-size: 23px;
+            }
+            .user-data {
+                font-size: 18px;
+            }
+        }
+
+    }
+
 
 }
 
@@ -2451,16 +2512,46 @@ footer{
 
         }
         h1, h2, h3 {
-            font-size: 47px;
-            font-weight: bold ;
+            margin: 0;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            line-height: 1.364em;
+            font-family: "Open Sans","Helvetica Neue",Arial,Helvetica,sans-serif;
+            font-size: 23px;
+            font-weight: 600 ;
             color: #3c3c3c;
+            a {
+                font-family: inherit;
+            }
         }
-        h2,h3 {
-            font-size: 37px;
+        h2 {
+            font-size: 32px;
         }
         p {
-            font-size: 23px;
+            margin: 0;
+            padding-bottom: 1.1em;
+            font-family: "Open Sans","Helvetica Neue",Arial,Helvetica,sans-serif;
+            font-size: 16px;
+            line-height: 1.875em;
             color: #4a4a4a;
+        }
+        & a {
+            font-family: "Open Sans";
+            text-decoration: none;
+            color: #00aeef;
+            -webkit-transition: all .15s ease-out;
+            -moz-transition: all .15s ease-out;
+            -ms-transition: all .15s ease-out;
+            -o-transition: all .15s ease-out;
+            transition: all .15s ease-out;
+            &:hover {
+                color: #006489;
+                -webkit-transition: all .15s ease-out;
+                -moz-transition: all .15s ease-out;
+                -ms-transition: all .15s ease-out;
+                -o-transition: all .15s ease-out;
+                transition: all .15s ease-out;
+            }
         }
 
         .massage-sign-up {
@@ -2648,13 +2739,30 @@ footer{
 
 
 .social-blog-single {
-    top: 900px;
+    top: 680px;
     position: absolute;
+
+    &.small-screen {
+        display: none;
+        position: static;
+        :after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        ul:first-child {
+            border-bottom: none!important;
+        }
+        .the_champ_sharing_container {
+            width: 152px;
+            margin-left: 0;
+        }
+    }
 
     .the_champ_sharing_container {
         position: static !important;
         margin-left: 28px;
-        width: 10px!important;
+        width: 10px;
         > div {
             display: none;
         }
@@ -2738,8 +2846,10 @@ footer{
             }
         }
     }
-
-    ul {
+    .the_champ_sharing_ul {
+        border-bottom: none!important;
+    }
+    > ul {
         &:first-child {
             border-bottom: 1px solid ;
             li {

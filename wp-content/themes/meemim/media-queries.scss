@@ -28,7 +28,16 @@
         }
     }
 }
-
+@media screen and (max-width: 1100px) {
+    .social-blog-single {
+        display: none;
+    }
+    .social-blog-single {
+       &.small-screen {
+           display: block;
+       }
+    }
+}
 @media screen and (max-width: 1024px) {
     .blog-index {
         .grid {
@@ -49,6 +58,7 @@
             }
         }
     }
+
     .social-blog-single {
         top: 610px;
     }
@@ -86,6 +96,9 @@
         }
     }
     .blog-single {
+        .content {
+            padding: 0 30px;
+        }
         #comments {
             margin: 0 20px;
         }
@@ -193,7 +206,32 @@
     .product-page,
     .pricing-page
     {
-        .form-inline {
+        .fscf-div-form {
+            .fscf-div-field-left {
+                float: none;
+            }
+            .fscf-button-submit {
+                margin: 0;
+                padding: 12px 12px;
+            }
+            input {
+                height: 45px;
+                width: 98%;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                box-sizing: border-box!important;
+            }
+            button.btn {
+                height: 45px;
+                width: 98%;
+                margin: 10px 0 0 0;
+                border-radius: 10px;
+                box-sizing: border-box!important;
+            }
+        }
+
+        .form-inline
+        {
             padding: 0 0 0 5px;
             #blog-index.form-group,
             .form-group{

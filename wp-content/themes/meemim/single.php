@@ -14,6 +14,13 @@ get_header(); ?>
     </div>
 
     <div class="main-img-post" style="background-image: url(' <?php echo wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0]?>')">
+        <div class="user">
+            <?php echo get_avatar( $post->post_author, 102 );?>
+            <div class="block-user">
+                <div class="user-name"><?php the_author_meta('last_name', get_post( $id )->post_author)?> &nbsp; <?php the_author_meta('first_name', get_post( $id )->post_author);?></div>
+                <div class="user-data">   <?php echo get_post_meta ($post->ID,'views', true); ?> views / <?php echo pssc_all($post->ID) ?> shares</div>
+            </div>
+        </div>
         <div class="rectangle">
             <div class="main-img-title">
                      <span>
@@ -22,14 +29,12 @@ get_header(); ?>
             </div>
         </div>
     </div>
+
+
     <section class="blog-single">
         <div class="content">
-            <div class="user">
-               <?php echo get_avatar( $post->post_author, 102 );?>
-                <div class="block-user">
-                    <div class="user-name"><?php the_author_meta('last_name', get_post( $id )->post_author)?> &nbsp; <?php the_author_meta('first_name', get_post( $id )->post_author);?></div>
-                    <div class="user-data">   <?php echo get_post_meta ($post->ID,'views', true); ?> views / <?php echo pssc_all($post->ID) ?> shares</div>
-                </div>
+            <div class="social-blog-single small-screen">
+                <?php echo do_shortcode('[TheChamp-Sharing count="1" total_shares="ON type="horizontal"]') ?>
             </div>
 
             <?php
