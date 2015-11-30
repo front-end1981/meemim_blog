@@ -2263,6 +2263,8 @@ footer {
     .social-blog-single.small-screen .the_champ_sharing_container {
       width: 152px;
       margin-left: 0; }
+      .social-blog-single.small-screen .the_champ_sharing_container .the_champ_sharing_ul li {
+        margin-bottom: 0px !important; }
   .social-blog-single .the_champ_sharing_container {
     position: static !important;
     margin-left: 28px;

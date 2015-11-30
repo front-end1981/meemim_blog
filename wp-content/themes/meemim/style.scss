@@ -2756,6 +2756,11 @@ footer{
         .the_champ_sharing_container {
             width: 152px;
             margin-left: 0;
+            .the_champ_sharing_ul {
+                li {
+                    margin-bottom: 0px!important;
+                }
+            }
         }
     }
 
