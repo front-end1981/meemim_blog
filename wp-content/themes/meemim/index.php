@@ -26,68 +26,6 @@ get_header(); ?>
         </p>
     </div>
     <section class="blog-index">
-        <div class="sidebar top">
-            <div class="suggested-readings">
-                <?php echo get_post_field( 'post_content', get_option( 'page_for_posts' ) );?>
-<!--                <h3>Suggested readings</h3>-->
-<!--                <div class="block-sidebar">-->
-<!--                    <div class="title">-->
-<!--                        <a href="">-->
-<!--                            Social Media News You-->
-<!--                            Need to Know:-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                    <div class="date">-->
-<!--                        October 2015 Roundup-->
-<!--                    </div>-->
-<!--                    <p>-->
-<!--                        <a href="#">-->
-<!--                            Hatching the ideas and techno-->
-<!--                            Shape the future of the social-->
-<!--                        </a>-->
-<!--                    </p>-->
-<!--                </div>-->
-<!---->
-<!--                <div class="block-sidebar">-->
-<!--                    <div class="title">-->
-<!--                        <a href="">-->
-<!--                            Social Media News You-->
-<!--                            Need to Know:-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                    <div class="date">-->
-<!--                        October 2015 Roundup-->
-<!--                    </div>-->
-<!--                    <p>-->
-<!--                        <a href="#">-->
-<!--                            Hatching the ideas and techno-->
-<!--                            Shape the future of the social-->
-<!--                        </a>-->
-<!--                    </p>-->
-<!--                </div>-->
-<!---->
-<!--                <div class="block-sidebar">-->
-<!--                    <div class="title">-->
-<!--                        <a href="">-->
-<!--                            Social Media News You-->
-<!--                            Need to Know:-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                    <div class="date">-->
-<!--                        October 2015 Roundup-->
-<!--                    </div>-->
-<!--                    <p>-->
-<!--                        <a href="#">-->
-<!--                            Hatching the ideas and techno-->
-<!--                            Shape the future of the social-->
-<!--                        </a>-->
-<!--                    </p>-->
-<!--                </div>-->
-
-            </div>
-        </div>
-
-
         <div class="content">
             <div class="block block-title grid">
 
@@ -148,6 +86,24 @@ get_header(); ?>
         <div class="sidebar">
             <div class="suggested-readings">
                 <?php echo get_post_field( 'post_content', get_option( 'page_for_posts' ) );?>
+                <!--                <h3>Suggested readings</h3>-->
+                <!--                <div class="block-sidebar">-->
+                <!--                    <div class="title">-->
+                <!--                        <a href="">-->
+                <!--                            Social Media News You-->
+                <!--                            Need to Know:-->
+                <!--                        </a>-->
+                <!--                    </div>-->
+                <!--                    <div class="date">-->
+                <!--                        October 2015 Roundup-->
+                <!--                    </div>-->
+                <!--                    <p>-->
+                <!--                        <a href="#">-->
+                <!--                            Hatching the ideas and techno-->
+                <!--                            Shape the future of the social-->
+                <!--                        </a>-->
+                <!--                    </p>-->
+                <!--                </div>-->
             </div>
         </div>
     </section>

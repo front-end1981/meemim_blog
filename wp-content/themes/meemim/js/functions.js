@@ -201,14 +201,14 @@ $(function ( ) {
 
 /* Masonry Cascading grid layout library */
 
-if ($('section').hasClass('blog-index')) {
-    $('.grid').masonry({
-        itemSelector: '.grid-item',
-//            isFitWidth: true,
-        "gutter": 10,
-        columnWidth: 50
-    });
-}
+//if ($('section').hasClass('blog-index')) {
+//    $('.grid').masonry({
+//        itemSelector: '.grid-item',
+////            isFitWidth: true,
+//        "gutter": 10,
+//        columnWidth: 50
+//    });
+//}
 
 /* Black and White image */
 
@@ -277,13 +277,17 @@ sliderNumberObj = {
         function (value) {
             $('.sounds_good .circles .numeric').each(function (e) {
                 var min = parseInt($(this).data('min')),
-                    circles = $(this).parent().attr('id');
+                    circles = $(this).parent().attr('id'),
+                    circles_val  = Math.round( (value) / 100 * 4 );
+
 
                 if( circles == 'circle1' ) {
-                    $(this).text( sliderNumberObj.roundingNumbers( Math.ceil( (value) / 100 * 10 ) ) );
+                    //$(this).text( sliderNumberObj.roundingNumbers( Math.ceil( (value) / 100 * 10 ) ) );
+                    $(this).text( sliderNumberObj.roundingNumbers( Math.round( (value) / 100 * 4 ) ) );
                 }
                 else if( circles == 'circle2' ) {
-                    $(this).text( sliderNumberObj.roundingNumbers( (value * 6) / 10) );
+                    //$(this).text( sliderNumberObj.roundingNumbers( (value * 6) / 10) );
+                    $(this).text( sliderNumberObj.roundingNumbers( Math.round(circles_val * 6) ) );
                 }
                 else if ( circles == 'circle3' ) {
                     $(this).text( sliderNumberObj.roundingNumbers( (value) * 2500) );

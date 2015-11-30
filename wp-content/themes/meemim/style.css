@@ -1710,6 +1710,7 @@ footer {
       width: 160px;
       height: 120px;
       margin-bottom: 15px;
+      margin-right: 25px;
       float: left; }
     .blog-index .grid .grid-item--width2 {
       width: 200px; }
@@ -1728,14 +1729,14 @@ footer {
     float: left; }
     .blog-index .suggested-readings h3 {
       margin-top: 0;
-      font-size: 40px;
+      font-size: 30px;
       color: #6d6d6d; }
     .blog-index .suggested-readings a {
       margin-top: 20px;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: bold;
-      color: inherit;
-      text-decoration: none; }
+      text-decoration: none;
+      color: #707070; }
     .blog-index .suggested-readings p {
       font-size: 18px;
       color: #707070; }
@@ -1752,7 +1753,7 @@ footer {
     .blog-index .suggested-readings .date {
       font-size: 24px; }
   .blog-index .content {
-    max-width: 876px;
+    max-width: 826px;
     margin-left: 92px;
     float: left; }
     .blog-index .content .block {
@@ -1874,7 +1875,7 @@ footer {
             .blog-index .content .block .group .title a:hover {
               text-decoration: none !important; }
         .blog-index .content .block .group .date {
-          font-size: 24px; }
+          font-size: 22px; }
         .blog-index .content .block .group .share {
           margin: 8px 0 0 0;
           font-size: 13px;
@@ -2063,6 +2064,8 @@ footer {
     .blog-single .content .user {
       margin: 108px auto 90px;
       text-align: center; }
+      .blog-single .content .user.small-screen {
+        display: none; }
       .blog-single .content .user.written-by {
         margin: 88px auto 53px;
         display: flex;
@@ -2252,6 +2255,7 @@ footer {
   top: 680px;
   position: absolute; }
   .social-blog-single.small-screen {
+    margin-bottom: 20px;
     display: none;
     position: static; }
     .social-blog-single.small-screen :after {

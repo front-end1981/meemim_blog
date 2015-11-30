@@ -1,6 +1,12 @@
+@media screen and (max-width: 1700px) {
+  .main-img-post .user {
+    display: none; }
+
+  .blog-single .content .user.small-screen {
+    display: block; } }
 @media screen and (max-width: 1160px) {
   .blog-single .content .user {
-    margin: 108px 0 90px 100px; }
+    margin-bottom: 50px; }
   .blog-single .content .comments .user {
     margin: 108px auto 100px; } }
 @media screen and (max-width: 1107px) {
@@ -28,7 +34,7 @@
     top: 610px; } }
 @media screen and (max-width: 980px) {
   .blog-index .grid .grid-item--width4 {
-    width: 65%; }
+    width: 47%; }
 
   .static-page p {
     text-align: justify;
@@ -76,6 +82,15 @@
     left: 0;
     width: 100%;
     background: none; }
+
+  .blog-index .grid {
+    width: 400px; }
+    .blog-index .grid .grid-item--width4 {
+      width: 100%; }
+  .blog-index .sidebar {
+    margin: auto;
+    max-width: 450px;
+    float: none; }
 
   .product-page .meemim_and_me .employees {
     margin: 50px 0 60px 200px;
@@ -176,7 +191,7 @@
     padding: 0px 0px 0px 15px; }
 
   .blog-index .grid .grid-item--width4 {
-    width: 85%; } }
+    width: 100%; } }
 @media screen and (max-width: 600px) {
   .main-img .rectangle.product-page span {
     margin: 16% 14%; }
@@ -259,6 +274,9 @@
     margin-left: -100px;
     padding: 0% 5%; }
 
+  .blog-index .sidebar {
+    padding: 0 30px; }
+
   .pricing-page .col-xs-6 {
     min-width: 315px; }
     .pricing-page .col-xs-6 .title-casuta {
@@ -313,8 +331,7 @@
     font-size: 15px; }
 
   .blog-single .content .user img {
-    margin-bottom: 10px;
-    margin-right: 0; }
+    margin-bottom: 10px; }
 
   footer .social li {
     margin-right: 20px; } }
@@ -363,19 +380,16 @@
     margin-left: 30px;
     float: none; }
     .blog-index .content .grid {
-      width: 100%;
       max-width: 100%; }
       .blog-index .content .grid .grid-item--width2 {
         width: 300px; }
-  .blog-index .sidebar {
-    display: none; }
-    .blog-index .sidebar.top {
-      margin-bottom: 30px;
-      margin-left: 30px;
-      display: block;
-      overflow: hidden; }
-      .blog-index .sidebar.top .suggested-readings {
-        max-width: 100%; } }
+  .blog-index .sidebar.top {
+    margin-bottom: 30px;
+    margin-left: 30px;
+    display: block;
+    overflow: hidden; }
+    .blog-index .sidebar.top .suggested-readings {
+      max-width: 100%; } }
 @media screen and (max-width: 1041px) {
   .blog-index .content {
     max-width: 100%;
