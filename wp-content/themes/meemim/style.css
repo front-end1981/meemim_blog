@@ -1717,7 +1717,7 @@ footer {
     .blog-index .grid .grid-item--width3 {
       width: 96%; }
     .blog-index .grid .grid-item--width4 {
-      width: 47%; }
+      width: 400px; }
     .blog-index .grid .grid-item--height2 {
       height: 300px; }
     .blog-index .grid .grid-item--height3 {
@@ -1737,17 +1737,18 @@ footer {
       .blog-index .suggested-readings p a {
         color: inherit;
         text-decoration: none; }
-    .blog-index .suggested-readings .title {
-      margin-top: 20px;
-      font-size: 20px;
-      font-weight: bold;
-      text-decoration: none;
-      color: #707070; }
-      .blog-index .suggested-readings .title a {
-        color: inherit;
-        text-decoration: none; }
-    .blog-index .suggested-readings .date {
-      font-size: 19px; }
+    .blog-index .suggested-readings .block-sidebar {
+      margin: 30px 0; }
+      .blog-index .suggested-readings .block-sidebar .title {
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #707070; }
+        .blog-index .suggested-readings .block-sidebar .title a {
+          color: inherit;
+          text-decoration: none; }
+      .blog-index .suggested-readings .block-sidebar .date {
+        font-size: 19px; }
   .blog-index .content {
     max-width: 826px;
     margin-left: 92px;
@@ -1981,19 +1982,28 @@ footer {
 .main-img-post {
   margin-top: 70px;
   margin-bottom: 70px;
-  min-height: 279px;
+  max-height: 340px;
   display: block;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 15%;
+  background-position: center center;
   text-align: center;
   position: relative; }
+  .main-img-post > img {
+    width: 100%;
+    max-height: 340px; }
   .main-img-post .rectangle {
+    top: 0;
+    left: 50%;
+    width: 912px;
     min-height: 279px;
+    margin-left: -456px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("../meemim/images/rectangele4.png") center no-repeat; }
+    background: url("../meemim/images/rectangele4.png") center no-repeat;
+    background-size: cover;
+    position: absolute; }
     .main-img-post .rectangle .main-img-title {
       max-width: 640px;
       margin: auto;
@@ -2003,7 +2013,7 @@ footer {
         display: inline-block;
         font-size: 34px; }
   .main-img-post .user {
-    top: 71px;
+    top: 100px;
     left: 120px;
     padding: 20px;
     text-align: center;
@@ -2048,7 +2058,7 @@ footer {
 .blog-single {
   position: relative; }
   .blog-single .content {
-    max-width: 916px;
+    max-width: 780px;
     margin: auto; }
     .blog-single .content div[id^='attachment_'] {
       width: 100% !important; }
@@ -2057,9 +2067,16 @@ footer {
         height: auto; }
     .blog-single .content #disqus_thread {
       margin-bottom: 100px; }
+    .blog-single .content .main-img-title {
+      max-width: 640px;
+      padding-bottom: 30px;
+      color: #000;
+      display: none; }
+      .blog-single .content .main-img-title span {
+        display: inline-block;
+        font-size: 34px; }
     .blog-single .content .user {
-      margin: 108px auto 90px;
-      text-align: center; }
+      margin: 0px auto 50px; }
       .blog-single .content .user.small-screen {
         display: none; }
       .blog-single .content .user.written-by {
@@ -2248,7 +2265,7 @@ footer {
       font-size: 16px; }
 
 .social-blog-single {
-  top: 680px;
+  top: 780px;
   position: absolute; }
   .social-blog-single.small-screen {
     margin-bottom: 20px;

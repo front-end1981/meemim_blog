@@ -3,7 +3,27 @@
     display: none; }
 
   .blog-single .content .user.small-screen {
+    margin: 0px auto 30px;
     display: block; } }
+@media screen and (max-width: 1350px) {
+  .blog-index .sidebar {
+    margin: auto;
+    max-width: 560px;
+    float: none; }
+    .blog-index .sidebar .suggested-readings {
+      max-width: 600px; }
+      .blog-index .sidebar .suggested-readings .block-sidebar {
+        max-width: 248px;
+        margin: 30px 30px 0 0;
+        display: inline-block;
+        vertical-align: text-top; }
+    .blog-index .sidebar.top {
+      margin-bottom: 30px;
+      margin-left: 30px;
+      display: block;
+      overflow: hidden; }
+      .blog-index .sidebar.top .suggested-readings {
+        max-width: 100%; } }
 @media screen and (max-width: 1160px) {
   .blog-single .content .user {
     margin-bottom: 50px; }
@@ -34,20 +54,32 @@
     top: 610px; } }
 @media screen and (max-width: 980px) {
   .blog-index .grid .grid-item--width4 {
-    width: 47%; }
+    width: 400px; }
+
+  .blog-single .content .user {
+    margin: 0px auto 30px; }
 
   .static-page p {
     text-align: justify;
     padding: 0px 20px; } }
 @media screen and (max-width: 900px) {
-  .main-img-post .rectangle {
-    background: none; }
+  .main-img-post {
+    margin-bottom: 60px; }
+    .main-img-post .rectangle {
+      display: none;
+      background: none; }
 
   .product-page .statement {
     margin: 0 0 0 250px; }
 
+  .blog-index .grid .grid-item {
+    margin-right: 20px; }
+
   .blog-single .content {
     padding: 0 30px; }
+    .blog-single .content .main-img-title {
+      padding-bottom: 25px;
+      display: block; }
   .blog-single #comments {
     margin: 0 20px; }
 
@@ -86,10 +118,9 @@
   .blog-index .grid {
     width: 400px; }
     .blog-index .grid .grid-item--width4 {
-      width: 100%; }
+      width: 400px; }
   .blog-index .sidebar {
     margin: auto;
-    max-width: 450px;
     float: none; }
 
   .product-page .meemim_and_me .employees {
@@ -275,6 +306,7 @@
     padding: 0% 5%; }
 
   .blog-index .sidebar {
+    max-width: 270px !important;
     padding: 0 30px; }
 
   .pricing-page .col-xs-6 {
@@ -294,7 +326,7 @@
   .blog-index .grid .grid-item--width4 {
     width: 100%; }
   .blog-index .content .block.block-title .group img {
-    max-height: 200px; }
+    height: auto; }
 
   .blog-single .main-img .rectangle {
     background: none; }
@@ -382,14 +414,7 @@
     .blog-index .content .grid {
       max-width: 100%; }
       .blog-index .content .grid .grid-item--width2 {
-        width: 300px; }
-  .blog-index .sidebar.top {
-    margin-bottom: 30px;
-    margin-left: 30px;
-    display: block;
-    overflow: hidden; }
-    .blog-index .sidebar.top .suggested-readings {
-      max-width: 100%; } }
+        width: 300px; } }
 @media screen and (max-width: 1041px) {
   .blog-index .content {
     max-width: 100%;

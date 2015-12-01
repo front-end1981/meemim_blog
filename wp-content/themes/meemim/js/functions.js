@@ -196,8 +196,34 @@ $(function ( ) {
     });
 
 
+    /* Contact Us Page */
+    $(window).load(function () {
+        var el = $('<input/>', { type: 'button', class: 'fscf-button-reset', value: 'Clear' });
+        el.on('click', function (e) {
+            e.preventDefault();
+            $('#FSContact1').find('textarea').val('');
+            $('#FSContact1').find('input[type=text]').each(function () {
+                $(this).val('');
+            })
+
+        });
+        $('#FSContact1').find('.fscf-div-submit').append(el);
+    });
+
+
+
+
 });
 
+//jQuery(function() {
+//
+//    url = window.location.href;
+//
+//    jQuery.getJSON("here", { url: url }, function(data) {
+//        jQuery("#totalshare").html(data.count);
+//    });
+//    return false;
+//});
 
 /* Masonry Cascading grid layout library */
 

@@ -908,6 +908,7 @@ footer{
     /*------------------------------------------------*/
 
     /* Alignment DIVs */
+
     .fscf-div-form              { width:100%; }
     .fscf-div-left-box          { float:left; width:100%;  }
     .fscf-div-right-box         { float:left;  }
@@ -1980,7 +1981,8 @@ footer{
 
         .grid-item--width2 { width: 200px; }
         .grid-item--width3 { width: 96%; }
-        .grid-item--width4 { width: 47%; }
+        //.grid-item--width4 { width: 47%; }
+        .grid-item--width4 { width: 400px; }
 
         .grid-item--height2 { height: 300px; }
         .grid-item--height3 { height: 480px; }
@@ -2008,23 +2010,23 @@ footer{
                 text-decoration: none
             }
         }
-
-        .title
-
-        {
-            margin-top: 20px;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            color: #707070;
-            a {
-                color: inherit;
-                text-decoration: none
+        .block-sidebar {
+            margin: 30px 0;
+            .title {
+                font-size: 20px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #707070;
+                a {
+                    color: inherit;
+                    text-decoration: none
+                }
+            }
+            .date {
+                font-size: 19px;
             }
         }
-        .date {
-            font-size: 19px;
-        }
+
     }
 
     .content {
@@ -2330,13 +2332,19 @@ footer{
 .main-img-post {
     margin-top: 70px;
     margin-bottom: 70px;
-    min-height: 279px;
+    max-height: 340px;
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 15%;
+    background-position: center center;
     text-align: center;
     position: relative;
+
+    > img {
+        width: 100%;
+        max-height: 340px;
+    }
+
 
 //    .img-block {
 //        position: relative;
@@ -2350,16 +2358,17 @@ footer{
 
 
     .rectangle {
-//        left: 50%;
-//        max-width: 912px;
+        top: 0;
+        left: 50%;
+        width: 912px;
         min-height: 279px;
-//        margin-left: -456px;
+        margin-left: -456px;
         display: flex;
         align-items: center;
         justify-content: center;
         background: url("../meemim/images/rectangele4.png") center no-repeat;
-//        background-size: cover;
-//        position: absolute;
+        background-size: cover;
+        position: absolute;
         .main-img-title {
             max-width: 640px;
             margin: auto;
@@ -2375,7 +2384,7 @@ footer{
         }
     }
     .user {
-        top: 71px;
+        top: 100px;
         left: 120px;
         padding: 20px;
         text-align: center;
@@ -2440,7 +2449,7 @@ footer{
 .blog-single {
     position: relative;
     .content {
-        max-width: 916px;
+        max-width: 780px;
         margin: auto;
 
         div[id^='attachment_'] {
@@ -2454,10 +2463,24 @@ footer{
         #disqus_thread {
             margin-bottom: 100px;
         }
+        .main-img-title {
+            max-width: 640px;
+            padding-bottom: 30px;
+            color: #000;
+            display: none;
+            span {
+                &:first-child {
+                    //font-weight: bold;
+                }
+                display: inline-block;
+                font-size: 34px;
+            }
+        }
+
 
         .user {
-            margin: 108px auto 90px;
-            text-align: center;
+            margin: 0px auto 50px;
+            //text-align: center;
 
             &.small-screen {
                 display: none;
@@ -2740,7 +2763,7 @@ footer{
 
 
 .social-blog-single {
-    top: 680px;
+    top: 780px;
     position: absolute;
 
     &.small-screen {

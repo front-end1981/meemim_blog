@@ -8,12 +8,46 @@
         .content {
             .user {
                 &.small-screen {
+                    margin: 0px auto 30px;
                     display: block;
                 }
             }
         }
     }
 }
+
+@media screen and (max-width: 1350px) {
+    .blog-index {
+
+        .sidebar {
+            margin: auto;
+            max-width: 560px;
+            float: none;
+            .suggested-readings {
+                max-width: 600px;
+                .block-sidebar {
+                    max-width: 248px;
+                    margin: 30px 30px 0 0;
+                    display: inline-block;
+                    vertical-align: text-top;
+                }
+            }
+
+            &.top {
+                margin-bottom: 30px;
+                margin-left: 30px;
+                display: block;
+                overflow: hidden;
+                .suggested-readings {
+                    max-width: 100%;
+                }
+            }
+        }
+
+
+    }
+}
+
 
 @media screen and (max-width: 1280px) {
 
@@ -84,7 +118,14 @@
     .blog-index {
         .grid {
             .grid-item--width4 {
-                width: 47%;
+                width: 400px;
+            }
+        }
+    }
+    .blog-single {
+        .content {
+            .user {
+                margin: 0px auto 30px;
             }
         }
     }
@@ -100,7 +141,9 @@
 @media screen and (max-width: 900px) {
 
     .main-img-post {
+        margin-bottom: 60px;
         .rectangle {
+            display: none;
             background: none;
             .main-img-title {
 
@@ -112,9 +155,20 @@
             margin: 0 0 0 250px;
         }
     }
+    .blog-index {
+        .grid {
+            .grid-item {
+                margin-right: 20px;
+            }
+        }
+    }
     .blog-single {
         .content {
             padding: 0 30px;
+            .main-img-title {
+                padding-bottom: 25px;
+                display: block;
+            }
         }
         #comments {
             margin: 0 20px;
@@ -185,12 +239,11 @@
         .grid {
             width: 400px;
             .grid-item--width4 {
-                width: 100%;
+                width: 400px;
             }
         }
         .sidebar {
             margin: auto;
-            max-width: 450px;
             float: none;
         }
     }
@@ -447,9 +500,11 @@
     }
     .blog-index {
         .sidebar{
+            max-width: 270px!important;
             padding: 0 30px;
         }
     }
+
     .pricing-page  {
         .col-xs-6 {
             min-width: 315px;
@@ -492,12 +547,13 @@
                 width: 100%;
             }
         }
+
         .content {
             .block {
                 &.block-title {
                     .group {
                         img {
-                            max-height: 200px;
+                            height: auto;
                         }
                     }
                 }
@@ -689,24 +745,6 @@
             }
 
         }
-        .suggested-readings {
-            //max-width: 24%;
-        }
-
-        .sidebar{
-           //display: none;
-            &.top {
-                margin-bottom: 30px;
-                margin-left: 30px;
-                display: block;
-                overflow: hidden;
-                .suggested-readings {
-                    max-width: 100%;
-                }
-            }
-        }
-
-
     }
 }
 
