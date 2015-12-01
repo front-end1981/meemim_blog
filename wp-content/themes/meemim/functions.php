@@ -198,10 +198,6 @@ function kama_postviews() {
     return true;
 }
 
-function custom_theme_setup() {
-    add_theme_support( 'widgets' );
-}
-add_action( 'after_setup_theme', 'custom_theme_setup' );
 
 function enqueue_styles() {
     wp_enqueue_style('meemim-styles', get_stylesheet_uri().'style.css');
@@ -240,3 +236,47 @@ function enqueue_scripts () {
 }
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
+
+function custom_theme_setup() {
+    add_theme_support( 'widgets' );
+}
+add_action( 'after_setup_theme', 'custom_theme_setup' );
+
+/**
+ * Register widget area.
+ *
+ * @since Twenty Fifteen 1.0
+ *
+ * @link https://codex.wordpress.org/Function_Reference/register_sidebar
+ */
+function meemim_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Widget Area', 'twentyfifteen' ),
+        'id'            => 'sidebar-1',
+        'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentyfifteen' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'meemim_widgets_init' );
+
+add_filter('simple_links_shortcode_output','change_shortcode_output', 0 , 3);
+function change_shortcode_output( $output, $links_object, $atts ){
+    $output = '';
+
+    foreach ($links_object as $link_object) {
+        $output .= '<div class="block-sidebar">
+                        <div class="title">
+                            <a href="'.$link_object->meta['web_address'][0].'">'.$link_object->post_title.'</a>
+                        </div>
+                        <div class="date">'.date('F, Y', strtotime(str_replace('/', '-', $link_object->post_date))).'</div>
+                        <p>
+                            '.$link_object->meta['description'][0].'
+                        </p>
+                    </div>';
+    }
+
+    return $output;
+}

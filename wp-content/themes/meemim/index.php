@@ -85,25 +85,8 @@ get_header(); ?>
 
         <div class="sidebar">
             <div class="suggested-readings">
-                <?php echo get_post_field( 'post_content', get_option( 'page_for_posts' ) );?>
-                <!--                <h3>Suggested readings</h3>-->
-                <!--                <div class="block-sidebar">-->
-                <!--                    <div class="title">-->
-                <!--                        <a href="">-->
-                <!--                            Social Media News You-->
-                <!--                            Need to Know:-->
-                <!--                        </a>-->
-                <!--                    </div>-->
-                <!--                    <div class="date">-->
-                <!--                        October 2015 Roundup-->
-                <!--                    </div>-->
-                <!--                    <p>-->
-                <!--                        <a href="#">-->
-                <!--                            Hatching the ideas and techno-->
-                <!--                            Shape the future of the social-->
-                <!--                        </a>-->
-                <!--                    </p>-->
-                <!--                </div>-->
+                <h3>Suggested readings</h3>
+                <?php  echo do_shortcode('[simple-links]');?>
             </div>
         </div>
     </section>
