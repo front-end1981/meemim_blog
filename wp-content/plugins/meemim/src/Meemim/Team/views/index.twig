@@ -1,0 +1,88 @@
+{% spaceless %}
+    <div class="team-photos">
+
+        <!-- ko foreach: members -->
+        <div class="photo">
+            <img src="" alt="" data-bind="attr: { src: photo.sizes.thumbnail.url }">
+
+            <div class="overlay">
+                <ul class="actions">
+                    <a href="#" class="action edit" title="Edit" data-bind="click: $parent.editor.open">
+                        <i class="fa fa-fw fa-pencil"></i>
+                    </a>
+                    <a href="javascript:;" class="action remove" title="Remove" data-bind="click: $parent.remove">
+                        <i class="fa fa-fw fa-trash"></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <!-- /ko -->
+
+        <div class="add photo" data-bind="click: function () { uploader.open(0) }">
+            <a href="javascript:;" title="Add new member">
+                <i class="fa fa-fw fa-plus-circle"></i>
+            </a>
+        </div>
+
+        <div class="loading-status" data-bind="visible: isLoading">
+            <i class="fa fa-fw fa-gear fa-spin"></i>
+        </div>
+    </div>
+
+    <div class="team-modal" data-bind="css: { visible: editor.isVisible }">
+        <div class="loading-status" data-bind="visible: editor.isLoading">
+            <i class="fa fa-fw fa-gear fa-spin"></i>
+        </div>
+        <a href="javascript:;" class="close" data-bind="click: editor.close">&times;</a>
+        <div class="team-modal-editor">
+            <div class="photo">
+                <img src="" alt="" data-bind="attr: { src: editor.member().photo.sizes.thumbnail.url }">
+            </div>
+            <div class="controls">
+                <div class="name">
+                    <div class="control">
+                        <label for="first_name">First name:</label>
+                        <input type="text" id="first_name" data-bind="textInput: editor.member().first_name"/>
+                    </div>
+                    <div class="control">
+                        <label for="last_name">Last name:</label>
+                        <input type="text" id="last_name" data-bind="textInput: editor.member().last_name"/>
+                    </div>
+                </div>
+                <div class="control">
+                    <label for="last_name">Position:</label>
+                    <input type="text" id="last_name" data-bind="textInput: editor.member().position"/>
+                </div>
+                <div class="control">
+                    <label for="description">Description:</label>
+                    <textarea id="description" data-bind="textInput: editor.member().description"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="team-modal-content" style="display:none;" data-bind="visible: parseInt(editor.member().parent_id) === 0">
+            <div class="team-photos">
+                <!-- ko foreach: editor.members -->
+                <div class="photo">
+                    <img src="" alt="" data-bind="attr: { src: photo.sizes.thumbnail.url }">
+
+                    <div class="overlay">
+                        <ul class="actions">
+                            <a href="#" class="action edit" title="Edit" data-bind="click: $parent.editor.reOpen">
+                                <i class="fa fa-fw fa-pencil"></i>
+                            </a>
+                            <a href="javascript:;" class="action remove" title="Remove" data-bind="click: $parent.remove">
+                                <i class="fa fa-fw fa-trash"></i>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /ko -->
+                <div class="add photo">
+                    <a href="javascript:;" title="Add new member" data-bind="click: function () { uploader.open(editor.member().id) }">
+                        <i class="fa fa-fw fa-plus-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endspaceless %}

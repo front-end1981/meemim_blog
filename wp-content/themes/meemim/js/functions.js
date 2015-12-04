@@ -48,8 +48,11 @@ $(function ( ) {
             }
         }
     };
+
     ToBottom();
+
     $(window).resize(function (e) {
+        $('[rel="popover1"]').popover('hide');
         ToBottom();
     });
 
@@ -191,8 +194,11 @@ $(function ( ) {
 
         //$(".multiple-items[data-employees]").not(currSlider).hide();
         $(".responsive[data-employees]").not(currSlider).hide();
-        $('.slick-track').css({'transform':'translate3d(-1339px, 0px, 0px)'});
+        //$('.slick-track').css({'transform':'translate3d(-1339px, 0px, 0px)'});
         currSlider.fadeIn(500);
+        $('.responsive').slick('setPosition', function() {
+            console.log('OK')
+        })
     });
 
 
@@ -210,20 +216,12 @@ $(function ( ) {
         $('#FSContact1').find('.fscf-div-submit').append(el);
     });
 
-
-
-
+    /* Blog single page set main image height*/
+    //$('.main-img-post').css({'maxHeight' :  $('.main-img-post img').width()});
+    //$('.main-img-post').find('.user').css( {'top' : ($('.main-img-post img').height() / 2) - ($('.main-img-post .user').height() / 2) } );
+    //$('.social-blog-single').css( {'top':$('.main-img-post img').offset().top + $('.main-img-post img').height() + 120} )
 });
 
-//jQuery(function() {
-//
-//    url = window.location.href;
-//
-//    jQuery.getJSON("here", { url: url }, function(data) {
-//        jQuery("#totalshare").html(data.count);
-//    });
-//    return false;
-//});
 
 /* Masonry Cascading grid layout library */
 

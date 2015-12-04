@@ -1,0 +1,149 @@
+#meemim_team .inside {
+  margin-top: 0 !important;
+}
+#meemim_team .inside * {
+  box-sizing: border-box;
+}
+#meemim_team .inside a {
+  transition: color 200ms linear;
+}
+#meemim_team .inside a:hover,
+#meemim_team .inside a:focus,
+#meemim_team .inside a:active {
+  outline: none;
+  box-shadow: none;
+}
+#meemim_team .inside .team-photos {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#meemim_team .inside .team-photos .photo {
+  margin: 5px;
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+#meemim_team .inside .team-photos .photo.add {
+  background: #fff;
+  border: 2px dashed #ecf0f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#meemim_team .inside .team-photos .photo.add:hover {
+  border-color: #bdc3c7;
+}
+#meemim_team .inside .team-photos .photo.add:hover a {
+  color: #bdc3c7;
+}
+#meemim_team .inside .team-photos .photo.add a {
+  color: #ecf0f1;
+  font-size: 50px;
+}
+#meemim_team .inside .team-photos .photo:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+#meemim_team .inside .team-photos .photo .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: opacity 200ms linear;
+}
+#meemim_team .inside .team-photos .photo .overlay .actions a {
+  color: #fff;
+  text-underline: none;
+}
+#meemim_team .inside .team-photos .photo .overlay .actions a:hover {
+  color: #dedede;
+}
+#meemim_team .inside .team-photos .photo .overlay .actions a i {
+  font-size: 30px;
+}
+#meemim_team .inside .team-modal {
+  display: none;
+  width: 670px;
+  background-color: #fff;
+  border: 1px solid #ecf0f1;
+  box-shadow: 1px 1px 5px #ccc;
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  margin-left: -335px;
+  z-index: 1000;
+}
+#meemim_team .inside .team-modal.visible {
+  display: block;
+}
+#meemim_team .inside .team-modal .team-modal-editor,
+#meemim_team .inside .team-modal .team-modal-content {
+  padding: 10px;
+}
+#meemim_team .inside .team-modal .team-modal-editor {
+  display: flex;
+}
+#meemim_team .inside .team-modal .team-modal-editor .photo {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+}
+#meemim_team .inside .team-modal .team-modal-editor .controls {
+  flex: 1 1 auto;
+}
+#meemim_team .inside .team-modal .team-modal-editor .controls .name {
+  display: flex;
+}
+#meemim_team .inside .team-modal .team-modal-editor .controls .name .control {
+  flex: 1 1 50%;
+}
+#meemim_team .inside .team-modal .team-modal-editor .controls .control {
+  padding: 0 5px;
+}
+#meemim_team .inside .team-modal .team-modal-editor .controls .control label {
+  display: block;
+}
+#meemim_team .inside .team-modal .team-modal-editor .controls .control input {
+  width: 100%;
+}
+#meemim_team .inside .team-modal .team-modal-editor .controls .control textarea {
+  width: 100%;
+  height: 90px;
+  resize: none;
+}
+#meemim_team .inside .team-modal .close {
+  font-size: 16px;
+  border-radius: 100%;
+  position: absolute;
+  top: -11px;
+  right: -12px;
+  background-color: #3498db;
+  color: #fff;
+  border: 1px solid #2980b9;
+  text-decoration: none;
+  padding: 2px 7px;
+}
+#meemim_team .inside .loading-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+#meemim_team .inside .loading-status i {
+  font-size: 60px;
+  color: #ecf0f1;
+}

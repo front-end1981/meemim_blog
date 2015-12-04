@@ -936,12 +936,12 @@ class FSCF_Process {
 			if ( $current_user->display_name != '' )
 			    $user_info['wp_user_display_name'] = __( 'User display name', 'si-contact-form' ) . ': ' . $current_user->display_name;
 		}
+		$user_info['wp_user_date'] = __( 'Date/Time', 'si-contact-form' ) . ': ' . date_i18n( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), current_time('timestamp') );
 		$user_info['wp_user_ip'] = __( 'Sent from (ip address)', 'si-contact-form' ) . ': ' . esc_attr( $_SERVER['REMOTE_ADDR'] ) . " ($userdomain)";
 		if ( $geo_loc != '' ) {
 			$user_info['wp_user_location'] = __( 'Location', 'si-contact-form' ) . ': ' . $geo_loc;
 			self::$form_data['sender_location'] = __( 'Location', 'si-contact-form' ) . ': ' . $geo_loc;
 		}
-	    $user_info['wp_user_date'] = __( 'Date/Time', 'si-contact-form' ) . ': ' . date_i18n( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), current_time('timestamp') );
 		$user_info['wp_user_referer'] = __( 'Coming from (referer)', 'si-contact-form' ) . ': ' . esc_url( self::$form_action_url );
 		$user_info['wp_user_agent'] = __( 'Using (user agent)', 'si-contact-form' ) . ': ' . FSCF_Util::clean_input( $_SERVER['HTTP_USER_AGENT'] ) . self::$php_eol;
 

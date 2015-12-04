@@ -7,19 +7,21 @@
  * @since Twenty Fourteen 1.0
  */
 
+
 get_header(); ?>
 
     <div class="main-heading-title">
         <h1>Meemim Blog</h1>
     </div>
 
-    <div class="main-img-post" >
-        <img src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0]?>">
+
+    <div class="main-img-post" style="background-image: url('<?php echo wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0]?>')">
+<!--        <img src="--><?php //echo wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0]?><!--">-->
         <div class="user">
             <?php echo get_avatar( $post->post_author, 102 );?>
             <div class="block-user">
                 <div class="user-name"><?php the_author_meta('last_name', get_post( $id )->post_author)?> &nbsp; <?php the_author_meta('first_name', get_post( $id )->post_author);?></div>
-                <div class="user-data">   <?php echo get_post_meta ($post->ID,'views', true); ?> views / <?php echo pssc_facebook($post->ID) + pssc_linkedin($post->ID) ?> shares</div>
+                <div class="user-data">   <?php echo get_post_meta ($post->ID,'views', true); ?> views / <span class="social-share-count"></span> shares</div>
             </div>
         </div>
         <div class="rectangle">
@@ -44,7 +46,7 @@ get_header(); ?>
                 <?php echo get_avatar( $post->post_author, 102 );?>
                 <div class="block-user">
                     <div class="user-name"><?php the_author_meta('last_name', get_post( $id )->post_author)?> &nbsp; <?php the_author_meta('first_name', get_post( $id )->post_author);?></div>
-                    <div class="user-data">   <?php echo get_post_meta ($post->ID,'views', true); ?> views / <?php echo pssc_all($post->ID) ?> shares</div>
+                    <div class="user-data">   <?php echo get_post_meta ($post->ID,'views', true); ?> views / <span class="social-share-count"></span> shares</div>
                 </div>
             </div>
             <div class="social-blog-single small-screen">
@@ -128,9 +130,18 @@ get_header(); ?>
         <?php echo do_shortcode('[TheChamp-Sharing count="1" total_shares="ON type="vertical"]') ?>
 
     </div>
+<script>
+    jQuery(function() {
+
+        url = window.location.href;
+
+        jQuery.getJSON("<?php echo dirname(get_stylesheet_uri()).'/socialworth.php'?>", { url: url }, function(data) {
+            jQuery(".social-share-count").html(data.count);
+        });
+        return false;
+    });
+</script>
 <?php
-//get_sidebar( 'content' );
-//get_sidebar();
 
 
 get_footer();

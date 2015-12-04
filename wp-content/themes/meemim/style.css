@@ -369,8 +369,15 @@ footer {
           right: -36px;
           width: 40px;
           background: url("../meemim/images/corner_right_color.png") no-repeat; }
+        .main-page .form-sing-up .wrapper-block .massage-sign-up.form-sent-ok:before {
+          left: -35px;
+          background: url("../meemim/images/corner_left_color2.png") no-repeat; }
+        .main-page .form-sing-up .wrapper-block .massage-sign-up.form-sent-ok:after {
+          right: -36px;
+          width: 40px;
+          background: url("../meemim/images/corner_right_color2.png") no-repeat; }
         .main-page .form-sing-up .wrapper-block .massage-sign-up span {
-          color: #b5b5b5;
+          color: #fff;
           font-size: 20px;
           line-height: 15px; }
     .main-page .form-sing-up form {
@@ -1615,6 +1622,8 @@ footer {
       font-family: Calibri;
       font-size: 18px;
       color: #868686; }
+  .product-page .responsive {
+    display: none; }
   .product-page .slick-slider {
     margin: -30px auto 50px; }
   .product-page .slick-slide {
@@ -1982,16 +1991,19 @@ footer {
 .main-img-post {
   margin-top: 70px;
   margin-bottom: 70px;
-  max-height: 340px;
+  min-height: 340px;
   display: block;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: 0 50%;
   text-align: center;
   position: relative; }
+  .main-img-post:after {
+    content: '';
+    display: block;
+    max-width: 340px; }
   .main-img-post > img {
-    width: 100%;
-    max-height: 340px; }
+    width: 100%; }
   .main-img-post .rectangle {
     top: 0;
     left: 50%;
@@ -2058,7 +2070,7 @@ footer {
 .blog-single {
   position: relative; }
   .blog-single .content {
-    max-width: 780px;
+    max-width: 620px;
     margin: auto; }
     .blog-single .content div[id^='attachment_'] {
       width: 100% !important; }
@@ -2129,10 +2141,10 @@ footer {
       font-size: 32px; }
     .blog-single .content p {
       margin: 0;
-      padding-bottom: 1.1em;
+      padding-bottom: 1.5em;
       font-family: "Open Sans","Helvetica Neue",Arial,Helvetica,sans-serif;
       font-size: 16px;
-      line-height: 1.875em;
+      line-height: 1.975em;
       color: #4a4a4a; }
     .blog-single .content a {
       font-family: "Open Sans";

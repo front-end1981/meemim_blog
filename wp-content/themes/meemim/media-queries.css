@@ -110,6 +110,9 @@
     top: 3px;
     position: absolute; } }
 @media screen and (max-width: 800px) {
+  .main-img-post {
+    min-height: 260px; }
+
   .blog-single .main-img .rectangle {
     left: 0;
     width: 100%;
@@ -222,8 +225,14 @@
     padding: 0px 0px 0px 15px; }
 
   .blog-index .grid .grid-item--width4 {
-    width: 100%; } }
+    width: 100%; }
+
+  .main-img-post {
+    min-height: 212px; } }
 @media screen and (max-width: 600px) {
+  .main-img-post {
+    min-height: 200px; }
+
   .main-img .rectangle.product-page span {
     margin: 16% 14%; }
 
@@ -315,7 +324,13 @@
       left: 7%; }
 
   .main-img .rectangle.product-page span {
-    margin: 16% 3%; } }
+    margin: 16% 3%; }
+
+  .main-img-post {
+    min-height: 160px; } }
+@media screen and (max-width: 470px) {
+  .blog-index .content .group img {
+    height: auto; } }
 @media screen and (max-width: 380px) {
   .pricing-page .column {
     width: 320px; }
@@ -323,6 +338,9 @@
   .product-page .statement {
     margin: 0 7px 0 10px; } }
 @media screen and (max-width: 360px) {
+  .main-img-post {
+    min-height: 120px; }
+
   .blog-index .grid .grid-item--width4 {
     width: 100%; }
   .blog-index .content .block.block-title .group img {
@@ -346,6 +364,9 @@
     margin: 50px 0 60px 0;
     align-items: center; } }
 @media screen and (max-width: 320px) {
+  .main-img-post {
+    min-height: 120px; }
+
   .pricing-page .column {
     width: 290px; }
   .pricing-page .massage-sign-up span {
