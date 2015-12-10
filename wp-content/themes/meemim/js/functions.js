@@ -52,7 +52,33 @@ $(function ( ) {
     ToBottom();
 
     $(window).resize(function (e) {
-        $('[rel="popover1"]').popover('hide');
+        //$('[rel="popover1"]').popover('hide');
+        var employeeBlockTop = $('.employee-blocks.' + document.currentPopoverName).offset().top,
+            employeeBlockLeft = $('.employee-blocks.' + document.currentPopoverName).offset().left,
+            popover = $(".popover");
+
+       if ( $('.popover').is(':visible') ) {
+           popover.popover('show');
+
+           if ( window.innerWidth >= 800 ) {
+               if ( popover.hasClass('left') ) {
+                   popover.css({'top' : employeeBlockTop, 'left' : employeeBlockLeft - 300})
+               } else {
+                   popover.css({'top' : employeeBlockTop, 'left' : employeeBlockLeft + 180})
+               }
+           } else if ( window.innerWidth < 800 && window.innerWidth > 480 ) {
+               popover.popover('show');
+               popover.css({'top' : employeeBlockTop, 'left' : employeeBlockLeft + 180})
+           } else if ( window.innerWidth <= 480 ) {
+               popover.popover('hide');
+           }
+       } else if ( document.currentPopoverName )  {
+           if ( window.innerWidth > 480 ) {
+               $('.employee-blocks.' + document.currentPopoverName).click();
+               //popover.css({'top' : employeeBlockTop, 'left' : employeeBlockLeft + 180})
+           }
+       }
+
         ToBottom();
     });
 
@@ -156,6 +182,8 @@ $(function ( ) {
 
     /* Popover */
 
+    document.currentPopoverName = '';
+
     $('[rel="popover1"]').popover({
         trigger: 'manual',
         container: '.meemim_and_me',
@@ -182,6 +210,9 @@ $(function ( ) {
         var widthScreen = {'360': 360, '480': 480};
         //var currSlider = $(".multiple-items[data-employees='" + $(this).data('employees') +"']");
         var currSlider = $(".responsive[data-employees='" + $(this).data('employees') +"']");
+
+        document.currentPopoverName = $(this).data('employees');
+
 
         $('[rel="popover1"]').not(this).popover('hide');
 

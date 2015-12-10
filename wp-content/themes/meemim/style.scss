@@ -264,9 +264,13 @@ header {
     &.home-page {
 
         #menu-top-menu li {
-            a:hover {
-                background-color: #F2B229;
-                text-decoration: none;
+            a {
+                &:link {color:#fff}
+                &:visited {color:#fff}
+                &:hover {
+                    background-color: #F2B229;
+                    text-decoration: none;
+                }
             }
         }
 
@@ -306,22 +310,19 @@ header {
             margin-right: 5px;
             list-style: none;
 
-            a:hover {
-                color: #fff;
-                background-color: #F2B229;
-                text-decoration: none;
-            }
-
             a {
+                &:link {color:#5d052a}
+                &:visited {color:#5d052a}
                 &:focus {
-                    //color: #5d052a;
+                    text-decoration: none;
+                }
+                &:hover {
+                    color: #fff;
+                    background-color: #F2B229;
                     text-decoration: none;
                 }
                 &:active {
                     color: #fff;
-                    text-decoration: none;
-                }
-                &:visited {
                     text-decoration: none;
                 }
             }
@@ -1732,6 +1733,7 @@ footer{
         padding: 180px 0 0 0;
         border-top: 1px solid #a8a8a8;
         text-align: center;
+        //position: relative;
        .title {
            p {
                padding: 0;
@@ -1815,11 +1817,23 @@ footer{
 
 
     .statement {
-        margin: 100px 20px 0 20px;
-        background: url("../meemim/images/icons/rounded-rectangle-clear-.png") no-repeat;
-        background-size: contain;
         max-width: 391px;
-        height: 154px;
+        min-height: 154px;
+        margin: 100px 20px 0 20px;
+        background-size: contain;
+        border: 1px solid #dedede;
+        border-radius: 10px;
+        position: relative;
+        &:after {
+            right: -15px;
+            top: calc(100% - 103px);
+            width: 233px;
+            height: 107px;
+            content: '';
+            display: block;
+            background: url("../meemim/images/clear-.png") no-repeat;
+            position: absolute;
+        }
 
         padding: 18px 19px;
         .user-photo {
@@ -2217,9 +2231,10 @@ footer{
                   min-height: 74px;
                   color: #3c3c3c;
                   display: block;
-                  &:hover {
-                      text-decoration: none!important;
-                  }
+                  &:link { text-decoration: none;}
+                  &:visited { text-decoration: none;}
+                  &:hover { text-decoration: none;}
+                  &:active { text-decoration: none;}
               }
           }
           .date {

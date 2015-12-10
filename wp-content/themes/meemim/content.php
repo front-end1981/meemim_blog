@@ -24,9 +24,11 @@
 <!--            <div class="featured">-->
 <!--                <span>Featured</span>-->
 <!--            </div>-->
-            <div class="bwWrapper">
-                <?php the_post_thumbnail();?>
-            </div>
+            <a href="<?php echo get_permalink()?>">
+                <div class="bwWrapper">
+                    <?php the_post_thumbnail();?>
+                </div>
+            </a>
 
             <div class="title">
                 <?php
