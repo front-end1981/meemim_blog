@@ -186,7 +186,10 @@
             }
             &.current-menu-item {
                 & > a {
-                    border-bottom: 2px solid #390042;
+                    &:hover {
+                        border-bottom: 2px solid #390042;
+                    }
+                    border-bottom: 2px solid transparent;
                 }
             }
         }

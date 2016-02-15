@@ -27,6 +27,12 @@ body {
   font-family: Calibri !important;
   line-height: normal; }
 
+body, img {
+  transition: all .2s linear;
+  -o-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -webkit-transition: all .2s linear; }
+
 body {
   /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   /* font-size: 14px; */
@@ -1734,7 +1740,6 @@ footer {
       clear: both; }
     .blog-index .grid .grid-item {
       width: 160px;
-      height: 120px;
       margin-bottom: 15px;
       margin-right: 25px;
       float: left; }
@@ -1749,7 +1754,7 @@ footer {
     .blog-index .grid .grid-item--height3 {
       height: 480px; }
     .blog-index .grid .grid-item--height4 {
-      height: 465px; }
+      min-height: 465px; }
   .blog-index .suggested-readings {
     max-width: 248px;
     float: left; }

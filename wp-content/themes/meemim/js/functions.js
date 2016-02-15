@@ -121,7 +121,7 @@ $(function ( ) {
         $('.the_champ_sharing_container').slideToggle('slow');
     });
 
-        /* Blog index page */
+    /* Blog index page */
 
     $('.blog-index .share').find('.theChampFacebookSvg').addClass('icon-facebook');
     $('.blog-index .share').find('.theChampTwitterSvg').addClass('icon-twitter');
@@ -246,24 +246,34 @@ $(function ( ) {
         });
         $('#FSContact1').find('.fscf-div-submit').append(el);
     });
-
-    /* Blog single page set main image height*/
-    //$('.main-img-post').css({'maxHeight' :  $('.main-img-post img').width()});
-    //$('.main-img-post').find('.user').css( {'top' : ($('.main-img-post img').height() / 2) - ($('.main-img-post .user').height() / 2) } );
-    //$('.social-blog-single').css( {'top':$('.main-img-post img').offset().top + $('.main-img-post img').height() + 120} )
 });
 
 
-/* Masonry Cascading grid layout library */
+/*blog index page set min height for Title blog item*/
 
-//if ($('section').hasClass('blog-index')) {
-//    $('.grid').masonry({
-//        itemSelector: '.grid-item',
-////            isFitWidth: true,
-//        "gutter": 10,
-//        columnWidth: 50
-//    });
-//}
+$(window).load(function() {
+    (function () {
+        var max = 0,
+            inc = 0;
+
+        $('.group').find('.title').each(function(index) {
+            var current = $(this).height();
+
+            ++inc;
+            if (max < current) {
+                max = current;
+            }
+
+            if (inc == 2) {
+                $(this).animate({minHeight : max}, 500);
+                $('.group').find('.title').eq(index - 1).animate({minHeight : max}, 500);
+                inc = 0;
+                max = 0;
+            }
+        })
+    })();
+});
+
 
 /* Black and White image */
 
@@ -439,7 +449,9 @@ $("#slider").slider({
     }
 });
 
-
+$(document).ready(function () {
+    console.log(2);
+});
 
 
 
