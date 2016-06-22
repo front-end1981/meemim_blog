@@ -18,9 +18,6 @@
                 </div>
 
                 <div class="share">
-<!--                    <div class="social-blog-single">-->
-<!--                        --><?php //echo do_shortcode('[supsystic-social-sharing id="1"]') ?>
-<!--                    </div>-->
                     <div class="date">
                         <div class="entry-meta">
                             <?php
@@ -43,11 +40,14 @@
                         </div>
                     </div>
 <!--                    <a  class="btn btn-default">Share</a>-->
+<!--                    <div class="social-blog-single">-->
+<!--                        --><?php //echo do_shortcode('[supsystic-social-sharing id="1"]') ?>
+<!--                    </div>-->
                     <a  class="share-btn">
-<!--                        <div class="social-blog-single">-->
-<!--                            --><?php //echo do_shortcode('[supsystic-social-sharing id="1"]') ?>
-<!--                        </div>-->
-                        <span class="icon-export"></span>Share
+                        <span class="icon-export"></span>
+                        <div class="social-blog-single">
+                            <?php echo do_shortcode('[supsystic-social-sharing id="1"]') ?>
+                        </div>
                     </a>
                     <div class="social" style="display: none">
 

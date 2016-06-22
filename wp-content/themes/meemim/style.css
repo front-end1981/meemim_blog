@@ -2092,32 +2092,42 @@ footer {
     .content-articles .block .short-desc .date {
       width: 100%;
       font-size: 14px;
-      color: #666666; }
+      color: #666666;
+      display: flex;
+      align-items: center; }
     .content-articles .block .short-desc .share {
       display: flex;
       margin: 8px 0 0 0;
       font-size: 13px;
       color: #484848;
       position: relative; }
+      .content-articles .block .short-desc .share .social-blog-single {
+        top: 10px;
+        left: 338px;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all .2s ease;
+        z-index: 1; }
+        .content-articles .block .short-desc .share .social-blog-single .supsystic-social-sharing a.social-sharing-button.sharer-flat {
+          background-color: inherit;
+          margin-bottom: 0;
+          margin-top: 0;
+          font-size: 1.2em;
+          padding: 0.63em 0.75em 0.63em 0.75em; }
       .content-articles .block .short-desc .share .share-btn {
         display: flex;
-        font-family: Calibri; }
-        .content-articles .block .short-desc .share .share-btn .social-blog-single {
-          top: -145px;
-          left: 338px;
-          height: 0;
-          overflow: hidden;
-          transition: all .2s ease; }
-          .content-articles .block .short-desc .share .share-btn .social-blog-single .supsystic-social-sharing a.social-sharing-button.sharer-flat {
-            background-color: inherit;
-            margin-bottom: 0;
-            margin-top: 0;
-            font-size: 1.2em;
-            padding: 0.63em 0.75em 0.63em 0.75em; }
+        font-family: Calibri;
+        z-index: 2; }
         .content-articles .block .short-desc .share .share-btn span {
+          width: 50px;
+          padding: 5px 0;
           margin-right: 5px;
           text-align: center;
           transition: all .2s ease; }
+          .content-articles .block .short-desc .share .share-btn span.hover {
+            background-color: #414347;
+            color: #ababad; }
       .content-articles .block .short-desc .share:after {
         content: '';
         display: block;
@@ -2514,7 +2524,6 @@ footer {
   top: 735px;
   left: 445px;
   width: 50px;
-  padding: 5px 0;
   position: absolute;
   background-color: #414347; }
   .social-blog-single .supsystic-social-sharing {

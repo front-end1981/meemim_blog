@@ -2302,6 +2302,8 @@ footer{
                 width: 100%;
                 font-size: 14px;
                 color: #666666;
+                display: flex;
+                align-items: center;
             }
             .share {
                 display: flex;
@@ -2309,59 +2311,47 @@ footer{
                 font-size: 13px;
                 color: #484848;
                 position: relative;
-                //.social-blog-single {
-                //    top: -145px;
-                //    left: 338px;
-                //    height: 0;
-                //    overflow: hidden;
-                //    transition:all .2s ease;
-                //    .supsystic-social-sharing {
-                //        a.social-sharing-button {
-                //            &.sharer-flat {
-                //                background-color: inherit;
-                //                margin-bottom: 0;
-                //                margin-top: 0;
-                //                font-size: 1.2em;
-                //                padding: 0.63em 0.75em 0.63em 0.75em;
-                //            }
-                //        }
-                //
-                //    }
-                //}
+                .social-blog-single {
+                    top: 10px;
+                    left: 338px;
+                    height: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    transition:all .2s ease;
+                    z-index: 1;
+                    .supsystic-social-sharing {
+                        a.social-sharing-button {
+                            &.sharer-flat {
+                                background-color: inherit;
+                                margin-bottom: 0;
+                                margin-top: 0;
+                                font-size: 1.2em;
+                                padding: 0.63em 0.75em 0.63em 0.75em;
+                            }
+                        }
+
+                    }
+                }
                 .share-btn {
                     display: flex;
                     font-family: Calibri ;
-                    .social-blog-single {
-                        top: -145px;
-                        left: 338px;
-                        height: 0;
-                        overflow: hidden;
-                        transition:all .2s ease;
-                        .supsystic-social-sharing {
-                            a.social-sharing-button {
-                                &.sharer-flat {
-                                    background-color: inherit;
-                                    margin-bottom: 0;
-                                    margin-top: 0;
-                                    font-size: 1.2em;
-                                    padding: 0.63em 0.75em 0.63em 0.75em;
-                                }
-                            }
-
-                        }
-                    }
+                    z-index: 2;
+                    //&:hover {
+                    //    span {
+                    //        background-color: #414347;
+                    //        color: #ababad;
+                    //    }
+                    //}
                     span {
-                        //width: 50px;
+                        width: 50px;
+                        padding: 5px 0;
                         margin-right: 5px;
                         text-align: center;
                         transition:all .2s ease;
-                        //&:hover {
-                        //    background-color: #414347;
-                        //    color: #ababad;
-                        //    .social-blog-single {
-                        //        height: 200px;
-                        //    }
-                        //}
+                        &.hover {
+                            background-color: #414347;
+                            color: #ababad;
+                        }
                     }
 
                 }
@@ -2917,7 +2907,7 @@ footer{
     top: 735px;
     left: 445px;
     width: 50px;
-    padding: 5px 0;
+    //padding: 5px 0;
     position: absolute;
     background-color: #414347;
     .supsystic-social-sharing {

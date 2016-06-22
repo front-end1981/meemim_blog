@@ -12,6 +12,22 @@
         repeat: true
     });
 
+    $('.share-btn').hover(
+        function() {
+            var self = $(this);
+            console.log(self.parent('.share ').find('.social-blog-single'));
+            self.find('span').addClass('hover');
+            self.parent('.share').find('.social-blog-single').animate({height:140, top:-140, opacity:1}, 100)
+        },
+        function() {
+            var self = $(this);
+            self.parent('.share').find('.social-blog-single').animate({height:0, top:10, opacity:0}, 100,function(){
+                self.find('span').removeClass('hover');
+            });
+
+        }
+    );
+
     //Home Page
 
     $('.solutions-lines a').on('click', function(e) {
