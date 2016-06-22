@@ -1,5 +1,3 @@
-
-
 <?php
 /**
  * The main template file
@@ -20,14 +18,69 @@
 get_header(); ?>
     <div class="main-heading-title">
         <h1>Meemim Blog</h1>
-        <p>
-            Hatching the ideas and technology that
-            will shape the future of the social web
-        </p>
+    </div>
+
+    <div class="main-img" style="background-image: url(' <?php echo wp_get_attachment_image_src( get_post_thumbnail_id( 11 ), 'full' )[0]?>')">
+        <div class="rectangle product-page">
+             <span>
+                 <?php echo get_post(get_post_thumbnail_id())->post_excerpt;?>
+             </span>
+        </div>
     </div>
     <section class="blog-index">
-        <div class="content">
+        <div class="content-articles">
             <div class="block block-title grid">
+
+                <?php
+                $custom_query_args = array(
+                    'post_type'  => 'post',
+                    'meta_key'   => '_is_ns_featured_post',
+                    'meta_value' => 'yes',
+                );
+                // Get current page and append to custom query parameters array
+                $custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+                $custom_query = new WP_Query( $custom_query_args ); ?>
+                <?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
+
+                    <?php if (get_post_meta(get_the_ID(), '_is_ns_featured_post', true) == 'yes'):?>
+                        <div class="featured">
+                            <div class="featured-img"><?php the_post_thumbnail('large');?></div>
+                            <div class="short-desc">
+                                <div class="featured-title">Featured</div>
+                                <div class="title">
+                                    <?php
+                                    if ( is_single() ) :
+                                        the_title( '<h1 class="entry-title">', '</h1>' );
+                                    else :
+                                        the_title( '<a href="' . esc_url( get_permalink() ) . '">', '</a>' );
+                                    endif;
+                                    ?>
+                                </div>
+
+                                <div class="short-content">
+                                    <?php the_excerpt()?>
+                                </div>
+
+
+                                <div class="share">
+                                    <div class="days-ago">
+                                        <?php
+                                        $time_diff = current_time('timestamp') - get_the_time('U');
+                                        echo human_time_diff(get_the_time('U'), current_time('timestamp')) . ' AGO' ;
+                                        ?>
+                                    </div>
+                                    <a  class="share-btn"><span class="icon-export"></span>Share</a>
+                                    <div class="social" style="display: none">
+
+                                        <?php echo do_shortcode('[TheChamp-Sharing count="1" total_shares="ON]') ?>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif?>
+
+                <?php endwhile; ?>
 
                 <?php
                     if ( have_posts() ) :
@@ -74,21 +127,14 @@ get_header(); ?>
             }
             ?>
 
-
-<!--            <form class="form-inline" role="form">-->
-<!--                <div class="form-group" id="blog-index">-->
-<!--                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">-->
-<!--                </div>-->
-<!--                <button type="submit" class="btn btn-default">sing up</button>-->
-<!--            </form>-->
         </div>
 
-        <div class="sidebar">
-            <div class="suggested-readings">
-                <h3>Suggested readings</h3>
-                <?php  echo do_shortcode('[simple-links]');?>
-            </div>
-        </div>
+<!--        <div class="sidebar">-->
+<!--            <div class="suggested-readings">-->
+<!--                <h3>Suggested readings</h3>-->
+<!--                --><?php // echo do_shortcode('[simple-links]');?>
+<!--            </div>-->
+<!--        </div>-->
     </section>
 
 

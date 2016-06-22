@@ -8,3 +8,12 @@
 #RewriteRule . /index.php [L]
 #</IfModule>
 
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^([^www].*)$
+RewriteRule ^(.*)$ http://www.%1/$1 [L,R=301]
+
+
+
+#RewriteRule (.*) http://new.name/$1 [R=301,L]

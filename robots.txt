@@ -1,0 +1,22 @@
+User-agent: * 
+Disallow: /wp-includes 
+Disallow: /wp-feed 
+Disallow: /wp-content/plugins 
+Disallow: /wp-content/cache 
+Disallow: /wp-content/themes 
+ 
+User-agent: Yandex 
+Disallow: /wp-includes 
+Disallow: /wp-feed 
+Disallow: /wp-content/plugins 
+Disallow: /wp-content/cache 
+Disallow: /wp-content/themes 
+Host: www.meemim.com
+ 
+User-agent: Googlebot-Image 
+Allow: /wp-content/uploads/ 
+ 
+User-agent: YandexImages 
+Allow: /wp-content/uploads/ 
+ 
+Sitemap: http://www.meemim.com/sitemap.xml

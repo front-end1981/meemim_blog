@@ -90,9 +90,7 @@
     footer .menu-item-has-children > a:hover {
       border-bottom: 2px solid #390042; }
   footer .menu-item-has-children.current-menu-item > a {
-    border-bottom: 2px solid transparent; }
-    footer .menu-item-has-children.current-menu-item > a:hover {
-      border-bottom: 2px solid #390042; }
+    border-bottom: 2px solid #390042; }
   footer .sub-menu {
     margin-top: 0; }
     footer .sub-menu > a {
@@ -409,24 +407,6 @@
 
   .contact-us-page .massage-sign-up {
     max-width: 95% !important; }
-  .contact-us-page .contact-us-block .contact-data .contact-email {
-    width: 100%;
-    margin: auto;
-    float: none;
-    background: none;
-    text-align: center; }
-    .contact-us-page .contact-us-block .contact-data .contact-email .phone,
-    .contact-us-page .contact-us-block .contact-data .contact-email .email {
-      padding: 0; }
-  .contact-us-page .contact-us-block .contact-data .contact-address {
-    width: 100%;
-    margin: auto;
-    float: none;
-    background: none; }
-    .contact-us-page .contact-us-block .contact-data .contact-address p {
-      margin-left: 0;
-      padding: 0;
-      text-align: center; }
   .contact-us-page form {
     width: 95%; } }
 @media screen and (max-width: 1350px) {
@@ -473,9 +453,7 @@
   .contact-us-page .massage-sign-up {
     max-width: 55%; }
     .contact-us-page .massage-sign-up span {
-      display: inline-block; }
-  .contact-us-page .contact-us-block .rectangle {
-    display: none; } }
+      display: inline-block; } }
 @media screen and (max-width: 540px) {
   header .logo {
     width: 235px; } }

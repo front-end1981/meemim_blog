@@ -186,10 +186,7 @@
             }
             &.current-menu-item {
                 & > a {
-                    &:hover {
-                        border-bottom: 2px solid #390042;
-                    }
-                    border-bottom: 2px solid transparent;
+                    border-bottom: 2px solid #390042;
                 }
             }
         }
@@ -725,35 +722,6 @@
         }
 
 
-        .contact-us-block {
-            .contact-data {
-                .contact-email {
-                    width: 100%;
-                    margin: auto;
-                    float: none;
-                    background: none;
-                    text-align: center;
-                    .phone,
-                    .email {
-                        padding: 0;
-                    }
-                }
-                .contact-address {
-                    width: 100%;
-                    margin: auto;
-                    float: none;
-                    background: none;
-                    p {
-                        margin-left: 0;
-                        padding: 0;
-                        text-align: center;
-                        //padding: 3px 60px 0 70px;
-                    }
-                }
-            }
-        }
-
-
         form {
             width: 95%;
         }
@@ -870,13 +838,6 @@
             max-width: 55%;
             span {
                 display: inline-block;
-            }
-        }
-
-        .contact-us-block {
-
-            .rectangle {
-                display: none;
             }
         }
     }

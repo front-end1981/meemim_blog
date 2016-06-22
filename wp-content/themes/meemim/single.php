@@ -20,7 +20,7 @@ get_header(); ?>
         <div class="user">
             <?php echo get_avatar( $post->post_author, 102 );?>
             <div class="block-user">
-                <div class="user-name"><?php the_author_meta('last_name', get_post( $id )->post_author)?> &nbsp; <?php the_author_meta('first_name', get_post( $id )->post_author);?></div>
+                <div class="user-name"><?php the_author_meta('first_name', $post->post_author)?>&nbsp;&nbsp;<?php the_author_meta('last_name', $post->post_author);?></div>
                 <div class="user-data">   <?php echo get_post_meta ($post->ID,'views', true); ?> views / <span class="social-share-count"></span> shares</div>
             </div>
         </div>
@@ -45,26 +45,30 @@ get_header(); ?>
             <div class="user small-screen">
                 <?php echo get_avatar( $post->post_author, 102 );?>
                 <div class="block-user">
-                    <div class="user-name"><?php the_author_meta('last_name', get_post( $id )->post_author)?> &nbsp; <?php the_author_meta('first_name', get_post( $id )->post_author);?></div>
+                    <div class="user-name"><?php the_author_meta('first_name', $post->post_author)?>&nbsp;&nbsp;<?php the_author_meta('last_name', $post->post_author);?></div>
                     <div class="user-data">   <?php echo get_post_meta ($post->ID,'views', true); ?> views / <span class="social-share-count"></span> shares</div>
                 </div>
             </div>
-            <div class="social-blog-single small-screen">
-                <?php echo do_shortcode('[TheChamp-Sharing count="1" total_shares="ON type="horizontal"]') ?>
+            <div class="social-blog-single small-screen" style="display: none">
+                <?php echo do_shortcode('[supsystic-social-sharing id="1"]') ?>
             </div>
 
-            <?php
-            // Start the Loop.
-            while ( have_posts() ) : the_post();
-
-               the_content();
-
-//                // If comments are open or we have at least one comment, load up the comment template.
-//                if ( comments_open() || get_comments_number() ) {
-//                    comments_template();
-//                }
-            endwhile;
-            ?>
+            <div class="content-text">
+                <?php
+                // Start the Loop.
+                while ( have_posts() ) : the_post();
+                    the_content();
+                endwhile;
+                ?>
+                <div class="user written-by">
+                    <span></span>
+                    <?php echo get_avatar( $post->post_author, 102 );?>
+                    <div class="block-user">
+                        <div class="user-name"><?php the_author_meta('first_name', $post->post_author)?>&nbsp;&nbsp;<?php the_author_meta('last_name', $post->post_author);?></div>
+                        <div class="user-data"><?php the_author_meta('description', $post->post_author)?></div>
+                    </div>
+                </div>
+            </div>
 
             <div id="FSContact3" class="massage-sign-up <?php $contact_form = $si_contact_form->si_display_thank_you_custom('3');
             if ( !is_array($contact_form) && $contact_form){ echo 'form-sent-ok';}?>">
@@ -91,21 +95,21 @@ get_header(); ?>
 <!--                </div>-->
 <!--                <button type="submit" class="btn btn-default">Sign In</button>-->
 <!--            </form>-->
-
-            <div class="user written-by">
-                <span>Written&nbsp;By</span>
-               <?php echo get_avatar( $post->post_author, 102 );?>
-                <div class="block-user">
-                    <div class="user-name"><?php the_author_meta('last_name', get_post( $id )->post_author)?> &nbsp; <?php the_author_meta('first_name', get_post( $id )->post_author);?></div>
-                    <div class="user-data"><?php the_author_meta('description', get_post( $id )->post_author)?></div>
+            <div class="content-articles">
+                <div class="block grid">
+                    <?php $args = array('posts_per_page'   => 2,'order' => 'ASC', 'post_type' => 'post', 'post_status' => 'publish');
+                    $myposts = get_posts( $args );
+                    foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+                        <?php include ('content.php'); ?>
+                    <?php endforeach;
+                    wp_reset_postdata();?>
                 </div>
             </div>
 
-            <p>
-                In this guide, we’ll cover some of the tactics we at Hootsuite have seen to be the most effective for gaining more followers on Instagram. Want to jump ahead? Click the buttons below to jump to the sections you want to focus on.
-            </p>
 
-            <p class="title-form" for="exampleInputEmail1">Sign in or Post as Guest</p>
+
+	
+	    <p>&nbsp;</p>
             <?php
             // Start the Loop.
             while ( have_posts() ) : the_post();
@@ -121,14 +125,7 @@ get_header(); ?>
     </section>
 
     <div class="social-blog-single">
-        <ul>
-            <li>
-                <a href="#" class="icon-export"></a>
-            </li>
-        </ul>
-
-        <?php echo do_shortcode('[TheChamp-Sharing count="1" total_shares="ON type="vertical"]') ?>
-
+        <?php echo do_shortcode('[supsystic-social-sharing id="1"]') ?>
     </div>
 <script>
     jQuery(function() {
